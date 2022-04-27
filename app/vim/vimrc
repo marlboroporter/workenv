@@ -107,7 +107,15 @@ call plug#begin('~/.vim/plugged')
 
   Plug 'dense-analysis/ale'
 
+  # https://github.com/preservim/nerdtree
   Plug 'preservim/nerdtree'
+
+  Plugin 'godlygeek/tabular'
+
+  " https://github.com/preservim/vim-markdown
+  Plugin 'preservim/vim-markdown'
+
+
 
 call plug#end()
 
