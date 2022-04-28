@@ -115,9 +115,34 @@ call plug#begin('~/.vim/plugged')
   " https://github.com/preservim/vim-markdown
   Plug 'preservim/vim-markdown'
 
+  " https://github.com/iamcco/markdown-preview.nvim  
+  Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+
+
 
 
 call plug#end()
+
+" }}}
+
+
+" PLUGIN CONFIG --------------------------------------------------------------- {{{
+
+" 'iamcco/markdown-preview.nvim'
+  Plug 'dense-analysis/ale'
+
+  " https://github.com/preservim/nerdtree
+  Plug 'preservim/nerdtree'
+
+  Plug 'godlygeek/tabular'
+
+  " https://github.com/preservim/vim-markdown
+  Plug 'preservim/vim-markdown'
+
+  " https://github.com/iamcco/markdown-preview.nvim  
+  Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+
+
 
 " }}}
 
