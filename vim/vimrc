@@ -144,9 +144,20 @@ inoremap jj <Esc>
 " https://github.com/preservim/nerdtree
 " https://github.com/godlygeek/tabular
 " https://github.com/preservim/vim-markdown
-" https://github.com/iamcco/markdown-preview.nvim  
 "
+"<<<markdown-preview
+" https://github.com/iamcco/markdown-preview.nvim  
+"nnoremap <silent> <C-p> :MarkdownPreviewToggle<CR>
+"runtime iamcco.markdown-preview.cfg.vim
+nmap <C-p> <Plug>MarkdownPreviewToggle
+"/>>>
+"
+"<<<nerdtree    
 nnoremap <silent> <Space> :NERDTreeToggle<CR>
+" Have nerdtree ignore certain files and directories.
+let NERDTreeIgnore=['\.git$', '\.jpg$', '\.mp4$', '\.ogg$', '\.iso$', '\.pdf$', '\.pyc$', '\.odt$', '\.png$', '\.gif$', '\.db$']
+"/>>>
+
 
 "coc-vim, coc-metal config/mapping 
 runtime coc-mapping.vim
@@ -166,13 +177,6 @@ noremap <c-up> <c-w>+
 noremap <c-down> <c-w>-
 noremap <c-left> <c-w>>
 noremap <c-right> <c-w><
-
-"" NERDTree specific mappings.
-"" Map the F3 key to toggle NERDTree open and close.
-"nnoremap <F3> :NERDTreeToggle<cr>
-"
-" Have nerdtree ignore certain files and directories.
-let NERDTreeIgnore=['\.git$', '\.jpg$', '\.mp4$', '\.ogg$', '\.iso$', '\.pdf$', '\.pyc$', '\.odt$', '\.png$', '\.gif$', '\.db$']
 
 " }}}
 
