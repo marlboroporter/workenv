@@ -1,11 +1,13 @@
 # EDIT --------------------------------------------{{{
-EDITOR=vim
+export EDITOR=vim
 set -o vi
 # }}}
 
 
 # PATH --------------------------------------------{{{
-export PATH=.:$PATH
+export PATH=.:   \
+
+$PATH
 
 # }}}
 
