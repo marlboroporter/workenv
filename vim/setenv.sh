@@ -1,4 +1,11 @@
 #!/usr/bin/env bash
-(rm -rf ~/.vim; mkdir -p  ~/.vim  && cd ~/.vim; mkdir -p autoload plugged colors backup)
-rm ~/.vimrc; ln -s ~/.workenv/app/vim/vimrc ~/.vimrc
+if [ -L ~/.vim ]; then
+    rm ~/.vim
+else
+    rm -rf ~/.vim
+fi
+
+(mkdir -p  ~/.vim  && cd ~/.vim; mkdir -p autoload plugged colors backup)
+    
+rm ~/.vimrc; ln -s ~/.workenv/vim/vimrc ~/.vimrc
 
