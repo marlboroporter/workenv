@@ -1,5 +1,4 @@
 "
-" cf
 " https://www.freecodecamp.org/news/vimrc-configuration-guide-customize-your-vim-editor/
 "
 "
@@ -120,6 +119,10 @@ call plug#begin('~/.vim/plugged')
   " https://github.com/iamcco/markdown-preview.nvim  
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
+  Plug 'neoclide/coc.nvim', {'branch': 'master'}
+  Plug 'scalameta/coc-metals', {'do': 'yarn install --frozen-lockfile'}
+
+
 
 
 
@@ -128,23 +131,7 @@ call plug#end()
 " }}}
 
 
-" PLUGIN CONFIG --------------------------------------------------------------- {{{
-
-  " https://github.com/dense-analysis/ale
-
-  " https://github.com/preservim/nerdtree
-
-" " https://github.com/godlygeek/tabular
-
-  " https://github.com/preservim/vim-markdown
-
-  " https://github.com/iamcco/markdown-preview.nvim  
-
-
-
-" }}}
-
-" MAPPINGS --------------------------------------------------------------- {{{
+" MAPPINGS && CONFIG --------------------------------------------------------- {{{
 
 " Set the backslash as the leader key.
 "let mapleader = "\"
@@ -152,10 +139,19 @@ let mapleader = ";"
 
 " Type jj to exit insert mode quickly.
 inoremap jj <Esc>
-
+"
+" https://github.com/dense-analysis/ale
+" https://github.com/preservim/nerdtree
+" https://github.com/godlygeek/tabular
+" https://github.com/preservim/vim-markdown
+" https://github.com/iamcco/markdown-preview.nvim  
 "
 nnoremap <silent> <Space> :NERDTreeToggle<CR>
 
+"coc-vim, coc-metal config/mapping 
+runtime coc-mapping.vim
+runtime coc-metal-mapping.vim
+"
 "
 " You can split the window in Vim by typing :split or :vsplit.
 " Navigate the split view easier by pressing CTRL+j, CTRL+k, CTRL+h, or CTRL+l.
