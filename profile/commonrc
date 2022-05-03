@@ -5,9 +5,7 @@ set -o vi
 
 
 # PATH --------------------------------------------{{{
-export PATH=.:   \
-
-$PATH
+export PATH=.:$PATH
 
 # }}}
 
