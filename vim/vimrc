@@ -135,7 +135,7 @@ call plug#end()
 
 " Set the backslash as the leader key.
 "let mapleader = "\"
-let mapleader = ";"
+let leader = ";"
 
 " Type jj to exit insert mode quickly.
 inoremap jj <Esc>
@@ -166,18 +166,30 @@ runtime coc-metal-mapping.vim
 "
 " You can split the window in Vim by typing :split or :vsplit.
 " Navigate the split view easier by pressing CTRL+j, CTRL+k, CTRL+h, or CTRL+l.
+
+nnoremap <Leader>w <C-w>
+
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+"
+"" Resize split windows using arrow keys by pressing:
+"" CTRL+UP, CTRL+DOWN, CTRL+LEFT, or CTRL+RIGHT.
+nnoremap <c-up> <c-w>+
+nnoremap <c-down> <c-w>-
+nnoremap <c-left> <c-w>>
+nnoremap <c-right> <c-w><
 
-" Resize split windows using arrow keys by pressing:
-" CTRL+UP, CTRL+DOWN, CTRL+LEFT, or CTRL+RIGHT.
-noremap <c-up> <c-w>+
-noremap <c-down> <c-w>-
-noremap <c-left> <c-w>>
-noremap <c-right> <c-w><
-
+:iab <expr> tds strftime("%F %b %T")"
+"
+"
+"
+"
+"
+"
+"
+"
 " }}}
 
 " VIMSCRIPT -------------------------------------------------------------- {{{

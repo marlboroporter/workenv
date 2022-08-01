@@ -1,15 +1,25 @@
+# PATH --------------------------------------------{{{
+export PATH=.:/usr/bin:/bin:\
+$PATH
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+# 
+alias idea="open -a \"/Applications/IntelliJ IDEA CE.app\""
+
+
+
+#
+#
+# }}}
+
 # EDIT --------------------------------------------{{{
 export EDITOR=vim
 set -o vi
 # }}}
 
 
-# PATH --------------------------------------------{{{
-export PATH=.:$PATH
-
-# }}}
-
 
 # ? --------------------------------------------{{{
 # }}}
 
+source "/Users/jieli/.sdkman/bin/sdkman-init.sh"
