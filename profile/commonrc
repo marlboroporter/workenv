@@ -15,11 +15,26 @@ alias idea="open -a \"/Applications/IntelliJ IDEA CE.app\""
 # EDIT --------------------------------------------{{{
 export EDITOR=vim
 set -o vi
+# git use less for output  
+export LESS="-F -X $LESS"
 # }}}
 
 
+# custom --------------------------------------{{{
+[ -f ~/.customrc ] && . ~/.customrc    
+
+# }}}
+
+
+# last --------------------------------------------{{{
+source "/Users/jieli/.sdkman/bin/sdkman-init.sh"
+# }}}
 
 # ? --------------------------------------------{{{
 # }}}
 
-source "/Users/jieli/.sdkman/bin/sdkman-init.sh"
+
+
+
+
+
