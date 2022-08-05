@@ -181,8 +181,8 @@ nnoremap <c-down> <c-w>-
 nnoremap <c-left> <c-w>>
 nnoremap <c-right> <c-w><
 
-:iab <expr> tds strftime("%F %b %T")"
-"
+:iab <expr> dat strftime("%Y-%m-%d")"
+
 "
 "
 "
