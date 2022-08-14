@@ -1,21 +1,14 @@
+#
+# Source this file at # user config section of omz generated and p10k modified .zshrc     
 # PATH --------------------------------------------{{{
-export PATH=.:/usr/bin:/bin:\
-$PATH
-
 eval "$(/opt/homebrew/bin/brew shellenv)"
-# 
 alias idea="open -a \"/Applications/IntelliJ IDEA CE.app\""
 
-
-
-#
-#
 # }}}
 
 # EDIT --------------------------------------------{{{
-export EDITOR=vim
 set -o vi
-# git use less for output  
+# git use less for output, use this to only use less when more than one page   
 export LESS="-F -X $LESS"
 # }}}
 

@@ -17,7 +17,6 @@ brew_install(){
 update_profile(){
     prompt---- "update .zshrc"
     cp  ~/.zshrc ~/.zshrc.$(date +%Y%m%d.%H%M%S)
-    echo ". ~/.workenv/profile/commonrc" >> ~/.zshrc
     echo ". ~/.workenv/profile/zshrc" > ~/.zshrc 
     # move to inside commonrc
     #echo '[ -f ~/.customrc ] && . ~/.customrc' >> ~/.zshrc

@@ -185,7 +185,8 @@ nnoremap <c-right> <c-w><
 
 nmap gx :silent execute "!google-chrome " . shellescape("<cWORD>") . " &"<CR>
 
-"
+" no bells
+set noeb vb t_vb=
 "
 "
 "
