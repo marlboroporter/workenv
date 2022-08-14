@@ -183,7 +183,8 @@ nnoremap <c-right> <c-w><
 
 :iab <expr> dat strftime("%Y-%m-%d")"
 
-"
+nmap gx :silent execute "!google-chrome " . shellescape("<cWORD>") . " &"<CR>
+
 "
 "
 "
