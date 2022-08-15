@@ -23,8 +23,8 @@ call plug#begin('~/.vim/plugged')
   " https://github.com/iamcco/markdown-preview.nvim  
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
-" Plug 'neoclide/coc.nvim', {'branch': 'master'}
-" Plug 'scalameta/coc-metals', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'neoclide/coc.nvim', {'branch': 'master'}
+  Plug 'scalameta/coc-metals', {'do': 'yarn install --frozen-lockfile'}
 
 call plug#end()
 

@@ -1,6 +1,7 @@
 #
 # Source this file at # user config section of omz generated and p10k modified .zshrc     
 # PATH --------------------------------------------{{{
+export PATH=.:$PATH
 eval "$(/opt/homebrew/bin/brew shellenv)"
 alias idea="open -a \"/Applications/IntelliJ IDEA CE.app\""
 
