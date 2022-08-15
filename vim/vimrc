@@ -119,27 +119,31 @@ call plug#begin('~/.vim/plugged')
   " https://github.com/iamcco/markdown-preview.nvim  
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
-  Plug 'neoclide/coc.nvim', {'branch': 'master'}
-  Plug 'scalameta/coc-metals', {'do': 'yarn install --frozen-lockfile'}
-
+ Plug 'neoclide/coc.nvim', {'branch': 'master'}
+ Plug 'scalameta/coc-metals', {'do': 'yarn install --frozen-lockfile'}
 
 
 
 
 call plug#end()
 
+"runtime ./metals.vim
+
+
+
+
 " }}}
 
 
 " MAPPINGS && CONFIG --------------------------------------------------------- {{{
 
-" Set the backslash as the leader key.
-"let mapleader = "\"
-let leader = ";"
+let mapleader = ";"
 
-" Type jj to exit insert mode quickly.
 inoremap jj <Esc>
-"
+inoremap kk <Esc>
+
+nnoremap <silent> <leader>ec :e $MYVIMRC<CR>
+
 " https://github.com/dense-analysis/ale
 " https://github.com/preservim/nerdtree
 " https://github.com/godlygeek/tabular
@@ -160,9 +164,11 @@ let NERDTreeIgnore=['\.git$', '\.jpg$', '\.mp4$', '\.ogg$', '\.iso$', '\.pdf$', 
 
 
 "coc-vim, coc-metal config/mapping 
-runtime coc-mapping.vim
-runtime coc-metal-mapping.vim
-"
+source ~/.vim/rc/coc-mapping.vim
+source ~/.vim/rc/coc-metal-mapping.vim
+" [resolve later coc-nvim tab remapping](https://www.reddit.com/r/neovim/comments/weydql/cocvim_switched_to_custom_popup_menu_how_to/)  
+source ~/.vim/rc/coc-rc.vim
+
 "
 " You can split the window in Vim by typing :split or :vsplit.
 " Navigate the split view easier by pressing CTRL+j, CTRL+k, CTRL+h, or CTRL+l.
