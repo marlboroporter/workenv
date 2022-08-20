@@ -9,8 +9,8 @@ vim_setup(){
     fi
 
     (mkdir -p  ~/.vim  && cd ~/.vim; mkdir -p autoload plugged colors backup)
-    ln -s ~/.workenv/vim ~/.vim/rc 
-    rm ~/.vimrc; ln -s ~/.vim/rc/vimrc ~/.vimrc
+    ln -sf ~/.workenv/vim/vim ~/.vim/rc 
+    ln -sf ~/.vim/rc/vimrc ~/.vimrc
 
     /usr/bin/vim -c " :PlugInstall | :qall! " 
 
