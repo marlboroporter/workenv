@@ -70,7 +70,7 @@ mac_install(){
     brew_app_minimal
 
     prompt---- "vim"
-    . vim/setenv.sh
+    . vim/vim/setup.sh
 
     prompt---- "java"
     sdk install java 18.0.2-amzn 
