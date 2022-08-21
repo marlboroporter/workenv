@@ -46,6 +46,7 @@ zsh_and_theme(){
 }
 
 brew_app_minimal(){
+
     brew_install node 
     brew_install yarn
     brew_install yq 
@@ -53,6 +54,8 @@ brew_app_minimal(){
     brew_install --cask intellij-idea
     brew_install iterm2    
     brew_install tree
+    brew_install pyenv
+
 }
 
 mac_install(){
@@ -71,6 +74,7 @@ mac_install(){
 
     prompt---- "vim"
     . vim/vim/setup.sh
+    . vim/nvim/setup.sh
 
     prompt---- "java"
     sdk install java 18.0.2-amzn 
