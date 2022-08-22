@@ -61,6 +61,7 @@ brew_app_minimal(){
 mac_install(){
 
     zsh_and_theme
+    source os/mac/preference.sh
 
     prompt---- "homebrew"
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -73,8 +74,9 @@ mac_install(){
     brew_app_minimal
 
     prompt---- "vim"
-    . vim/vim/setup.sh
-    . vim/nvim/setup.sh
+    source vim/vim/setup.sh
+    #. vim/nvim/setup.sh
+    source vim/ideavim/setup.sh
 
     prompt---- "java"
     sdk install java 18.0.2-amzn 
