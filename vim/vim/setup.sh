@@ -16,8 +16,8 @@ vim_setup(){
 
     #  coc-metals
     #  to deprecate
-    (cd /Users/jieli/.vim/plugged/coc.nvim && yarn)
-    (cd /Users/jieli/.vim/plugged/coc-metals && yarn)
+    (cd ~/.vim/plugged/coc.nvim && yarn)
+    (cd ~//.vim/plugged/coc-metals && yarn)
 }
 
 # main
