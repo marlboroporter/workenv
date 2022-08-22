@@ -1,4 +1,5 @@
-#
+
+
 # Source this file at # user config section of omz generated and p10k modified .zshrc     
 # PATH --------------------------------------------{{{
 
@@ -28,7 +29,7 @@ export LESS="-F -X $LESS"
 
 
 # last --------------------------------------------{{{
-source "~/.sdkman/bin/sdkman-init.sh"
+source ~/.sdkman/bin/sdkman-init.sh
 # }}}
 
 # ? --------------------------------------------{{{
