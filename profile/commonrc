@@ -28,7 +28,7 @@ export LESS="-F -X $LESS"
 
 
 # last --------------------------------------------{{{
-source "/Users/jieli/.sdkman/bin/sdkman-init.sh"
+source "~/.sdkman/bin/sdkman-init.sh"
 # }}}
 
 # ? --------------------------------------------{{{
