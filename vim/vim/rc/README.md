@@ -1,8 +1,8 @@
 # Vim env 
-* coc.nvim has bug on M1
-* ❗️Important: Some Vim plugins could change key mappings. Please use command like:verbose imap <tab> to make sure that your keymap has taken effect.
+## Reference
+* [Learn vim the hard way](https://danielmiessler.com/study/vim/) 
 * [How to read all the current in effect mapping](https://stackoverflow.com/questions/7642746/is-there-any-way-to-view-the-currently-mapped-keys-in-vim)
-    - display
+   - display
     ```vim
         :nmap
         :imap
@@ -15,3 +15,4 @@
         :silent verbose map
         :redir END
     ```
+

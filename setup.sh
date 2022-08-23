@@ -69,7 +69,7 @@ mac_install(){
 
     prompt---- "sdkman"
     curl -s https://get.sdkman.io | bash
-    source "/Users/jieli/.sdkman/bin/sdkman-init.sh"
+    source ~/.sdkman/bin/sdkman-init.sh
 
     brew_app_minimal
 

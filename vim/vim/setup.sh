@@ -9,13 +9,10 @@ vim_setup(){
     fi
 
     (mkdir -p  ~/.vim  && cd ~/.vim; mkdir -p autoload plugged colors backup)
-    ln -sf ~/.workenv/vim/vim ~/.vim/rc 
-    ln -sf ~/.vim/rc/vimrc ~/.vimrc
+    ln -sf ~/.workenv/vim/vim/rc ~/.vim/rc 
+    ln -sf ~/.workenv/vim/vim/vimrc ~/.vim/vimrc 
 
     /usr/bin/vim -c " :PlugInstall | :qall! " 
-
-    #  coc-metals
-    #  to deprecate
     (cd ~/.vim/plugged/coc.nvim && yarn)
     (cd ~//.vim/plugged/coc-metals && yarn)
 }

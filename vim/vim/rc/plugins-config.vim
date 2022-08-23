@@ -19,9 +19,7 @@ let NERDTreeIgnore=['\.git$', '\.jpg$', '\.mp4$', '\.ogg$', '\.iso$', '\.pdf$', 
 "/>>>
 
 "coc-vim, coc-metal config/mapping 
-source ~/.vim/rc/coc-mapping.vim
-source ~/.vim/rc/coc-metal-mapping.vim
-" [resolve later coc-nvim tab remapping](https://www.reddit.com/r/neovim/comments/weydql/cocvim_switched_to_custom_popup_menu_how_to/)  
-source ~/.vim/rc/coc-rc.vim
+runtime rc/coc-mapping.vim
+runtime rc/coc-metal-mapping.vim
 "
 " }}}
