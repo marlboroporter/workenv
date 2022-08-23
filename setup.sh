@@ -2,7 +2,10 @@
 
 PROC="cat"
 
-+(){ echo "#------> $@" ; }
++(){ echo "
+#------> $@ -------
+" 
+}
 
 +.(){ 
     c="brew install $@"
@@ -27,7 +30,7 @@ upd(){
 }
 
 ++() { 
-    + "$PROC $@"
+    + "$@"
     case "$PROC" in
         source) source  "$@" ;;
         cat) cat "$@"  ;;
@@ -37,14 +40,13 @@ upd(){
 
 install(){
     
-    #+ "" && ++ 
-    + "preference" && ++ app/pref/mac_preference.sh 
-    + "xcode-select" && ++ app/xcode/xcode-select.sh 
-    + "ssh" && ++ app/ssh/setup.sh  
-    + "chrome" && ++ app/chrome/setup.sh 
-    + "zsh & theme" && ++ app/zsh/setup.sh 
-    + "homebrew" && ++ app/brew/setup.sh  
-    + "sdkman" && ++ app/sdkman/setup.sh
+    ++ app/pref/mac_preference.sh 
+    ++ app/xcode/xcode-select.sh 
+    ++ app/ssh/setup.sh  
+    ++ app/chrome/setup.sh 
+    ++ app/zsh/setup.sh 
+    ++ app/brew/setup.sh  
+    ++ app/sdkman/setup.sh
 
     +. node 
     +. yarn
@@ -55,9 +57,9 @@ install(){
     +. tree
     +. pyenv
 
-    + "vim" && ++ vim/vim/setup.sh
-    + "nvim" && ++ vim/nvim/setup.sh
-    + "ideavim" && ++ vim/ideavim/setup.sh
+    ++ vim/vim/setup.sh
+    ++ vim/nvim/setup.sh
+    ++ vim/ideavim/setup.sh
 
     upd
 }
