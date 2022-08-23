@@ -1,144 +1,67 @@
-#! /usr/bin/env bash
+#!/usr/bin/env bash 
 
+PROC="cat"
 
-prompt----(){
-    echo "
-------> $@
-"
++(){ echo "#------> $@" ; }
+
++.(){ 
+    c="brew install $@"
+    + "$c"
+    case "$PROC" in
+        source)  eval "$c" ;;
+        cat) echo "$c"  ;;
+        *) echo "not supported $PROC" ;;
+    esac
 }
 
-brew_install(){
-    app="$@"
-    c="brew install $app"   
-    prompt---- "$c"
-    eval "$c"
+upd(){
+    c=$(echo "
+    cp  ~/.zshrc ~/.zshrc.$(date +%Y%m%d.%H%M%S)  
+    echo \". ~/.workenv/profile/zshrc\" > ~/.zshrc
+    ") 
+    case "$PROC" in
+        source)  eval "$c" ;;
+        cat) echo "$c"  ;;
+        *) echo "not supported $PROC" ;;
+    esac
 }
 
-update_profile(){
-    prompt---- "update .zshrc"
-    cp  ~/.zshrc ~/.zshrc.$(date +%Y%m%d.%H%M%S)
-    echo ". ~/.workenv/profile/zshrc" > ~/.zshrc 
-    # move to inside commonrc
-    #echo '[ -f ~/.customrc ] && . ~/.customrc' >> ~/.zshrc
+++() { 
+    + "$PROC $@"
+    case "$PROC" in
+        source) source  "$@" ;;
+        cat) cat "$@"  ;;
+        *) echo "not supported $PROC" ;;
+    esac
 }
 
-mac_preinstall(){
-    prompt---- " preinstall manual config mac"
-    ###################### manual presteps ############################
-    # * create a "brewer" admin user
-    # * rename computer
-    # * reset modifier key: map capslock to esc
-    # * keyboard speed 
-    # * dock & menu auto hide
-    # * `ssh: ssh-keygen -t rsa` && and add to github, bitbucket
-    #    pbcopy <id_rsa.pub
-    # * install  chrome
-    ####################### common #############################
-    prompt---- " preinstall xcode-select"
-    # xcode-select --install
+install(){
+    
+    #+ "" && ++ 
+    + "preference" && ++ app/pref/mac_preference.sh 
+    + "xcode-select" && ++ app/xcode/xcode-select.sh 
+    + "ssh" && ++ app/ssh/setup.sh  
+    + "chrome" && ++ app/chrome/setup.sh 
+    + "zsh & theme" && ++ app/zsh/setup.sh 
+    + "homebrew" && ++ app/brew/setup.sh  
+    + "sdkman" && ++ app/sdkman/setup.sh
+
+    +. node 
+    +. yarn
+    +. yq 
+    #+. ansible
+    +. --cask intellij-idea
+    +. iterm2    
+    +. tree
+    +. pyenv
+
+    + "vim" && ++ vim/vim/setup.sh
+    + "nvim" && ++ vim/nvim/setup.sh
+    + "ideavim" && ++ vim/ideavim/setup.sh
+
+    upd
 }
 
-zsh_and_theme(){
-    prompt---- "zsh ohmyzsh & theme" 
-    [ ! -d $ZSH ] && sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    [ ! -d ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k ]  && \
-        git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-}
-
-brew_app_minimal(){
-
-    brew_install node 
-    brew_install yarn
-    brew_install yq 
-    brew_install ansible
-    brew_install --cask intellij-idea
-    brew_install iterm2    
-    brew_install tree
-    brew_install pyenv
-
-}
-
-mac_install(){
-
-    zsh_and_theme
-    source os/mac/preference.sh
-
-    prompt---- "homebrew"
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-
-    prompt---- "sdkman"
-    curl -s https://get.sdkman.io | bash
-    source ~/.sdkman/bin/sdkman-init.sh
-
-    brew_app_minimal
-
-    prompt---- "vim"
-    source vim/vim/setup.sh
-    #. vim/nvim/setup.sh
-    source vim/ideavim/setup.sh
-
-    prompt---- "java"
-    sdk install java 18.0.2-amzn 
-
-    update_profile
-
-}
-
-
-mac_uninstall(){
-
-    prompt----  "uninstall brewed apps" 
-    brew list | while read app 
-    do 
-        echo $app; 
-        brew uninstall --ignore-dependencies $app 
-    done
-
-
-    #prompt--- "uninstall homebrew"
-    # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
-    # sudo rm -rf /opt/homebrew
-
-    #prompt---- "uninstall sdkman"
-    # rm -rf ~/.sdkman
-    # then remove from all profiles
-}
-
-
-
-usage(){
-    echo "Usage $0 [mac|ubuntu] [install|uninstall]"
-}
-
-
-# main
-if [ $# -lt 2 ] ; then
-    usage
-    exit
-fi
-
-case $1 in
-    mac) 
-        case $2 in
-            install)
-                mac_preinstall
-                mac_install
-                ;;
-            uninstall)
-                mac_uninstall
-                ;;
-            *)
-                ;;
-        esac
-        ;;
-    ubuntu)
-        echo "not yet supported"
-        ;; 
-    *)           
-        usage
-        ;;
-esac
-       
+install
 
 
