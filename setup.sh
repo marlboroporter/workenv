@@ -9,7 +9,7 @@ prompt----(){
 
 brew_install(){
     app="$@"
-    c="brew reinstall $app"   
+    c="brew install $app"   
     prompt---- "$c"
     eval "$c"
 }
