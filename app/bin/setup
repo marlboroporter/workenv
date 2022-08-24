@@ -1,0 +1,6 @@
+D=$(echo $PWD | awk -F/ '{print FS $4}')
+[ $D != "/.w" ] && echo " only run inside .w !"
+source ~/.w/app/lib/setup.sh 
+[ -f ./setup.sh ] && source ./setup.sh
+eval "$1"
+

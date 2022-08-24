@@ -1,4 +1,9 @@
+app=${PWD##*/}
+install(){
 # xcode-select install many tools including git
 #   before this, some bin link are empty when shipped
-xcode-select --install
-
+eval "$app --install"
+}
+setenv(){
+    echo ""
+}

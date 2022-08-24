@@ -1,3 +1,12 @@
-* install chrome manually
-! [[ -d /Applications/Google\ Chrome.app ]] && echo "Please install chrome" 
+msg="Please install chrome manually" 
+install(){
+    if [[ -d /Applications/Google\ Chrome.app ]] ; then
+        echo "chrome installed"
+    else 
+        echo "$msg" 
+    fi
+}
+reinstall(){
+    install
+}
 
