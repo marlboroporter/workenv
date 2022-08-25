@@ -1,8 +1,12 @@
 install(){
+   echo "included in intellij-idea" 
+}
+
+alias reinstall='install'
+
+config(){
     #
-    ln -sf ~/.workenv/vim/ideavim/ideavimrc ~/.ideavimrc
+    ln -sf ~/.w/vim/ideavim/ideavimrc ~/.ideavimrc
     # j,k key press to repeat     
     defaults write -g ApplePressAndHoldEnabled -bool false
 }
-alias reinstall='install'
-

@@ -1,6 +1,22 @@
-D=$(echo $PWD | awk -F/ '{print FS $4}')
-[ $D != "/.w" ] && echo " only run inside .w !"
+# to avoid "setup" command used in some dirs  
+([[ ! $PWD =~ /.w ]] || \
+    [[ $PWD == ~/.w ]] || \
+    [[ $PWD == ~/.w/app ]] || \
+    [[ $PWD == ~/.w/app/brew ]] || \
+    [[ $PWD == ~/.w/app/lib ]] || \
+    [[ $PWD == ~/.w/app/mac/xcode-select ]] ||  \
+    [[ $PWD == ~/.w/app/bin ]] ) \
+ &&  echo " not allowed to  run setup in this dir !" && exit 1
+
+# framework "inheritance" 
 source ~/.w/app/lib/setup.sh 
 [ -f ./setup.sh ] && source ./setup.sh
-eval "$1"
+
+# earlier app set up updated .customer
+source ~/.customrc 
+
+
+# func name supported in lib/setup.sh : install, config, setenv, uninstall
+func=$1
+eval "$func"
 

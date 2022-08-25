@@ -10,7 +10,7 @@ install(){
     fi
 }
 config(){
-echo"
+echo "
 # TBD: additional configuration in .ssh
 "
 }

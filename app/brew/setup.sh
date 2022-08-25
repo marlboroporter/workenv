@@ -1,10 +1,14 @@
 install(){
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    eval $(setenv)
+    # only needed first time
+    #/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    eval "$(setenv)"
 }
 alias reinstall='install'
 uninstall(){
     NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
+}
+config(){
+    :
 }
 setenv(){
 cat<<EOF

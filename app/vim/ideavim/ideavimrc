@@ -46,7 +46,7 @@ map <S-Space> <Action>(GotoNextError)
 
 map <leader>b <Action>(ToggleLineBreakpoint)
 map <leader>o <Action>(FileStructurePopup)
-map <leader>m :e ~/.workenv/vim/ideavim/help.md
+map <leader>m :e ~/.w/vim/ideavim/help.md
 
 
 

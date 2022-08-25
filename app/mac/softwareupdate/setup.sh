@@ -1,0 +1,3 @@
+updates(){
+    eval "$app -l"    
+}
