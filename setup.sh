@@ -16,9 +16,9 @@ add() {
     setup install $1 
     setup config $1
     E="$(setup setenv $1)"
-    echo "$title">>$RC
-    echo "$E">>$RC 
-    eval "$E"    # better quote  
+    #echo "$title">>$RC
+    #echo "$E">>$RC 
+    #eval "$E"    # better quote  
 }
 
 install(){
@@ -54,5 +54,4 @@ install(){
 
     add prof
 }
-
-install
+#install
