@@ -39,6 +39,7 @@ install(){
     add yq 
     #add ansible
     add intellij-idea
+    add intellij-idea-ce
     add iterm2    
 
     add tree

@@ -1,13 +1,40 @@
-usage(){ echo "Usage: $(basename $0) f [dir]"; exit 1; }
+# ------- edit here -------------------------------------------
+no_app=("lib" "python" "mac/xcode-select" )
+# -------------------------------------------------------------
+usage(){ 
+echo "Usage: $(basename $0) f [app_dir=.]
+  - use within ~/.w
+  - some dir not allowed
+" 
+exit 1 
+}
 [[ $# -lt 1 ]] && usage 
 FUNC=$1
-DIR=~/.w/app/$2 
+default_app_dir=$(echo $PWD|sed -e "s:${HOME}/.w/app/::g")
+app_dir=${2:-$default_app_dir}
+DIR=~/.w/app/$app_dir 
 [[ ! $PWD =~ "$HOME/.w" ]] &&  echo "Run within ~/.w !" && usage  
-allow(){
-  for d in bin lib 
+
+# ok with as a/b
+allow_nested(){
+  for d in $no_app 
   do  
-    if [[ "$d" == "$1" ]]; then
-        echo "Run within $1 !" && exit 1 
+    echo  "\"$d\" == \"$app_dir\"" 
+    if [[ "$d" == "$app_dir" ]]; then
+        echo "$(basename $0) not allowed for app: ${no_app[@]}" &&  usage 
+    fi
+  done  
+}
+
+allow_nested $app_dir
+
+# only checkk b of a/b
+allow_baseame(){
+  for d in $no_app 
+  do  
+    echo "\"$app\" =~ \"$d\""
+    if [[ "$app" =~ "$d" ]]; then
+        echo "$(basename $0) not allowed for app: $app" &&  usage 
     fi
   done  
 }
@@ -17,10 +44,9 @@ allow(){
     cd $DIR  
     # has to be sourced after enter the dir 
     source ~/.w/app/lib/setup.sh 
+    #echo "#$app"
     [ -f ./setup.sh ] && source ./setup.sh 
-    # 
-    #echo "app is $app"
-    allow $app
-    #
+    #echo "#$app"
+    allow_baseame $app
     eval "$FUNC" 
 )
