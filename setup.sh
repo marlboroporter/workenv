@@ -1,21 +1,20 @@
 export PATH=~/.w/app/bin:$PATH
+rm ~/.customrc
 
-RC=~/.customrc
-rm  -f $RC
-
-info(){ echo "
-#------> $@ -------
-" 
-}
+#info(){ echo "
+##------> $@ -------
+#" 
+#}
 
 
 add() { 
     #alias setup='app/bin/setup'
-    title=$(info $1) 
+    #title=$(info $1) 
     echo "$title"
     setup install $1 
     setup config $1
-    E="$(setup setenv $1)"
+    setup setenv $1
+    #E="$(setup setenv $1)"
     #echo "$title">>$RC
     #echo "$E">>$RC 
     #eval "$E"    # better quote  

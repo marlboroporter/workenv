@@ -1,0 +1,6 @@
+# setup.sh.brew
+wenv=""
+install(){ winfo; brew install $app; } 
+reinstall(){ winfo; brew reinstall $app; } 
+uninstall(){ winfo; brew uninstall $option $app; } 
+config(){ winfo; }

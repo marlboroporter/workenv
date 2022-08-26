@@ -25,6 +25,9 @@ call plug#begin('~/.vim/plugged')
 
   Plug 'neoclide/coc.nvim', {'branch': 'master'}
   Plug 'scalameta/coc-metals', {'do': 'yarn install --frozen-lockfile'}
+  "
+  " https://github.com/aperezdc/vim-template
+  Plug 'aperezdc/vim-template'
 
 call plug#end()
 

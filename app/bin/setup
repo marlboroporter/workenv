@@ -10,7 +10,12 @@ exit 1
 }
 [[ $# -lt 1 ]] && usage 
 FUNC=$1
-default_app_dir=$(echo $PWD|sed -e "s:${HOME}/.w/app::g" -e "s:^/::g")
+
+default_app_dir=$(echo $PWD|sed \
+-e "s:${HOME}/.w/app::g" \
+-e "s:${HOME}/.w::g"  \
+-e "s:^/::g")
+
 app_dir=${2:-$default_app_dir}
 echo "app_dir=$app_dir"
 DIR=~/.w/app/$app_dir 
@@ -34,21 +39,22 @@ allow_nested $app_dir
 allow_baseame(){
   for d in $no_app 
   do  
-    #echo "\"$app\" =~ \"$d\""
-    if [[ "$app" =~ "$d" ]]; then
-        echo "$(basename $0) not allowed for app: $app" &&  usage 
+    #echo "\"$wapp\" =~ \"$d\""
+    if [[ "$wapp" =~ "$d" ]]; then
+        echo "$(basename $0) not allowed for app: $wapp" &&  usage 
     fi
   done  
 }
 
 ( 
     #
+    echo $DIR
     cd $DIR  
     # has to be sourced after enter the dir 
     source ~/.w/app/lib/setup.sh 
-    #echo "#$app"
+    #echo "#$wapp"
     [ -f ./setup.sh ] && source ./setup.sh 
-    #echo "#$app"
-    allow_baseame $app
+    #echo "#$wapp"
+    allow_baseame $wapp
     eval "$FUNC" 
 )

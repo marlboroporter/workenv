@@ -1,17 +1,12 @@
 install(){
+    echo "$info"
     xcode-select --install
 }
-config(){
-    : #noop
-}
-setenv(){
-    : #noop
-}
-
 reinstall(){ 
-    # this updates
+    echo "$info"
     sudo rm -rf /Library/Developer/CommandLineTools
     xcode-select --install
 }
 uninstall(){
+    echo "$info"
 }

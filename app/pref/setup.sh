@@ -1,15 +1,12 @@
-app=${PWD##*/}
-info=$(cat<<EOF
+myinfo="
 # Manually set $app : 
 # - map modifier key: reset capslock to esc
 # - set keyboard speed to faster 
 # - rename computer
 # - dock & menu auto hide
-EOF
-)
-
+"
 install(){
-    echo "$info"
+    echo "$info$myinfo"
     # apple script to hide screenshot etc icon  on desktop
     defaults write com.apple.finder CreateDesktop -bool false
     # apple script to allow to press key to repeat 

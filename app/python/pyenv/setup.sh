@@ -1,11 +1,11 @@
-wenv=$base_wenv'
+wenv='
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 '
 install(){
     brew install pyenv 
-    eval "$(setenv)"
+    eval "$wenv"
 }
 
 config_nvim(){
@@ -18,13 +18,13 @@ config_nvim(){
 }
 
 config_default_python(){
-    eval "$(setenv)"
+    eval "$wenv"
     pyenv install 3.10.6  
     pyenv global 3.10.6
 }
 
 config(){
-  eval "$(setenv)"
+  eval "$wenv"
   config_default_python
   config_nvim
 }

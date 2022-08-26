@@ -1,7 +1,7 @@
-install(){ :; }
-config(){ :; }
+install(){ echo $info; }
+config(){ echo $info; }
 uninstall(){ :; }
-export wenv="$wenv
+wenv="
 export PATH=~/.w/app/bin:\$PATH    
 "
 
