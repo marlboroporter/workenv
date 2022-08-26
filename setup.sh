@@ -2,65 +2,56 @@ export PATH=~/.w/app/bin:$PATH
 
 RC=~/.customrc
 rm  -f $RC
-info(){ echo '\n#------> '"$@"'-------\n' 
+
+info(){ echo "
+#------> $@ -------
+" 
 }
 
-# $1/setup.sh must define install(),config(),setenv()
 
-add0(){ 
-    title=$(info $@)
-    echo "$title"
-    (cd $1; 
-     source ./setup.sh;    
-     install;
-     config;
-     echo "$title$(setenv)" >>$RC;
-    )
-    # introduce env to current shel immediatelyl
-    source $RC  
-}
-
-# $1/setup.sh does not have to define install(),config(),setenv()
 add() { 
-    title=$(info $@) 
-    (cd $1; setup install; \
-        setup config;\
-        echo "$title$(setup setenv)" >>$RC )
+    #alias setup='app/bin/setup'
+    title=$(info $1) 
+    echo "$title"
+    setup install $1 
+    setup config $1
+    E="$(setup setenv $1)"
+    echo "$title">>$RC
+    echo "$E">>$RC 
+    eval "$E"    # better quote  
 }
 
 install(){
-    
-    # 
-    add0 app/mac/xcode-select  # get basic tools such as curl 
-    add0 app/brew # get pacakge manager
+    #add mac/xcode-select 
+    add brew 
     #
-    add app/sdkman
-    add app/python # using system default python, set python and pip alias
-    add app/python/pyenv
+    add sdkman
+    add python 
+    add python/pyenv
     # 
-    add app/pref 
-    add app/ssh  
-    add app/chrome
-    add app/ohmyzsh
-    add app/node 
-    add app/node/npm 
-    add app/node/yarn
-    add app/yq 
+    add pref 
+    add ssh  
+    add chrome
+    add ohmyzsh
+    add node 
+    add node/npm 
+    add node/yarn
+    add yq 
     #add ansible
-    add app/intellij-idea
-    add app/iterm2    
+    add intellij-idea
+    add iterm2    
 
-    add app/tree
+    add tree
 
 
-    add app/vim/vim
-    add app/vim/nvim
-    add app/vim/ideavim
+    add vim/vim
+    add vim/nvim
+    add vim/ideavim
     
-    add app/ctags
+    add ctags
 
 
-    add app/prof
+    add prof
 }
 
 install

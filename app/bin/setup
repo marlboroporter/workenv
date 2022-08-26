@@ -1,11 +1,26 @@
-#! /usr/bin/env bash
 usage(){ echo "Usage: $(basename $0) f [dir]"; exit 1; }
 [[ $# -lt 1 ]] && usage 
 FUNC=$1
-base=${2:-$(basename $PWD)}  
 DIR=~/.w/app/$2 
-[[ ! $PWD =~ "$HOME/.w/app" ]] &&  echo "Run within ~/.w/app !" && usage  
-[[ "$base" == "bin" ]] &&  echo "Not within ~/.w/app/$base !" && usage  
+[[ ! $PWD =~ "$HOME/.w" ]] &&  echo "Run within ~/.w !" && usage  
+allow(){
+  for d in bin lib 
+  do  
+    if [[ "$d" == "$1" ]]; then
+        echo "Run within $1 !" && exit 1 
+    fi
+  done  
+}
 
-source ~/.w/app/lib/setup.sh 
-( cd $DIR ; [ -f ./setup.sh ] && source ./setup.sh; eval "$FUNC" )
+( 
+    #
+    cd $DIR  
+    # has to be sourced after enter the dir 
+    source ~/.w/app/lib/setup.sh 
+    [ -f ./setup.sh ] && source ./setup.sh 
+    # 
+    #echo "app is $app"
+    allow $app
+    #
+    eval "$FUNC" 
+)
