@@ -10,10 +10,12 @@ exit 1
 }
 [[ $# -lt 1 ]] && usage 
 FUNC=$1
-default_app_dir=$(echo $PWD|sed -e "s:${HOME}/.w/app/::g")
+default_app_dir=$(echo $PWD|sed -e "s:${HOME}/.w/app::g" -e "s:^/::g")
 app_dir=${2:-$default_app_dir}
+echo "app_dir=$app_dir"
 DIR=~/.w/app/$app_dir 
-[[ ! $PWD =~ "$HOME/.w" ]] &&  echo "Run within ~/.w !" && usage  
+[[ ! $PWD =~ "$HOME/.w" ]] &&  echo "Must run within ~/.w !" && usage  
+[[ "$app_dir" == "" ]] &&  echo "Not run at ~/.w/app !" && usage  
 
 # ok with as a/b
 allow_nested(){
