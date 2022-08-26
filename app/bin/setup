@@ -19,7 +19,7 @@ DIR=~/.w/app/$app_dir
 allow_nested(){
   for d in $no_app 
   do  
-    echo  "\"$d\" == \"$app_dir\"" 
+    #echo  "\"$d\" == \"$app_dir\"" 
     if [[ "$d" == "$app_dir" ]]; then
         echo "$(basename $0) not allowed for app: ${no_app[@]}" &&  usage 
     fi
@@ -32,7 +32,7 @@ allow_nested $app_dir
 allow_baseame(){
   for d in $no_app 
   do  
-    echo "\"$app\" =~ \"$d\""
+    #echo "\"$app\" =~ \"$d\""
     if [[ "$app" =~ "$d" ]]; then
         echo "$(basename $0) not allowed for app: $app" &&  usage 
     fi
