@@ -1,14 +1,15 @@
 #! /usr/bin/env bash 
-##! /usr/bin/env zsh
 usage(){ 
-echo "Usage: $(basename $0) [func=info] [dir=.] 
+echo "Usage: $(basename $0) [func=[info | install | setenv | config | pkgmgr ] [dir=.] 
   - use within ~/.w
-  - WPKGMGR=noop|brew change default behavior 
 "
 exit 1 
 }
-[[ ! $PWD =~ "$HOME/.w" ]] && usage 
+[[ ! $PWD =~ "$HOME/.w/app" ]]  && usage 
+#
 FUNC=${1:-info}
+
+# for all individual app
 if [[ "$2" == "" ]]; then
     DIR=$PWD
 else

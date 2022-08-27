@@ -1,5 +1,7 @@
+#! /usr/bin/env bash
 export PATH=~/.w/app/bin:$PATH
 apps=(
+     #bin
      mac/xcode-select 
      brew 
      sdkman
@@ -26,44 +28,50 @@ apps=(
 )
 
 install(){
-    rm  ~/.customrc
+    rm  -f ~/.customrc
     for x in $apps 
     do 
-        setup install $x           
-        setup config $x 
-        setup setenv $x 
+        (cd $PWD/app/$x; 
+        setup install           
+        setup config 
+        setup setenv 
+        )
     done
 }
 
 uninstall(){
-    rm  ~/.customrc
+    rm  -f ~/.customrc
     for x in $apps 
     do 
-        setup $x  uninstall            
+        (cd $PWD/app/$x; setup uninstall )           
     done
 }
 reinstall(){
-    rm  ~/.customrc
+    rm -f  ~/.customrc
     for x in $apps 
     do 
-        setup reinstall $x           
-        setup config $x 
-        setup setenv $x 
+        (cd $PWD/app/$x; 
+        setup reinstall            
+        setup config  
+        setup setenv  
+        )
     done
 }
 
 setenv(){
-    rm  ~/.customrc
+    rm -f  ~/.customrc
     for x in $apps 
     do 
-        setup setenv $x           
+        (cd $PWD/app/$x; setup setenv $x  )
     done
 }
 
 pkgmgr(){
     for x in $apps 
     do 
+        (cd $PWD/app/$x; 
         setup pkgmgr $x           
+        )
     done
 }
 
@@ -71,7 +79,7 @@ info(){
     echo "Utility to set working env"
     for x in $apps 
     do 
-        setup info $x            
+        (cd $PWD/app/$x; setup info)           
     done
 }
 
