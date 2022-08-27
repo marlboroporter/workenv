@@ -1,60 +1,25 @@
-# ------- edit here -------------------------------------------
-no_app=("lib" "python" "mac/xcode-select" )
-# -------------------------------------------------------------
 usage(){ 
-echo "Usage: $(basename $0) f [app_dir=.]
+echo "Usage: $(basename $0) f [dir=.]
   - use within ~/.w
-  - some dir not allowed
-" 
+  - WPKGMGR=noop|brew change default behavior 
+"
 exit 1 
 }
-[[ $# -lt 1 ]] && usage 
+if ( [[ ! $PWD =~ "$HOME/.w" ]]  || [[ $# -lt 1 ]] ); then
+ usage 
+fi
 FUNC=$1
-
-default_app_dir=$(echo $PWD|sed \
--e "s:${HOME}/.w/app::g" \
--e "s:${HOME}/.w::g"  \
--e "s:^/::g")
-
-app_dir=${2:-$default_app_dir}
-echo "app_dir=$app_dir"
-DIR=~/.w/app/$app_dir 
-[[ ! $PWD =~ "$HOME/.w" ]] &&  echo "Must run within ~/.w !" && usage  
-[[ "$app_dir" == "" ]] &&  echo "Not run at ~/.w/app !" && usage  
-
-# ok with as a/b
-allow_nested(){
-  for d in $no_app 
-  do  
-    #echo  "\"$d\" == \"$app_dir\"" 
-    if [[ "$d" == "$app_dir" ]]; then
-        echo "$(basename $0) not allowed for app: ${no_app[@]}" &&  usage 
-    fi
-  done  
-}
-
-allow_nested $app_dir
-
-# only checkk b of a/b
-allow_baseame(){
-  for d in $no_app 
-  do  
-    #echo "\"$wapp\" =~ \"$d\""
-    if [[ "$wapp" =~ "$d" ]]; then
-        echo "$(basename $0) not allowed for app: $wapp" &&  usage 
-    fi
-  done  
-}
-
+D=$HOME/.w/app/$2 
+if [[ "$2" == "" ]]; then
+    DIR=$PWD
+elif [[ -d  $D ]]; then
+    DIR=$D 
+else
+    usage    
+fi
 ( 
-    #
-    echo $DIR
     cd $DIR  
-    # has to be sourced after enter the dir 
-    source ~/.w/app/lib/setup.sh 
-    #echo "#$wapp"
-    [ -f ./setup.sh ] && source ./setup.sh 
-    #echo "#$wapp"
-    allow_baseame $wapp
+    source ~/.w/app/lib/setup.sh  
+    [[ -f ./setup.sh ]] && source ./setup.sh 
     eval "$FUNC" 
 )

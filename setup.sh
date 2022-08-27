@@ -1,12 +1,5 @@
 export PATH=~/.w/app/bin:$PATH
 rm ~/.customrc
-
-#info(){ echo "
-##------> $@ -------
-#" 
-#}
-
-
 add() { 
     #alias setup='app/bin/setup'
     #title=$(info $1) 
