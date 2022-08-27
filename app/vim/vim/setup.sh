@@ -1,3 +1,4 @@
+pkgmgr=brew
 config(){
     # prerequisites:  node yarn
     if [ -L ~/.vim ]; then

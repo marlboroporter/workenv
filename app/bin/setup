@@ -1,25 +1,43 @@
+#! /usr/bin/env bash 
+##! /usr/bin/env zsh
 usage(){ 
-echo "Usage: $(basename $0) f [dir=.]
+echo "Usage: $(basename $0) [func=info] [dir=.] 
   - use within ~/.w
   - WPKGMGR=noop|brew change default behavior 
 "
 exit 1 
 }
-if ( [[ ! $PWD =~ "$HOME/.w" ]]  || [[ $# -lt 1 ]] ); then
- usage 
-fi
-FUNC=$1
-D=$HOME/.w/app/$2 
+[[ ! $PWD =~ "$HOME/.w" ]] && usage 
+FUNC=${1:-info}
 if [[ "$2" == "" ]]; then
     DIR=$PWD
-elif [[ -d  $D ]]; then
-    DIR=$D 
 else
-    usage    
+    DIR=$HOME/.w/app/$2
 fi
 ( 
     cd $DIR  
-    source ~/.w/app/lib/setup.sh  
+    source ~/.w/app/lib/basesetup.sh  
     [[ -f ./setup.sh ]] && source ./setup.sh 
-    eval "$FUNC" 
+    #echo "$wapp $pkgmgr"
+    #eval "$FUNC" 
+    case $FUNC in 
+        install) 
+            ;& 
+        uninstall) 
+            ;&
+        reinstall) 
+            ;&
+        config) 
+            ;& 
+        info)  
+            ;&
+        pkgmgr)  
+            f="call_$FUNC"
+            $f
+            ;;  
+        *) 
+            winfo "$FUNC"
+            $FUNC    
+            ;;  
+    esac
 )

@@ -1,3 +1,4 @@
+pkgmgr=noop
 myinfo="
 # Manually set $app : 
 # - map modifier key: reset capslock to esc

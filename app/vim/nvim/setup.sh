@@ -1,3 +1,4 @@
+pkgmgr=brew
 config(){
     # config reference config git
     [ ! -d ~/dev/nvim-config ] && mkdir -p ~/dev && \

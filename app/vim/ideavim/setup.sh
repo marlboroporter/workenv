@@ -1,9 +1,4 @@
-install(){
-   echo "included in intellij-idea" 
-}
-
-alias reinstall='install'
-
+pkgmgr=noop
 config(){
     #
     ln -sf ~/.w/vim/ideavim/ideavimrc ~/.ideavimrc

@@ -1,1 +1,1 @@
-install(){ :;  }
+pkgmgr=noop

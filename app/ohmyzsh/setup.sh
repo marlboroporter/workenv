@@ -1,3 +1,4 @@
+pkgmgr=noop
 install(){
 echo "$info"
 [ ! -d $ZSH ] && sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

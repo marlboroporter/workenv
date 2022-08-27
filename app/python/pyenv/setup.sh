@@ -1,12 +1,9 @@
+pkgmgr=brew
 wenv='
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 '
-install(){
-    brew install pyenv 
-    eval "$wenv"
-}
 
 config_nvim(){
   pip install pynvim # install to current python verion dir
@@ -28,5 +25,4 @@ config(){
   config_default_python
   config_nvim
 }
-
 

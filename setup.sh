@@ -1,49 +1,78 @@
 export PATH=~/.w/app/bin:$PATH
-rm ~/.customrc
-add() { 
-    #alias setup='app/bin/setup'
-    #title=$(info $1) 
-    echo "$title"
-    setup install $1 
-    setup config $1
-    setup setenv $1
-    #E="$(setup setenv $1)"
-    #echo "$title">>$RC
-    #echo "$E">>$RC 
-    #eval "$E"    # better quote  
-}
+apps=(
+     mac/xcode-select 
+     brew 
+     sdkman
+     python 
+     python/pyenv
+     pref 
+     ssh  
+     chrome
+     ohmyzsh
+     node 
+     node/npm 
+     node/yarn
+     yq 
+     # ansible
+     intellij-idea
+     intellij-idea-ce
+     iterm2    
+     tree
+     vim/vim
+     vim/nvim
+     vim/ideavim
+     ctags
+     prof
+)
 
 install(){
-    #add mac/xcode-select 
-    add brew 
-    #
-    add sdkman
-    add python 
-    add python/pyenv
-    # 
-    add pref 
-    add ssh  
-    add chrome
-    add ohmyzsh
-    add node 
-    add node/npm 
-    add node/yarn
-    add yq 
-    #add ansible
-    add intellij-idea
-    add intellij-idea-ce
-    add iterm2    
-
-    add tree
-
-
-    add vim/vim
-    add vim/nvim
-    add vim/ideavim
-    
-    add ctags
-
-
-    add prof
+    rm  ~/.customrc
+    for x in $apps 
+    do 
+        setup install $x           
+        setup config $x 
+        setup setenv $x 
+    done
 }
-#install
+
+uninstall(){
+    rm  ~/.customrc
+    for x in $apps 
+    do 
+        setup $x  uninstall            
+    done
+}
+reinstall(){
+    rm  ~/.customrc
+    for x in $apps 
+    do 
+        setup reinstall $x           
+        setup config $x 
+        setup setenv $x 
+    done
+}
+
+setenv(){
+    rm  ~/.customrc
+    for x in $apps 
+    do 
+        setup setenv $x           
+    done
+}
+
+pkgmgr(){
+    for x in $apps 
+    do 
+        setup pkgmgr $x           
+    done
+}
+
+info(){
+    echo "Utility to set working env"
+    for x in $apps 
+    do 
+        setup info $x            
+    done
+}
+
+
