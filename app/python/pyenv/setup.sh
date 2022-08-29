@@ -25,4 +25,6 @@ config(){
   config_default_python
   config_nvim
 }
-
+info(){
+    echo "# pyenv global 3.10.6"
+}

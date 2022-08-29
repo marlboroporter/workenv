@@ -1,7 +1,7 @@
 #! /usr/bin/env bash 
 usage(){ 
 echo "Usage: $(basename $0) [func=[info | install | setenv | config | pkgmgr ] [dir=.] 
-  - use within ~/.w
+  - use within ~/.w/app
 "
 exit 1 
 }

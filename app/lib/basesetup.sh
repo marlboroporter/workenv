@@ -30,14 +30,14 @@ call_uninstall(){ winfo "uninstall"; uninstall; }
 call_reinstall(){ winfo "reinstall"; reinstall; } 
 call_config(){ winfo "config"; config; }
 call_pkgmgr(){ winfo $pkgmgr; pkgmgr; }
-call_info(){ winfo "info"; info; }
+call_info(){ winfo "info"; echo "$wenv"; info; }
 # default ops
 install(){ $"${pkgmgr}_install"; } 
 uninstall(){ f=${pkgmgr}_uninstall; $f; } 
 reinstall(){ f="${pkgmgr}_reinstall"; $f; } 
 config(){ :; }
 pkgmgr(){ :; }
-info(){ echo "$wenv"; }
+info(){ :; }
 
 
 # env 

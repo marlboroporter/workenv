@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 export PATH=~/.w/app/bin:$PATH
 apps=(
-     #bin
+     bin
      mac/xcode-select 
      brew 
      sdkman
