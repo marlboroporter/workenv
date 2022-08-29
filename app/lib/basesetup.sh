@@ -1,7 +1,8 @@
 wapp=${PWD##/*/}
 
 # msg
-winfo="#------ ${wapp} ------"
+winfo="
+#------ ${wapp} ------"
 # concatenate
 winfo(){ echo "$winfo $1"; } 
 

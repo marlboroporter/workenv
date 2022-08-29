@@ -76,7 +76,6 @@ pkgmgr(){
 }
 
 info(){
-    echo "Utility to set working env"
     for x in $apps 
     do 
         (cd $PWD/app/$x; setup info)           
