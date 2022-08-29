@@ -1,3 +1,4 @@
+#! /usr/bin/env zsh
 wapp=${PWD##/*/}
 
 # msg
@@ -33,8 +34,8 @@ call_config(){ winfo "config"; config; }
 call_pkgmgr(){ winfo $pkgmgr; pkgmgr; }
 call_info(){ winfo "info"; echo "$wenv"; info; }
 # default ops
-install(){ $"${pkgmgr}_install"; } 
-uninstall(){ f=${pkgmgr}_uninstall; $f; } 
+install(){ f="${pkgmgr}_install"; $f; } 
+uninstall(){ f="${pkgmgr}_uninstall"; $f; } 
 reinstall(){ f="${pkgmgr}_reinstall"; $f; } 
 config(){ :; }
 pkgmgr(){ :; }
@@ -42,6 +43,7 @@ info(){ :; }
 
 
 # env 
-wrc=~/.customrc
+#wrc=~/.customrc # define from caller 
+#echo $wrc
 wenv="" # to be define by child
-setenv(){ echo "$winfo">>$wrc; echo "$wenv">>$wrc; eval "$wenv";  }
+setenv(){  echo "$winfo">>$wrc; echo "$wenv">>$wrc; eval "$wenv";  }

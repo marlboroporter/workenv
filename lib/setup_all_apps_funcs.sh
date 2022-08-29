@@ -1,35 +1,38 @@
-#! /usr/bin/env bash
-export PATH=~/.w/bin:$PATH
-RC=~/.wenvrc
-apps=(
-     bin
-     mac/xcode-select 
-     brew 
-     sdkman
-     python 
-     python/pyenv
-     pref 
-     ssh  
-     chrome
-     ohmyzsh
-     node 
-     node/npm 
-     node/yarn
-     yq 
-     # ansible
-     intellij-idea
-     intellij-idea-ce
-     iterm2    
-     tree
-     vim/vim
-     vim/nvim
-     vim/ideavim
-     ctags
-     prof
-)
+##! /usr/bin/env bash
+#export PATH=~/.w/bin:$PATH
+#RC=~/.wenvrc
+#apps=(
+#     bin
+#     mac/xcode-select 
+#     brew 
+#     sdkman
+#     python 
+#     python/pyenv
+#     pref 
+#     ssh  
+#     chrome
+#     ohmyzsh
+#     node 
+#     node/npm 
+#     node/yarn
+#     yq 
+#     # ansible
+#     intellij-idea
+#     intellij-idea-ce
+#     iterm2    
+#     tree
+#     vim/vim
+#     vim/nvim
+#     vim/ideavim
+#     ctags
+#     prof
+#)
 
+init_rc(){
+    echo 'export PATH=~/.w/bin:\$PATH'>>$RC
+}
 install(){
-    rm  -f ~/.customrc
+    init_rc
     for x in $apps 
     do 
         (cd $PWD/app/$x; 
@@ -41,14 +44,14 @@ install(){
 }
 
 uninstall(){
-    rm  -f ~/.customrc
     for x in $apps 
     do 
         (cd $PWD/app/$x; setup uninstall )           
     done
+    init_rc
 }
 reinstall(){
-    rm -f  ~/.customrc
+    init_rc
     for x in $apps 
     do 
         (cd $PWD/app/$x; 
@@ -60,7 +63,7 @@ reinstall(){
 }
 
 setenv(){
-    echo 'export PATH=~/.w/bin:\$PATH'>>$RC
+    init_rc
     for x in $apps 
     do 
         (cd $PWD/app/$x; setup setenv $x  )

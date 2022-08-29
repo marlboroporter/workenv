@@ -1,0 +1,13 @@
+#! /usr/bin/env zsh
+. ~/.w/lib/envframework.sh
+export ENVROOT=$(get_envroot "$PWD")
+#echo "ENVROOT=$ENVROOT"
+
+if [[ "$ENVROOT" =~ ".w" ]]; then 
+    export wrc=~/.wenvrc 
+elif [[ "$ENVROOT" =~ ".p" ]]; then 
+    export wrc=~/.penvrc 
+fi
+
+setup_one "$@"
+
