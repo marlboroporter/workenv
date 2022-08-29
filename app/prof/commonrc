@@ -22,7 +22,9 @@ set -o vi
 
 
 
-[ -f ~/.customrc ] && . ~/.customrc    
+#[ -f ~/.customrc ] && . ~/.customrc    
+[ -f ~/.wenvrc ] && . ~/.wenvrc    
+[ -f ~/.penvrc ] && . ~/.penvrc    
 
 
 

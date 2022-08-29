@@ -1,0 +1,53 @@
+#! /usr/bin/env zsh
+export PATH=~/.w/bin:$PATH
+. ~/.w/lib/env_utils.sh
+. ~/.w/lib/setup_all_apps_funcs.sh
+#echo $WENV
+#echo $WRC
+
+apps=(
+     mac/xcode-select 
+     brew 
+     sdkman
+     python 
+     python/pyenv
+     pref 
+     ssh  
+     chrome
+     ohmyzsh
+     node 
+     node/npm 
+     node/yarn
+     yq 
+     # ansible
+     intellij-idea
+     intellij-idea-ce
+     iterm2    
+     tree
+     vim/vim
+     vim/nvim
+     vim/ideavim
+     ctags
+     prof
+)
+
+case $1 in
+    install)
+        install ;;
+    uninstall)
+        uninstall ;;
+    reinstall)
+        reinstall ;;
+    config)
+        config ;;
+    setenv)
+        setenv ;;
+    info)
+        info ;;
+    *)
+        echo "not supported op!"
+        ;;
+esac
+
+
+

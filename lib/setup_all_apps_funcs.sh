@@ -1,41 +1,13 @@
-##! /usr/bin/env bash
-#export PATH=~/.w/bin:$PATH
-#RC=~/.wenvrc
-#apps=(
-#     bin
-#     mac/xcode-select 
-#     brew 
-#     sdkman
-#     python 
-#     python/pyenv
-#     pref 
-#     ssh  
-#     chrome
-#     ohmyzsh
-#     node 
-#     node/npm 
-#     node/yarn
-#     yq 
-#     # ansible
-#     intellij-idea
-#     intellij-idea-ce
-#     iterm2    
-#     tree
-#     vim/vim
-#     vim/nvim
-#     vim/ideavim
-#     ctags
-#     prof
-#)
+#! /usr/bin/env zsh 
 
 init_rc(){
-    echo 'export PATH=~/.w/bin:\$PATH'>>$RC
+    echo 'export PATH=~/.w/bin:\$PATH'>>$WRC
 }
 install(){
     init_rc
     for x in $apps 
     do 
-        (cd $PWD/app/$x; 
+        (cd $ENVROOT/app/$x; 
         setup install           
         setup config 
         setup setenv 
@@ -46,7 +18,7 @@ install(){
 uninstall(){
     for x in $apps 
     do 
-        (cd $PWD/app/$x; setup uninstall )           
+        (cd $ENVROOT/app/$x; setup uninstall )           
     done
     init_rc
 }
@@ -54,7 +26,7 @@ reinstall(){
     init_rc
     for x in $apps 
     do 
-        (cd $PWD/app/$x; 
+        (cd $ENVROOT/app/$x; 
         setup reinstall            
         setup config  
         setup setenv  
@@ -66,14 +38,14 @@ setenv(){
     init_rc
     for x in $apps 
     do 
-        (cd $PWD/app/$x; setup setenv $x  )
+        (cd $ENVROOT/app/$x; setup setenv $x  )
     done
 }
 
 pkgmgr(){
     for x in $apps 
     do 
-        (cd $PWD/app/$x; 
+        (cd $ENVROOT/app/$x; 
         setup pkgmgr $x           
         )
     done
@@ -82,7 +54,7 @@ pkgmgr(){
 info(){
     for x in $apps 
     do 
-        (cd $PWD/app/$x; setup info)           
+        (cd $ENVROOT/app/$x; setup info)           
     done
 }
 

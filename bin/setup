@@ -1,0 +1,9 @@
+#! /usr/bin/env zsh
+. ~/.w/lib/env_utils.sh
+. ~/.w/lib/envframework.sh
+
+#echo $WENV
+#echo $WRC
+
+setup_one "$@"
+
