@@ -40,21 +40,6 @@ reinstall(){ f="${pkgmgr}_reinstall"; $f; }
 config(){ :; }
 pkgmgr(){ :; }
 info(){ :; }
-
-
-# env 
-##WRC=~/.customrc # define from caller 
-##echo $WRC
-#case $ENVROOT in
-#    "~/.w")
-#        WRC=~/.wenvrc
-#        ;;
-#    "~/.p")
-#        WRC=~/.penvrc
-#        ;;
-#    *)  
-#        ;;
-#esac 
-#
+##
 wenv="" # to be define by child
 setenv(){  echo "$winfo">>$WRC; echo "$wenv">>$WRC; eval "$wenv";  }

@@ -1,4 +1,5 @@
-#! /usr/bin/env zsh 
+
+. ${ENVROOT}/etc/config.sh
 
 init_rc(){
     echo 'export PATH=~/.w/bin:$PATH'>$WRC

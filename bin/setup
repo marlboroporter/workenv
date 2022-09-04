@@ -1,9 +1,9 @@
 #! /usr/bin/env zsh
-. ~/.w/lib/env_utils.sh
 . ~/.w/lib/envframework.sh
-
-#echo $WENV
-#echo $WRC
-
-setup_one "$@"
+if [[ "$1" == "-a" ]] || [[ "$1" == "-all" ]]; then 
+    shift
+    setup_all "$@"
+else
+    setup_one "$@"
+fi
 
