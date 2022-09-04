@@ -29,7 +29,6 @@ apps=(
 )
 
 install(){
-    rm  -f ~/.customrc
     for x in $apps 
     do 
         (cd $PWD/app/$x; 
@@ -41,14 +40,12 @@ install(){
 }
 
 uninstall(){
-    rm  -f ~/.customrc
     for x in $apps 
     do 
         (cd $PWD/app/$x; setup uninstall )           
     done
 }
 reinstall(){
-    rm -f  ~/.customrc
     for x in $apps 
     do 
         (cd $PWD/app/$x; 

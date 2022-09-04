@@ -1,7 +1,7 @@
 #! /usr/bin/env zsh 
 
 init_rc(){
-    echo 'export PATH=~/.w/bin:\$PATH'>>$WRC
+    echo 'export PATH=~/.w/bin:$PATH'>$WRC
 }
 install(){
     init_rc
