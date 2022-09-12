@@ -1,8 +1,3 @@
-" https://www.freecodecamp.org/news/vimrc-configuration-guide-customize-your-vim-editor/
-"source ~/.vim/rc/base-set.vim
-"source ~/.vim/rc/plugins-load.vim
-"source ~/.vim/rc/plugins-config.vim
-"source ~/.vim/rc/base-config.vim
 runtime rc/base-set.vim
 runtime rc/plugins-load.vim
 runtime rc/plugins-config.vim
