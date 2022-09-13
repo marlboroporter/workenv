@@ -18,8 +18,18 @@ vimrc_with_coc_metals(){
     (cd ~//.vim/plugged/coc-metals && yarn)
 }
 
+vimrc_with_vimspector(){
+    cleanup
+    ln -sf ~/.w/app/vim/vim/rc ~/.vim/rc 
+    ln -sf ~/.w/app/vim/vim/vimrc_with_vimspector.vim ~/.vim/vimrc 
+    vim -c " :PlugInstall | :qall! " 
+    vim -c " :VimspectorInstall | :qall! " 
+}
+
+
 config() {
-   vimrc_with_coc_metals 
+   #vimrc_with_coc_metals 
+   vimrc_with_vimspector
 }
 
 
