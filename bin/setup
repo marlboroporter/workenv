@@ -1,9 +1,11 @@
 #! /usr/bin/env zsh
 . ~/.w/lib/envframework.sh
 if [[ "$1" == "-a" ]] || [[ "$1" == "-all" ]]; then 
+    [[ ! "$PWD" =~ "$ENVROOT"$ ]] && usage
     shift
     setup_all "$@"
 else
+    [[ ! "$PWD" =~ "$ENVROOT/app/*/" ]] && usage
     setup_one "$@"
 fi
 

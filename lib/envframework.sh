@@ -15,13 +15,13 @@ get_envroot(){
     then
         r="$HOME/.p"      
     else 
-        setup_one_usage 
+        usage 
     fi
     echo "$r"
 }
 
 setup_one() {
-    [[ ! "$PWD" =~ "$ENVROOT/app" ]]  && setup_one_usage 
+    [[ ! "$PWD" =~ "$ENVROOT/app" ]]  && usage 
     FUNC=${1:-info}
     # for all individual app
     if [[ "$2" == "" ]]; then
@@ -74,24 +74,21 @@ setup_all(){
             setenv ;;
         info)
             info ;;
-        *)
+        pkgmgr)
+            pkgmgr ;;
+         *)
             echo "not supported op!"
-            setup_all_usage
+            usage
             ;;
     esac
 )
 }
 
-setup_one_usage(){ 
-echo "Usage: setup [func=[info | install | reinstall |uninstall | setenv | config | pkgmgr ] [dir=.] 
-  - use within [.p|.w]/app
-"
-exit 1 
-}
 
-setup_all_usage(){ 
-echo "Usage: setup [-a |--all] [info | install | uninstall| reinstall|  setenv | config]
-  - [-a|--all] works use within [.p |.w]
+usage(){ 
+echo "Usage: setup [-a |--all] [info | install | uninstall| reinstall|  setenv | config |pkgmgr ]
+  *  cd ~/[.p|.w]/app/*/; setup action
+  *  cd ~/[.p|.w]; setup -a action
 "
 exit 1 
 }

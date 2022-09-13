@@ -39,7 +39,7 @@ setenv(){
     init_rc
     for x in $apps 
     do 
-        (cd $ENVROOT/app/$x; setup setenv $x  )
+        (cd $ENVROOT/app/$x; setup setenv  )
     done
 }
 
@@ -47,7 +47,7 @@ pkgmgr(){
     for x in $apps 
     do 
         (cd $ENVROOT/app/$x; 
-        setup pkgmgr $x           
+        setup pkgmgr           
         )
     done
 }
