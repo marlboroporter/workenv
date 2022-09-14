@@ -26,10 +26,18 @@ vimrc_with_vimspector(){
     vim -c " :VimspectorInstall | :qall! " 
 }
 
+cpp(){
+    cleanup
+    ln -sf ~/.w/app/vim/vim/rc ~/.vim/rc 
+    ln -sf ~/.w/app/vim/vim/cpp_vimrc.vim  ~/.vim/vimrc 
+    vim -c " :PlugInstall | :qall! " 
+    vim -c " :VimspectorInstall | :qall! " 
+}
 
 config() {
    #vimrc_with_coc_metals 
-   vimrc_with_vimspector
+   #vimrc_with_vimspector
+   cpp
 }
 
 

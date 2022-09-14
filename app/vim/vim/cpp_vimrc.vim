@@ -30,7 +30,9 @@ call plug#begin('~/.vim/plugged')
 
   "https://github.com/puremourning/vimspector#quick-start
   Plug 'puremourning/vimspector'
-
+ " Plug 'puremourning/vimspector' , {
+ "     \ 'do': 'python3 install_gadget.py --enable-vscode-cpptools'
+ "     \ }
 
 call plug#end()
 
@@ -40,7 +42,15 @@ call plug#end()
 runtime rc/nerdtree-config.vim 
 runtime rc/iamcco.markdown-preview.cfg.vim
 
+" https://idie.ru/posts/vim-modern-cpp/
 runtime rc/vimspector-config.vim
+runtime rc/cpp-config.vim
+
+" enable Man and K
+runtime ftplugin/man.vim
+set keywordprg=:Man
+
+
 
 " }}}
 
