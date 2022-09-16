@@ -6,7 +6,7 @@ cleanup() {
     else
         rm -rf ~/.vim
     fi
-    (mkdir -p  ~/.vim  && cd ~/.vim; mkdir -p autoload plugged )
+    (mkdir -p  ~/.vim  && cd ~/.vim; mkdir -p autoload plugged after/ftplugin doc )
 }
 
 vimrc_with_coc_metals(){
@@ -34,10 +34,27 @@ cpp(){
     vim -c " :VimspectorInstall | :qall! " 
 }
 
+vimrc_cpp_gist(){
+    # for OmniCppComplete
+    cleanup
+    (
+        cd ~/dev; 
+        [[ ! -d OmniCppComplete ]] && git clone https://github.com/vim-scripts/OmniCppComplete.git
+        cp -r OmniCppComplete/after/ftplugin/* ~/.vim/after/ftplugin
+        cp -r OmniCppComplete/autoload/*  ~/.vim/autoload
+        cp -r OmniCppComplete/doc/*  ~/.vim/doc
+    )
+    ln -sf ~/.w/app/vim/vim/vimrc_cpp_gist.vim  ~/.vim/vimrc 
+    #vim -c " :PlugInstall | :qall! " 
+}
+
+
+
 config() {
    #vimrc_with_coc_metals 
    #vimrc_with_vimspector
-   cpp
+   #cpp
+   vimrc_cpp_gist
 }
 
 
