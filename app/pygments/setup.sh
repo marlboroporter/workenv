@@ -1,6 +1,7 @@
 pkgmgr=pip
-wcheatsheet=" 
-$(which pygmentize)
+wcheatsheet="
+*  generic syntax highlighter written in Python
 ""
-hi
+* $(which pygmentize)
+""
 "
