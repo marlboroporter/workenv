@@ -1,6 +1,6 @@
 #! /usr/bin/env zsh
-#---------------------------------------------------------
 wapp=${PWD##/*/}
+
 # msg
 winfo="
 #------ ${wapp} ------"
@@ -18,16 +18,6 @@ brew_install()  { brewenv;  brew install $wapp; }
 brew_uninstall(){ brewenv;  brew uninstall $wapp; }
 brew_reinstall(){ brewenv;  brew install -f $wapp; }
 
-## pip 
-pipenv(){
-    # current used global pyenv setting
-}
-pip_install(){ pipenv; pip install $wapp; }
-pip_uninstall(){ pipenv; pip unintall $wapp; }
-pip_reinstall(){ pipenv; echo " pip has no reinstall!" }
-
-
-
 ## noop 
 noop_install(){ echo "no op!"; }
 noop_reinstall(){ echo "no op!"; }
@@ -43,7 +33,6 @@ call_reinstall(){ winfo "reinstall"; reinstall; }
 call_config(){ winfo "config"; config; }
 call_pkgmgr(){ winfo $pkgmgr; pkgmgr; }
 call_info(){ winfo "info"; echo "$wenv"; info; }
-
 # default ops
 install(){ f="${pkgmgr}_install"; $f; } 
 uninstall(){ f="${pkgmgr}_uninstall"; $f; } 
