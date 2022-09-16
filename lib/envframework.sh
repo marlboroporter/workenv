@@ -1,3 +1,4 @@
+#! /usr/bin/env zsh
 get_env(){
     envroot=$1 
     if [[ "$envroot" =~ ".w" ]]; then 
@@ -31,13 +32,13 @@ setup_one() {
     fi
     ( 
         cd $DIR  
-        source ~/.w/lib/setup_one_app_funcs_base.sh  # point to .w only 
+        source ~/.w/lib/single_app.sh  # point to .w only 
         [[ -f ./setup.sh ]] && source ./setup.sh 
         #echo "$wapp $pkgmgr"
         #eval "$FUNC" 
         case $FUNC in 
-            install) 
-                ;& 
+            install)
+                ;&
             uninstall) 
                 ;&
             reinstall) 
@@ -60,7 +61,7 @@ setup_one() {
 
 setup_all(){
 (
-    source ~/.w/lib/setup_all_apps_funcs.sh
+    source ~/.w/lib/all_app.sh
     case $1 in
         install)
             install ;;
