@@ -2,7 +2,7 @@
 wapp=${PWD##/*/}
 # msg
 winfo="
-#------ ${wapp} ------"
+# ------ ${wapp} --"
 # concatenate
 winfo(){ echo "$winfo $1"; } 
 
@@ -42,6 +42,7 @@ call_reinstall(){ winfo "reinstall"; reinstall; }
 call_config(){ winfo "config"; config; }
 call_pkgmgr(){ winfo $pkgmgr; pkgmgr; }
 call_info(){ winfo "info"; echo "$wenv"; info; }
+call_cheatsheet(){ winfo "cheetsheet"; echo "$wcheatsheet"; }
 
 # default ops
 install(){ f="${pkgmgr}_install"; $f; } 
@@ -50,6 +51,8 @@ reinstall(){ f="${pkgmgr}_reinstall"; $f; }
 config(){ :; }
 pkgmgr(){ :; }
 info(){ :; }
+## variable to be overrided by child
+wenv="" 
+wcheatsheet=""
 ##
-wenv="" # to be define by child
 setenv(){  echo "$winfo">>$WRC; echo "$wenv">>$WRC; eval "$wenv";  }

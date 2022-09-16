@@ -25,6 +25,7 @@ dev=(
      vim/nvim
      vim/ideavim
      ctags
+     pygments
 )
 
 apps=(${platform[@]} ${dev[@]})

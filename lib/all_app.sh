@@ -1,5 +1,5 @@
-
 . ${ENVROOT}/etc/config.sh
+W_APP_EXE=app    
 
 init_rc(){
     echo 'export PATH=~/.w/bin:$PATH'>$WRC
@@ -9,9 +9,9 @@ install(){
     for x in $apps 
     do 
         (cd $ENVROOT/app/$x; 
-        setup install           
-        setup config 
-        setup setenv 
+        $W_APP_EXE install           
+        $W_APP_EXE config 
+        $W_APP_EXE setenv 
         )
     done
 }
@@ -19,7 +19,7 @@ install(){
 uninstall(){
     for x in $apps 
     do 
-        (cd $ENVROOT/app/$x; setup uninstall )           
+        (cd $ENVROOT/app/$x; $W_APP_EXE uninstall )           
     done
     init_rc
 }
@@ -28,9 +28,9 @@ reinstall(){
     for x in $apps 
     do 
         (cd $ENVROOT/app/$x; 
-        setup reinstall            
-        setup config  
-        setup setenv  
+        $W_APP_EXE reinstall            
+        $W_APP_EXE config  
+        $W_APP_EXE setenv  
         )
     done
 }
@@ -39,7 +39,7 @@ setenv(){
     init_rc
     for x in $apps 
     do 
-        (cd $ENVROOT/app/$x; setup setenv  )
+        (cd $ENVROOT/app/$x; $W_APP_EXE setenv  )
     done
 }
 
@@ -47,7 +47,7 @@ pkgmgr(){
     for x in $apps 
     do 
         (cd $ENVROOT/app/$x; 
-        setup pkgmgr           
+        $W_APP_EXE pkgmgr           
         )
     done
 }
@@ -55,7 +55,14 @@ pkgmgr(){
 info(){
     for x in $apps 
     do 
-        (cd $ENVROOT/app/$x; setup info)           
+        (cd $ENVROOT/app/$x; $W_APP_EXE info)           
+    done
+}
+
+cheatsheet(){
+    for x in $apps 
+    do 
+        (cd $ENVROOT/app/$x; $W_APP_EXE cheatsheet)           
     done
 }
 

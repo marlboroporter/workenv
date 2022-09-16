@@ -47,7 +47,9 @@ setup_one() {
                 ;& 
             info)  
                 ;&
-            pkgmgr)  
+            cheatsheet)  
+                ;&
+             pkgmgr)  
                 f="call_$FUNC"
                 $f
                 ;;  
@@ -75,7 +77,9 @@ setup_all(){
             setenv ;;
         info)
             info ;;
-        pkgmgr)
+        cheatsheet)
+            cheatsheet ;;
+         pkgmgr)
             pkgmgr ;;
          *)
             echo "not supported op!"
