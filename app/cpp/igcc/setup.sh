@@ -6,6 +6,12 @@ install(){
   )
 }
 
+wenv="
+export PATH=~/dev/cpp/igcc:\$PATH  
+"
+
+
+
 start(){
   (cd ~/dev/cpp/igcc ; ./igcc -I libigcc)
 }
