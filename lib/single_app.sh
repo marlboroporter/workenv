@@ -40,7 +40,7 @@ call_install(){ winfo "install";  install; }
 call_uninstall(){ winfo "uninstall"; uninstall; } 
 call_reinstall(){ winfo "reinstall"; reinstall; } 
 call_config(){ winfo "config"; config; }
-call_pkgmgr(){ winfo $pkgmgr; pkgmgr; }
+call_pkgmgr(){ winfo "pkgmgr"; echo $pkgmgr; }
 call_info(){ winfo "info"; echo "$wenv"; info; }
 call_cheatsheet(){ winfo "cheetsheet"; echo "$wcheatsheet"; }
 
@@ -50,7 +50,13 @@ uninstall(){ f="${pkgmgr}_uninstall"; $f; }
 reinstall(){ f="${pkgmgr}_reinstall"; $f; } 
 config(){ :; }
 pkgmgr(){ :; }
-info(){ :; }
+info(){ 
+  f="${pkgmgr}_info" 
+  if typeset -f  $f > /dev/null; then
+    $f
+  fi
+  #:; 
+}
 ## variable to be overrided by child
 wenv="" 
 wcheatsheet=""

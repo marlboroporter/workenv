@@ -1,5 +1,9 @@
 pkgmgr=brew
 
+relink(){
+ brew unlink vim 
+ brew link vim
+}
 cleanup() {
     if [ -L ~/.vim ]; then
         rm ~/.vim
@@ -53,8 +57,8 @@ vimrc_cpp_gist(){
 config() {
    #vimrc_with_coc_metals 
    #vimrc_with_vimspector
-   #cpp
-   vimrc_cpp_gist
+   cpp
+   #vimrc_cpp_gist
 }
 
 

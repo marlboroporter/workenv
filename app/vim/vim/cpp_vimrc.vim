@@ -37,6 +37,13 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 " }}}
+"
+" ------ Base Setting -------------------------------------------------- {{{
+
+runtime rc/base-config.vim
+runtime rc/base-set.vim
+"
+" }}}
 
 "------ Config Plugins -------------------------------------------------- {{{
 runtime rc/nerdtree-config.vim 
@@ -55,10 +62,4 @@ set keywordprg=:Man
 " }}}
 
 "
-" ------ Base Setting -------------------------------------------------- {{{
-
-runtime rc/base-config.vim
-runtime rc/base-set.vim
-"
-" }}}
 

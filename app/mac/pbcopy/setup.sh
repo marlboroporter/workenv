@@ -1,0 +1,4 @@
+
+wcheatsheet="
+pbcopy < file.txt
+"
