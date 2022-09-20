@@ -1,8 +1,7 @@
 pkgmgr=noop
 
 install_manually(){
-  #git clone https://github.com/SpaceVim/SpaceVim.git ~/.SpaceVim
-  git clone git@github.com:jli8000/SpaceVim.git ~/.SpaceVim
+  git clone git@github.com:marlboroporter/SpaceVim.git ~/.SpaceVim
   mv ~/.vimrc ~/.vimrc_back
   mv ~/.vim ~/.vim_back
   mv ~/.config/nvim ~/.config/nvim_back
