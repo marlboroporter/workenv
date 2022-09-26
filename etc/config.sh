@@ -1,34 +1,43 @@
 # config 
 
-platform=(
+basics=(
      mac/xcode-select 
      brew 
      ssh  
      pref 
      prof
+     ohmyzsh
+     iterm2    
 )
 
-dev=(
-     ohmyzsh
+utils=(
+     yq 
+     tree
+) 
+
+lang=(
      sdkman
      python/pyenv
-    node 
+     node 
      node/npm 
      node/yarn
-     yq 
-     # ansible
-     intellij-idea
-     intellij-idea-ce
-     iterm2    
-     tree
-     vim/vim
-     vim/nvim
-     vim/ideavim
-     ctags
-     pygments
 )
 
-apps=(${platform[@]} ${dev[@]})
+#editor
+ide=(
+     vim/spacevim
+     intellij-idea-ce
+     vim/nvim
+     vim/ideavim
+     visual-studio-code 
+)
+
+apps=(
+  ${basics[@]}
+  ${lang[@]}
+  ${utils[@]}
+  ${ide[@]}
+)
 
 echo "${apps[@]}"
 
