@@ -19,6 +19,7 @@ function! myspacevim#before() abort
     
     "for custom plugin
     "" nmap <C-p> <Plug>MarkdownPreviewToggle
+    set belloff=all
 
 endfunction
 
