@@ -2,8 +2,7 @@ pkgmgr=brew
 install(){
     brew install cmake
     brew install cmake-docs
-    #something belongs to xcode
-    sudo xcodebuild -license
+    echo "install xcode before use cmake on mac!"
 }
 
 sample(){
@@ -15,4 +14,7 @@ sample(){
   unzip cmake-3.24.2-tutorial-source.zip
   ln -s $D/cmake-3.24.2-tutorial-source $linkto
   )
+}
+
+config(){
 }
