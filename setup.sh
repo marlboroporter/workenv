@@ -1,1 +1,0 @@
-pkgmgr=brew
