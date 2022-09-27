@@ -42,7 +42,7 @@ call_reinstall(){ winfo "reinstall"; reinstall; }
 call_config(){ winfo "config"; config; }
 call_pkgmgr(){ winfo "pkgmgr"; echo $pkgmgr; }
 call_info(){ winfo "info"; echo "$wenv"; info; }
-call_cheatsheet(){ winfo "cheetsheet"; echo "$wcheatsheet"; }
+call_cheatsheet(){ winfo "cheatsheet"; echo "$wcheatsheet"; }
 
 # default ops
 install(){ f="${pkgmgr}_install"; $f; } 

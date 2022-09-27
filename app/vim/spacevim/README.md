@@ -41,6 +41,9 @@
 ```
 
 
+# leader
+  - `SPC , gx` --> open link to browser 
+
 
 
 # vimspector
@@ -50,4 +53,9 @@
   - First use trigger vimspace to install vscodetool
 
   - .vimspector.json https://cdmana.com/2022/01/202201071724156132.html   
+
+
+
+
+
 

@@ -1,5 +1,13 @@
 pkgmgr=brew
 
+#cheatsheet(){
+wcheatsheet=$(cat<<EOF
+* fn + F10:  step over
+EOF
+)
+#echo "$S"
+#}
+
 samples(){
   sample_cpp
 
@@ -32,7 +40,9 @@ EOF
 )
 rm $N
 ln -s $D .  
-
+# config
+rm -rf $D/.vscode
+cp -r ./etc/cpp/active_file $D/.vscode 
 }
 
 
