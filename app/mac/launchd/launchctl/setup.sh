@@ -1,0 +1,5 @@
+tutorial(){
+  man launchctl
+}
+
+
