@@ -17,7 +17,7 @@ config_jdhao(){
     git clone https://github.com/jdhao/nvim-config.git $D
     (cd $D; git pull) 
     nvimconf=~/.config/nvim 
-    rm $nvimconf; ln -f -s  $D $nvimconf 
+    rm $nvimconf; ln -s  $D $nvimconf 
     # install plugins 
     #:PackerSync at first open or maybe auto installed  
 

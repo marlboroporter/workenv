@@ -1,11 +1,19 @@
+
+print_link(){ 
+  if [ -L $n_cfg_dir ]; then
+    # ls -l $1
+    ls -l $1  | awk  '{print $(NF-2) " "  $(NF -1)  " " $(NF) }'
+  else
+    ls -d $n_cfg_dir
+  fi
+}
+
+
 show_config(){
-  echo "------current nvim  ----------"
-  echo "plugins location: $(ls -ldF ~/.local/share/nvim)"
-  echo "config location : $(ls -la ~/.config/nvim)"
-  echo "------current vim  ----------"
-  echo "config location : $(ls -la ~/.vim)"
-  echo "------current ideavim  ----------"
-  echo "config location : $(ls -lda ~/.ideavimrc)"
+  print_link ~/.config/nvim
+  print_link ~/.vim
+  print_link ~/.SpaceVim.d
+  print_link ~/.ideavimrc
 }
 
 markdown_supports=(
