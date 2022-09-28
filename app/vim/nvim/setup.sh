@@ -22,13 +22,21 @@ config_jdhao(){
 }
 
 config(){
-    config_jdhao
+  #
+  config_jdhao
+  # 
+  show_config
 }
 
+show_config(){
+  echo "------current----------"
+  echo "plugins location: $(ls -ldF ~/.local/share/nvim)"
+  echo "config location : $(ls -la ~/.config/nvim)"
+}
+
+
 wcheatsheet=$(cat<<'EOF'
-* locations:
-    ~/.local/share/nvim
-    ~/.config/nvim
+
 EOF
 )
 
