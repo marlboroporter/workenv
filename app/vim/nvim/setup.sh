@@ -1,10 +1,35 @@
 pkgmgr=brew
-config_1(){
-    # config reference config git
-    [ ! -d ~/dev/nvim-config ] && mkdir -p ~/dev && \
-    git clone git@github.com:jdhao/nvim-config.git ~/dev/nvim-config \
-    git pull \
-    cp -r ~/dev/nvim-config/* .
 
-    ln -sf ~/.w/app/vim/nvim ~/.config 
+add_packer(){
+  # some other tool may already installed it
+  git clone --depth=1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/opt/packer.nvim
 }
+
+config_jdhao(){
+    # vim pkgmgr
+    add_packer
+    #config
+    D=~/dev/nvim-config
+    #[ ! -d $D ] && mkdir -p $D
+    rm -rf $D; mkdir -p $D
+    git clone https://github.com/jdhao/nvim-config.git $D
+    (cd $D; git pull) 
+    nvimconf=~/.config/nvim 
+    rm $nvimconf; ln -f -s  $D $nvimconf 
+    # install plugins 
+    #:PackerSync at first open or maybe auto installed  
+
+}
+
+config(){
+    config_jdhao
+}
+
+wcheatsheet=$(cat<<'EOF'
+* locations:
+    ~/.local/share/nvim
+    ~/.config/nvim
+EOF
+)
+
+
