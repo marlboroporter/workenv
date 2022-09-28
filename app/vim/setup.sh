@@ -1,3 +1,5 @@
+. lib/func.sh
+
 wcheatsheet=$(cat<<'EOF'
 * Show vim setting
   - :set all 

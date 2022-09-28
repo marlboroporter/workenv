@@ -1,5 +1,7 @@
 pkgmgr=brew
 
+. ../lib/func.sh
+
 add_packer(){
   # some other tool may already installed it
   git clone --depth=1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/opt/packer.nvim
@@ -28,16 +30,8 @@ config(){
   show_config
 }
 
-show_config(){
-  echo "------current----------"
-  echo "plugins location: $(ls -ldF ~/.local/share/nvim)"
-  echo "config location : $(ls -la ~/.config/nvim)"
-}
-
-
 wcheatsheet=$(cat<<'EOF'
 
 EOF
 )
-
 
