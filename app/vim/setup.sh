@@ -1,10 +1,10 @@
 wcheatsheet=$(cat<<'EOF'
-1. Show vim setting
+* Show vim setting
   - :set all 
   - :map
-1. `f`ind/`t`ill char in current line: `fFtT` `;` `c`    
-1. yank to clipboard:  `"*y`
-  - " to select register"
+* `f`ind/`t`ill char in current line: `fFtT` `;` `c`    
+* yank to clipboard:  `"*y`
+  - `"` to select register"
   - `*` is system register 
 
 
