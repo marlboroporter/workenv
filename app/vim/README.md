@@ -23,3 +23,4 @@
 ![](https://www.google.com/aclk?sa=l&ai=DChcSEwjMzLaq-Kv6AhUKhMgKHZGfDqQYABADGgJxdQ&ae=2&sig=AOD64_0KiT--hPBVASewwGXJVNaI6L-Qfg&adurl&ctype=5&ved=2ahUKEwjc6aeq-Kv6AhXnrnIEHSe3CZYQvhd6BAgBEHI)
 
 # SpaceVim
+* `"*y` to copy to system clipboard 

@@ -1,20 +1,9 @@
-install_manually(){
-  #
-  git clone git@github.com:marlboroporter/SpaceVim.git ~/.SpaceVim
-  mv ~/.vimrc ~/.vimrc_back
-  mv ~/.vim ~/.vim_back
-  mv ~/.config/nvim ~/.config/nvim_back
-  ln -s ~/.SpaceVim ~/.vim
-  ln -s ~/.SpaceVim ~/.config/nvim
-}
-
 install_auto(){
   curl -sLf https://spacevim.org/install.sh | bash
 }
 
 install(){
     install_auto
-    #install_manually
     brew tap homebrew/cask-fonts
     brew install --cask font-hack-nerd-font
     #

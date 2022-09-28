@@ -1,5 +1,5 @@
 pkgmgr=brew
-config(){
+config_1(){
     # config reference config git
     [ ! -d ~/dev/nvim-config ] && mkdir -p ~/dev && \
     git clone git@github.com:jdhao/nvim-config.git ~/dev/nvim-config \
