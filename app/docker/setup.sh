@@ -26,8 +26,14 @@ tutorial(){
   # tutorial
   # https://docs.docker.com/get-started/      
   docker run --name starter -d -p 80:80 docker/getting-started
-
-
+  D=~/dev/docker/tutorial
+  (
+    mkdir -p $D; \
+    cd $D; \
+    wget http://localhost/assets/app.zip -O tutorial.zip ;\
+    unzip tutorial.zip; rm tutorial.zip
+  )  
+  ln -s $D tutorial 
 }
 
 
