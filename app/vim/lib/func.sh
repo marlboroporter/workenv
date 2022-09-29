@@ -1,10 +1,10 @@
 
 print_link(){ 
-  if [ -L $n_cfg_dir ]; then
+  if [ -L $1 ]; then
     # ls -l $1
     ls -l $1  | awk  '{print $(NF-2) " "  $(NF -1)  " " $(NF) }'
   else
-    ls -d $n_cfg_dir
+    ls -d $1
   fi
 }
 

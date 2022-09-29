@@ -1,5 +1,4 @@
 # config 
-
 basics=(
      mac/xcode-select 
      brew 
@@ -38,8 +37,7 @@ apps=(
   ${utils[@]}
   ${ide[@]}
 )
-
-echo "${apps[@]}"
+#echo "${apps[@]}"
 
 
 

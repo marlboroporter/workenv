@@ -1,9 +1,8 @@
-pkgmgr=brew
-
 relink(){
  brew unlink vim 
  brew link vim
 }
+
 cleanup() {
     if [ -L ~/.vim ]; then
         rm ~/.vim
