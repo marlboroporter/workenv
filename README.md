@@ -3,3 +3,8 @@
 * app setup framework
 * `cd ~/[.w | .p ]; app -a install`
 * `cd ~/[.w | .p ]/app/*/; app cheatsheet`
+
+
+# todo
+* add install/uninstall ability of app groups 
+
