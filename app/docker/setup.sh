@@ -35,6 +35,14 @@ tutorial(){
     unzip tutorial.zip; rm tutorial.zip
   )  
   ln -s $D tutorial 
+  echo "
+  🤗
+    * Check tutorial dir now!
+    * Also play on line https://labs.play-with-docker.com/
+      - add an instance
+      - ssh from your local machine
+  "
+
 }
 
 
