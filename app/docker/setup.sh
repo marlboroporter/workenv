@@ -1,7 +1,6 @@
 install(){
-  #echo "download Docker.dmg from docker.com"
+  echo "download Docker.dmg from docker.com"
   F=~/Downloads/Docker.img
-
   wget "https://desktop.docker.com/mac/main/arm64/Docker.dmg?utm_source=docker&utm_medium=webreferral&utm_campaign=dd-smartbutton&utm_location=module" \
     -O $F 
   # auto install
@@ -12,7 +11,9 @@ install(){
   sudo hdiutil detach /Volumes/Docker
 
   # for intel chip app to run on M1 
-  softwareupdate --install-rosetta
+  if [[ $(uname -m) == "arm64" ]]; then
+    softwareupdate --install-rosetta
+  fi
 }
 
 uninstall(){
