@@ -24,11 +24,18 @@ lang=(
 
 #editor
 ide=(
-     vim/spacevim
      intellij-idea-ce
+     vim
      vim/nvim
      vim/ideavim
+     vim/spacevim
      visual-studio-code 
+)
+
+cloud=(
+  docker
+  kind
+  busybox
 )
 
 apps=(
@@ -36,6 +43,7 @@ apps=(
   ${lang[@]}
   ${utils[@]}
   ${ide[@]}
+  ${cloud[@]}
 )
 #echo "${apps[@]}"
 
