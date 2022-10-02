@@ -1,7 +1,7 @@
 pkgmgr=brew
 
 #cheatsheet(){
-wcheatsheet=$(cat<<EOF
+cheatsheet=$(cat<<EOF
 * fn + F10:  step over
 EOF
 )

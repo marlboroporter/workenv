@@ -6,4 +6,4 @@ install(){
 reinstall(){
     install
 }
-wenv='. ~/.sdkman/bin/sdkman-init.sh'
+setenv='. ~/.sdkman/bin/sdkman-init.sh'

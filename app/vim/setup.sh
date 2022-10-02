@@ -2,7 +2,7 @@ pkgmgr=brew
 
 . lib/func.sh
 
-wcheatsheet=$(cat<<'EOF'
+cheatsheet=$(cat<<'EOF'
 * Show vim setting
   - :set all 
   - :map

@@ -1,4 +1,4 @@
-wcheatsheet="
+cheatsheet="
 * x-man-page://launchctl
 "
 

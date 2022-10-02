@@ -1,4 +1,4 @@
 pkgmgr=brew
 info(){
-  brew list $wapp
+  brew list $app
 }

@@ -1,4 +1,4 @@
 
-wcheatsheet="
+cheatsheet="
 pbcopy < file.txt
 "

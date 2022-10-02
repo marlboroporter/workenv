@@ -39,31 +39,16 @@ setup_one() {
 }
 
 setup_all(){
-(
+  (
     source ~/.w/lib/all_app.sh
-    case $1 in
-        install)
-            install ;;
-        uninstall)
-            uninstall ;;
-        reinstall)
-            reinstall ;;
-        config)
-            config ;;
-        setenv)
-            setenv ;;
-        info)
-            info ;;
-        cheatsheet)
-            cheatsheet ;;
-         pkgmgr)
-            pkgmgr ;;
-         *)
-            echo "not supported op!"
-            usage
-            ;;
-    esac
-)
+    FUNC=$1
+    if typeset -f  $1 > /dev/null; then
+      $FUNC  
+    else
+      echo " op not supported"
+      usage
+    fi
+  )
 }
 
 

@@ -10,4 +10,4 @@ install(){
 reinstall(){
     install
 }
-wenv="alias chrome='open -a \"Google Chrome\"'"
+setenv="alias chrome='open -a \"Google Chrome\"'"

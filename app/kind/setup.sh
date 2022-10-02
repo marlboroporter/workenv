@@ -1,5 +1,5 @@
 pkgmgr=brew
-wcheatsheet=$(cat<<'EOF'
+cheatsheet=$(cat<<'EOF'
   kind create cluster --name kind-baeldung-kind
   kubectl cluster-info --context oak-kind
 

@@ -1,1 +1,1 @@
-wenv='export LESS="-F -X $LESS"  # to avoid git over-paging'
+setenv='export LESS="-F -X $LESS"  # to avoid git over-paging'

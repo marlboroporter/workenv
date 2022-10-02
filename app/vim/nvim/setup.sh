@@ -30,7 +30,7 @@ config(){
   show_config
 }
 
-wcheatsheet=$(cat<<'EOF'
+cheatsheet=$(cat<<'EOF'
 
 EOF
 )

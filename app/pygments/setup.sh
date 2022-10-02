@@ -1,5 +1,5 @@
 pkgmgr=pip
-wcheatsheet="
+cheatsheet="
 *  generic syntax highlighter written in Python
 ""
 * $(which pygmentize)

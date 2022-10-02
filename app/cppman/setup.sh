@@ -7,7 +7,7 @@ config(){
     # to download all available man 
     cppman -c
 }
-wenv="
+setenv="
 # to make bash completion work for ::
 export COMP_WORDBREAKS=\" /\\\"\\'><;|&(\"
 "

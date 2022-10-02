@@ -49,7 +49,7 @@ tutorial(){
 }
 
 
-wcheatsheet=$(cat<<'EOF'
+cheatsheet=$(cat<<'EOF'
 * docker container ls
 * docker run --name starter -d -p 80:80 docker/getting-started
 * docker stop/kill container x y z 

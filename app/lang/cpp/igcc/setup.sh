@@ -6,7 +6,7 @@ install(){
   )
 }
 
-wenv="
+setenv="
 export PATH=~/dev/cpp/igcc:\$PATH  
 "
 
