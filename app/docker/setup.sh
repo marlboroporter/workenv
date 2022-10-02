@@ -34,10 +34,13 @@ tutorial(){
     wget http://localhost/assets/app.zip -O tutorial.zip ;\
     unzip tutorial.zip; rm tutorial.zip
   )  
+  rm -f tutorial
   ln -s $D tutorial 
   echo "
   🤗
     * Check tutorial dir now!
+      - follow http://localhost/tutorial/ or  https://www.docker.com/101-tutorial/ 
+      - cd tutorial
     * Also play on line https://labs.play-with-docker.com/
       - add an instance
       - ssh from your local machine
