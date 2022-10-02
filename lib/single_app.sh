@@ -1,28 +1,29 @@
-#! /usr/bin/env zsh
-wapp=${PWD##/*/}
+#!/usr/bin/env zsh 
+app=${PWD##/*/}
 # msg
-winfo="
-# ------ ${wapp} --"
+headerprefix="
+# ------ ${app} --"
 # concatenate
-winfo(){ echo "$winfo $1"; } 
+header(){ echo "$headerprefix $1"; } 
 
 ## brew
-brewenv(){
+bresetenv(){
 # apple m1 differ from intel
 ! [ -L /usr/local/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 export HOMEBREW_NO_INSTALL_CLEANUP=true #  unset to cancel
 export HOMEBREW_NO_ENV_HINTS=true # unset to concel
 }
-brew_install()  { brewenv;  brew install $wapp; }
-brew_uninstall(){ brewenv;  brew uninstall $wapp; }
-brew_reinstall(){ brewenv;  brew install -f $wapp; }
+brew_install()  { bresetenv;  brew install $app; }
+brew_uninstall(){ bresetenv;  brew uninstall $app; }
+brew_reinstall(){ bresetenv;  brew install -f $app; }
 
 ## pip 
 pipenv(){
-    # current used global pyenv setting
+    #echo "pip current used global pyenv setting"
+    echo ""
 }
-pip_install(){ pipenv; pip install $wapp; }
-pip_uninstall(){ pipenv; pip unintall $wapp; }
+pip_install(){ pipenv; pip install $app; }
+pip_uninstall(){ pipenv; pip unintall $app; }
 pip_reinstall(){ pipenv; echo " pip has no reinstall!" }
 
 
@@ -35,30 +36,35 @@ noop_uninstall(){ echo "no op!"; }
 #default but overridden by app by reassign pkgmgr 
 pkgmgr=${WPKGMGR:-noop}
 
-# op caller
-call_install(){ winfo "install";  install; } 
-call_uninstall(){ winfo "uninstall"; uninstall; } 
-call_reinstall(){ winfo "reinstall"; reinstall; } 
-call_config(){ winfo "config"; config; }
-call_pkgmgr(){ winfo "pkgmgr"; echo $pkgmgr; }
-call_info(){ winfo "info"; echo "$wenv"; info; }
-call_cheatsheet(){ winfo "cheatsheet"; echo "$wcheatsheet"; }
-
-# default ops
-install(){ f="${pkgmgr}_install"; $f; } 
-uninstall(){ f="${pkgmgr}_uninstall"; $f; } 
-reinstall(){ f="${pkgmgr}_reinstall"; $f; } 
-config(){ :; }
-pkgmgr(){ :; }
-info(){ 
-  f="${pkgmgr}_info" 
-  if typeset -f  $f > /dev/null; then
-    $f
+bash_call_check_defined(){
+  fun=$1
+  defaultfun=${pkgmgr}_$fun 
+  if [[ $(type -t $fun) == function ]] ; then 
+    $fun 
+  elif [[ $(type -t $defaultfun) == function ]] ; then 
+    $defaultfun
   fi
-  #:; 
 }
+
+zsh_call_check_defined(){
+  fun=$1
+  defaultfun=${pkgmgr}_$fun 
+  # this check function also avoid invoke base unix command accidently such as install
+  if typeset -f  $fun > /dev/null; then 
+    header $fun
+    $fun 
+  elif typeset -f  $defaultfun > /dev/null; then 
+    $defaultfun
+  else
+    # show variable of same name defined  
+    #echo "${!1}" # for bash   
+    header $fun
+    echo "${(P)fun}" # P indicates to interpret as further paramete 
+  fi
+}
+
 ## variable to be overrided by child
-wenv="" 
-wcheatsheet=""
+setenv="" 
+cheatsheet=""
 ##
-setenv(){  echo "$winfo">>$WRC; echo "$wenv">>$WRC; eval "$wenv";  }
+setenv(){  echo "$headerprefix">>$WRC; echo "$setenv">>$WRC; eval "$setenv";  }

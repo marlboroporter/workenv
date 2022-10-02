@@ -1,4 +1,4 @@
-
+#####!/usr/bin/env bash
 getAllLinks(){
   echo "--------Link in .w/app"
   find ~/.w/app -type l  | while read x; do ls -l $x; done
@@ -25,14 +25,6 @@ showAppAndLinks(){
   do
     echo "$x"
   done
-
-#  a=(
-#  "dir --> "
-#  "${d[@]}"
-#  "link --> "
-#  "${l[@]}"
-#  ) 
-#  echo "${a[@]}"
 }
 
 getAllApps(){
@@ -50,11 +42,19 @@ goToApp(){
   cd "$prefix/$(getApp $1)"
 }
 
-#echo "$(getAppAndLinks $1)"
-#getApp $1
-#getAppAndLinks $1
-#getAllApps
 
-
-
-#find ~/.w/app -type l  | while read x; do ls -l $x; done
+# rename_all old new
+rename_all() {
+  old=$1
+  new=$2
+  dirs=($(find ~/.w/app -type d))
+  for d in "${dirs[@]}"
+  do
+    files=($(find $d  -type f -name "*.sh")) 
+    for f in  "${files[@]}" 
+    do
+      echo $f
+      sed -i '' -e "s/$old/$new/g" "$f"  
+    done
+  done
+}

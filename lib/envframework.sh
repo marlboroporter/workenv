@@ -34,30 +34,7 @@ setup_one() {
         cd $DIR  
         source ~/.w/lib/single_app.sh  # point to .w only 
         [[ -f ./setup.sh ]] && source ./setup.sh 
-        #echo "$wapp $pkgmgr"
-        #eval "$FUNC" 
-        case $FUNC in 
-            install)
-                ;&
-            uninstall) 
-                ;&
-            reinstall) 
-                ;&
-            config) 
-                ;& 
-            info)  
-                ;&
-            cheatsheet)  
-                ;&
-             pkgmgr)  
-                f="call_$FUNC"
-                $f
-                ;;  
-            *) 
-                winfo "$FUNC"
-                $FUNC    
-                ;;  
-        esac
+        zsh_call_check_defined "$FUNC"
     )
 }
 
