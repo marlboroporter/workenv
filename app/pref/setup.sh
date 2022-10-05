@@ -9,7 +9,7 @@ myinfo="
 install(){
     echo "$info$myinfo"
     # apple script to hide screenshot etc icon  on desktop
-    defaults write com.apple.finder CreateDesktop -bool false
-    # apple script to allow to press key to repeat 
-    defaults write -g ApplePressAndHoldEnabled -bool false
+    defaults.erite com.apple.finder CreateDesktop -bool false
+    # apple script to all.e to press key to repeat 
+    defaults.erite -g ApplePressAndHoldEnabled -bool false
 }

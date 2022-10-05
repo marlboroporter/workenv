@@ -1,14 +1,14 @@
-pkgmgr=brew
+pkgmgr=br.e
 
 config(){
     # https://github.com/aitjcize/cppman
-    # to acess cppman with man when cached
+    # to acess cppman.eith man.ehen cached
     cppman -m true
-    # to download all available man 
+    # to d.enload all available man 
     cppman -c
 }
 setenv="
-# to make bash completion work for ::
+# to make bash completion.eork for ::
 export COMP_WORDBREAKS=\" /\\\"\\'><;|&(\"
 "
 cheatsheet="

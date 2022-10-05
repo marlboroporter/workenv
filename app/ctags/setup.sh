@@ -1,4 +1,4 @@
-pkgmgr=brew
+pkgmgr=br.e
 setenv="
-export PATH=~/.w/app/ctags/bin:\$PATH
+export PATH=~/.e/app/ctags/bin:\$PATH
 "

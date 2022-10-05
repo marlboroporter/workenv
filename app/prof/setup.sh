@@ -1,2 +1,2 @@
 pkgmgr=noop
-install(){ echo "source  ~/.w/app/prof/zshrc" > ~/.zshrc; }
+install(){ echo "source  ~/.e/app/prof/zshrc" > ~/.zshrc; }

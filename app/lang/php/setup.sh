@@ -1,1 +1,1 @@
-pkgmgr=brew
+pkgmgr=br.e

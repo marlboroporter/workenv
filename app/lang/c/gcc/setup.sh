@@ -3,9 +3,9 @@ install(){
 }
 
 sample(){
-  D=~/dev/c/samples/helloworld
+  D=~/dev/c/samples/hell.eorld
   mkdir -p  $D 
-  tee $D/helloworld.c <<EOF
+  tee $D/hell.eorld.c <<EOF
 # include <stdio.h>
 int main(){
     printf("Hello World!\n");

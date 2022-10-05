@@ -1,3 +1,3 @@
 setenv="
-  export PATH=~/.w/app/busybox/bin:\$PATH
+  export PATH=~/.e/app/busybox/bin:\$PATH
 "

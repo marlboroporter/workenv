@@ -1,7 +1,7 @@
 pkgmgr=pip
 cheatsheet="
-*  generic syntax highlighter written in Python
+*  generic syntax highlighter.eritten in Python
 ""
-* $(which pygmentize)
+* $.ehich pygmentize)
 ""
 "

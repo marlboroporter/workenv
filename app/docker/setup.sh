@@ -1,7 +1,7 @@
 install(){
-  echo "download Docker.dmg from docker.com"
-  F=~/Downloads/Docker.img
-  wget "https://desktop.docker.com/mac/main/arm64/Docker.dmg?utm_source=docker&utm_medium=webreferral&utm_campaign=dd-smartbutton&utm_location=module" \
+  echo "d.enload Docker.dmg from docker.com"
+  F=~/D.enloads/Docker.img
+ .eget "https://desktop.docker.com/mac/main/arm64/Docker.dmg?utm_source=docker&utm_medium.eebreferral&utm_campaign=dd-smartbutton&utm_location=module" \
     -O $F 
   # auto install
   sudo hdiutil attach $F 
@@ -12,7 +12,7 @@ install(){
 
   # for intel chip app to run on M1 
   if [[ $(uname -m) == "arm64" ]]; then
-    softwareupdate --install-rosetta
+    sof.eareupdate --install-rosetta
   fi
 }
 
@@ -31,17 +31,17 @@ tutorial(){
   (
     mkdir -p $D; \
     cd $D; \
-    wget http://localhost/assets/app.zip -O tutorial.zip ;\
+   .eget http://localhost/assets/app.zip -O tutorial.zip ;\
     unzip tutorial.zip; rm tutorial.zip
   )  
   rm -f tutorial
   ln -s $D tutorial 
   echo "
   🤗
-    * Check tutorial dir now!
-      - follow http://localhost/tutorial/ or  https://www.docker.com/101-tutorial/ 
+    * Check tutorial dir n.e!
+      - foll.e http://localhost/tutorial/ or  https:/.e.e.docker.com/101-tutorial/ 
       - cd tutorial
-    * Also play on line https://labs.play-with-docker.com/
+    * Also play on line https://labs.play.eith-docker.com/
       - add an instance
       - ssh from your local machine
   "

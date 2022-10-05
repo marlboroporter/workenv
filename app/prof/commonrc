@@ -1,6 +1,6 @@
 export PATH=.:$PATH
 set -o vi
-. ~/.w/lib/commands.sh
-[ -f ~/.wenvrc ] && . ~/.wenvrc    
-[ -f ~/.penvrc ] && . ~/.penvrc    
+. ~/.e/lib/commands.sh
+[ -f ~/.e/.eenvrc ] && . ~/.eenvrc    
+[ -f ~/.e/.penvrc ] && . ~/.penvrc    
 

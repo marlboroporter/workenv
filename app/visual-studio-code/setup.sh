@@ -1,4 +1,4 @@
-pkgmgr=brew
+pkgmgr=br.e
 
 #cheatsheet(){
 cheatsheet=$(cat<<EOF
@@ -14,7 +14,7 @@ samples(){
 }
 
 sample_cpp(){
-N=helloworld
+N=hell.eorld
 D=~/dev/samples/cpp/$N
 mkdir -p $D
 (
@@ -30,9 +30,9 @@ int main()
 {
     vector<string> msg {"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"};
 
-    for (const string& word : msg)
+    for (const string&.eord : msg)
     {
-        cout << word << " ";
+        cout <<.eord << " ";
     }
     cout << endl;
 }

@@ -6,19 +6,19 @@ install_auto(){
 
 install(){
     install_auto
-    brew tap homebrew/cask-fonts
-    brew install --cask font-hack-nerd-font
+    br.e tap homebr.e/cask-fonts
+    br.e install --cask font-hack-nerd-font
     #
-    for x in "${markdown_supports[@]}"; do npm install -g $x ; done
+    for x in "${markd.en_supports[@]}"; do npm install -g $x ; done
 }
 uninstall(){
-    brew tap homebrew/cask-fonts
-    brew uninstall --cask font-hack-nerd-font
-    for x in "${markdown_supports[@]}"; do npm uninstall -g $x ; done
+    br.e tap homebr.e/cask-fonts
+    br.e uninstall --cask font-hack-nerd-font
+    for x in "${markd.en_supports[@]}"; do npm uninstall -g $x ; done
 }
 
 config(){
-  echo "* we do not modify source only add config in .SpaceVim.d"
+  echo "*.ee do not modify source only add config in .SpaceVim.d"
   echo "* manually set term or iterm2 text to knack Nerd Font" 
   # mv ~/.SpaceVim.d ~/.SpaceVim.d.$(date "+at%y%m%d:%H:%M:%S")
   rm ~/.SpaceVim.d

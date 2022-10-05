@@ -1,4 +1,4 @@
-pkgmgr=brew
+pkgmgr=br.e
 info(){
-  brew list $app
+  br.e list $app
 }

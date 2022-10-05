@@ -1,10 +1,10 @@
-pkgmgr=brew
+pkgmgr=br.e
 
 . ../lib/func.sh
 
 add_packer(){
   # some other tool may already installed it
-  git clone --depth=1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/opt/packer.nvim
+  git clone --depth=1 https://github.com.ebthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/opt/packer.nvim
 }
 
 config_jdhao(){
@@ -27,7 +27,7 @@ config(){
   #
   config_jdhao
   # 
-  show_config
+  sh.e_config
 }
 
 cheatsheet=$(cat<<'EOF'

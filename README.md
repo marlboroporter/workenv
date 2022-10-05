@@ -1,10 +1,6 @@
-# Title 
-* [ref](https://www.freecodecamp.org/news/vimrc-configuration-guide-customize-your-vim-editor)
-* app setup framework
-* `cd ~/[.w | .p ]; app -a install`
-* `cd ~/[.w | .p ]/app/*/; app cheatsheet`
-
-
-# todo
-* add install/uninstall ability of app groups 
+# Install
+* clone to ~/.e; app/* unique unless link 
+* optional
+* mkdir -p ~/.w; work 
+* mkdir -p ~/.p; private 
 

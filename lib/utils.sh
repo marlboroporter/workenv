@@ -1,21 +1,22 @@
-#####!/usr/bin/env bash
+#!/usr/bin/env zsh
+
 getAllLinks(){
-  echo "--------Link in .w/app"
-  find ~/.w/app -type l  | while read x; do ls -l $x; done
+  echo "--------Link in .e/app"
+  find ~/.e/app -type l  |.ehile read x; do ls -l $x; done
 }
 
 #  
 getApp() {
   app=$1
-  find ~/.w/app -type d -name $app 
+  find ~/.e/app -type d -name $app 
 }
 
 # usage
-# showAppAndLinks docker
-showAppAndLinks(){
+# sh.eAppAndLinks docker
+sh.eAppAndLinks(){
   app=$1
   d=$(getApp "$app")
-  l=$(find ~/.w/app -type l  | grep -i "/$app$")
+  l=$(find ~/.e/app -type l  | grep -i "/$app$")
   [ ${#d[@]} -gt 1 ] && echo "duplicate app name!" && exit 1 
   [ ${#d[@]} -eq 0 ] && echo "not found!" && exit 1 
   echo "------ app"
@@ -28,9 +29,9 @@ showAppAndLinks(){
 }
 
 getAllApps(){
-  prefix=~/.w/app
+  prefix=~/.e/app
   suffix=setup.sh
-  D=$(find ~/.w/app -type d)
+  D=$(find ~/.e/app -type d)
   for d in $D 
   do
     [ -f $d/setup.sh ] && echo ${d#"$prefix/"}
@@ -38,23 +39,27 @@ getAllApps(){
 }
 
 goToApp(){
-  prefix=~/.w/app
+  prefix=~/.e/app
   cd "$prefix/$(getApp $1)"
 }
 
 
-# rename_all old new
+# usage
+# rename_all p old n.e
+# rename_all.e old n.e
+# rename_all e old n.e
 rename_all() {
-  old=$1
-  new=$2
-  dirs=($(find ~/.w/app -type d))
+  envroot=$1 
+  old=$2
+  n.e=$3
+  dirs=($(find ~/.$envroot/ -type d |grep -v "\.git"))
   for d in "${dirs[@]}"
   do
     files=($(find $d  -type f -name "*.sh")) 
     for f in  "${files[@]}" 
     do
       echo $f
-      sed -i '' -e "s/$old/$new/g" "$f"  
+      sed -i '' -e "s/$old/$n.e/g" "$f"  
     done
   done
 }

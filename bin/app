@@ -1,11 +1,15 @@
 #! /usr/bin/env zsh
+. ~/.w/lib/curenv.sh
 . ~/.w/lib/envframework.sh
-if [[ "$1" == "-a" ]] || [[ "$1" == "-all" ]]; then 
-    [[ ! "$PWD" =~ "$ENVROOT"$ ]] && usage
+if [[ "$1" == "-a" ]] || [[ "$1" == "--all" ]]; then 
+    [[ ! "$PWD" =~ "$CENVROOT"$ ]] && usage
     shift
-    setup_all "$@"
+    echo "setup_all $@ $CENVROOT"
+    #setup_all "$@ $CENVROOT" 
+    #setup_all $@ $CENVROOT 
+    setup_all $1 $CENVROOT 
 else
-    [[ ! "$PWD" =~ "$ENVROOT/app/*/" ]] && usage
+    [[ ! "$PWD" =~ "$CENVROOT/app/*/" ]] && usage
     setup_one "$@"
 fi
 

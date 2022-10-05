@@ -6,16 +6,16 @@ headerprefix="
 # concatenate
 header(){ echo "$headerprefix $1"; } 
 
-## brew
+## br.e
 bresetenv(){
 # apple m1 differ from intel
-! [ -L /usr/local/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
+! [ -L /usr/local/bin/br.e ] && eval "$(/opt/homebr.e/bin/br.e shellenv)"
 export HOMEBREW_NO_INSTALL_CLEANUP=true #  unset to cancel
 export HOMEBREW_NO_ENV_HINTS=true # unset to concel
 }
-brew_install()  { bresetenv;  brew install $app; }
-brew_uninstall(){ bresetenv;  brew uninstall $app; }
-brew_reinstall(){ bresetenv;  brew install -f $app; }
+br.e_install()  { bresetenv;  br.e install $app; }
+br.e_uninstall(){ bresetenv;  br.e uninstall $app; }
+br.e_reinstall(){ bresetenv;  br.e install -f $app; }
 
 ## pip 
 pipenv(){
@@ -56,7 +56,7 @@ zsh_call_check_defined(){
   elif typeset -f  $defaultfun > /dev/null; then 
     $defaultfun
   else
-    # show variable of same name defined  
+    # sh.e variable of same name defined  
     #echo "${!1}" # for bash   
     header $fun
     echo "${(P)fun}" # P indicates to interpret as further paramete 
@@ -67,4 +67,4 @@ zsh_call_check_defined(){
 setenv="" 
 cheatsheet=""
 ##
-setenv(){  echo "$headerprefix">>$WRC; echo "$setenv">>$WRC; eval "$setenv";  }
+setenv(){  echo "$headerprefix">>$CRC; echo "$setenv">>$CRC; eval "$setenv";  }

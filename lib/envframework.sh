@@ -1,51 +1,33 @@
 #! /usr/bin/env zsh
-get_env(){
-    envroot=$1 
-    if [[ "$envroot" =~ ".w" ]]; then 
-        echo "w"
-    elif [[ "$envroot" =~ ".p" ]]; then 
-        echo "p" 
-    fi
-}
-
-get_envroot(){
-    if [[ "$1" =~ "^${HOME}/.w" ]]
-    then
-        r="$HOME/.w"     
-    elif [[ "$1" =~ "^${HOME}/.p" ]]
-    then
-        r="$HOME/.p"      
-    else 
-        usage 
-    fi
-    echo "$r"
-}
-
+# setup_one func docker.ehichroot   
 setup_one() {
-    [[ ! "$PWD" =~ "$ENVROOT/app" ]]  && usage 
+    root=$3
+    [[ ! "$PWD" =~ "$root/app" ]]  && usage 
     FUNC=${1:-info}
     # for all individual app
     if [[ "$2" == "" ]]; then
         DIR=$PWD
     else
-        DIR=$ENVROOT/app/$2
+        DIR=$root/app/$2
     fi
     ( 
         cd $DIR  
-        source ~/.w/lib/single_app.sh  # point to .w only 
+        source ~/.e/lib/single_app.sh  # point to .e only 
         [[ -f ./setup.sh ]] && source ./setup.sh 
         zsh_call_check_defined "$FUNC"
     )
 }
 
+#setup_all docker e 
 setup_all(){
   (
-    source ~/.w/lib/all_app.sh
+    source ~/.e/lib/all_app.sh
     FUNC=$1
-    if typeset -f  $1 > /dev/null; then
-      $FUNC  
+    root=$2 
+    if typeset -f  $FUNC > /dev/null; then
+      $FUNC $root
     else
-      echo " op not supported"
+      echo " op not supported !"
       usage
     fi
   )
@@ -54,14 +36,10 @@ setup_all(){
 
 usage(){ 
 echo "Usage: setup [-a |--all] [info | install | uninstall| reinstall|  setenv | config |pkgmgr ]
-  *  cd ~/[.p|.w]/app/*/; setup action
-  *  cd ~/[.p|.w]; setup -a action
+  *  cd ~/[.p|.e]/app/*/; setup action
+  *  cd ~/[.p|.e]; setup -a action
 "
 exit 1 
 }
-
-export ENVROOT=$(get_envroot "$PWD")
-export WENV=$(get_env $ENVROOT)
-export WRC=~/."${WENV}envrc"
 
 

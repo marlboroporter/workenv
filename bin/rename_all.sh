@@ -1,3 +1,4 @@
-#!/usr/bin/env bash
-source ~/.w/lib/utils.sh
+#!/usr/bin/env zsh 
+. ~/.e/etc/env.sh   
+source ~/.e/lib/utils.sh
 rename_all $*

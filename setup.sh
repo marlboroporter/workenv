@@ -1,2 +1,2 @@
-/Users/jieli/.w/app/cloud/grafana/
+/Users/jieli/.e/app/cloud/grafana/
 
