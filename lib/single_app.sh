@@ -67,4 +67,10 @@ zsh_call_check_defined(){
 setenv="" 
 cheatsheet=""
 ##
-setenv(){  echo "$headerprefix">>$CRC; echo "$setenv">>$CRC; eval "$setenv";  }
+setenv(){
+  echo "$headerprefix">>$CRC; 
+  echo "$setenv">>$CRC; 
+  echo "appended to $CRC: 
+$setenv";  
+  eval "$setenv";  
+}

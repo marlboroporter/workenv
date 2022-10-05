@@ -7,6 +7,11 @@ cheatsheet=$(cat<<'EOF'
 EOF
 )
 
+setenv='
+export KINDENV=xxxxx
+'
+
+
 tutorial(){
   D=~/dev/kind/tutorial/
   L=tutorial

@@ -2,7 +2,7 @@
 # setup_one func docker.ehichroot   
 source ~/.e/lib/utils.sh
 setup_one() {
-    root=$3
+    root=${CENVROOT}
     [[ ! "$PWD" =~ "$root/app" ]]  && usage 
     FUNC=${1:-info}
     # for all individual app
