@@ -27,7 +27,7 @@ config(){
   #
   config_jdhao
   # 
-  sh.e_config
+  show_config
 }
 
 cheatsheet=$(cat<<'EOF'

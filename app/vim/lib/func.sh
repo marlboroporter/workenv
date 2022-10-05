@@ -9,7 +9,7 @@ print_link(){
 }
 
 
-config(){
+show_config(){
   print_link ~/.config/nvim
   print_link ~/.vim
   print_link ~/.SpaceVim.d
