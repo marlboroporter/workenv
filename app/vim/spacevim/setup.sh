@@ -9,12 +9,12 @@ install(){
     brew tap homebrew/cask-fonts
     brew install --cask font-hack-nerd-font
     #
-    for x in "${markd.en_supports[@]}"; do npm install -g $x ; done
+    for x in "${markdown_supports[@]}"; do npm install -g $x ; done
 }
 uninstall(){
     brew tap homebrew/cask-fonts
     brew uninstall --cask font-hack-nerd-font
-    for x in "${markd.en_supports[@]}"; do npm uninstall -g $x ; done
+    for x in "${markdown_supports[@]}"; do npm uninstall -g $x ; done
 }
 
 config(){

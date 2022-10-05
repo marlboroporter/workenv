@@ -1,12 +1,12 @@
 pkgmgr=noop
 install(){
     # only needed first time
-    #/bin/bash -c "$(curl -fsSL https://r.e.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    #/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     eval "$setenv"
 }
 reinstall(){ install; }
 uninstall(){
-    NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://r.e.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
+    NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
 }
 setenv='
 # apple m1 differ from intel

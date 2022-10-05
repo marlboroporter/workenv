@@ -1,7 +1,7 @@
 install(){
-  echo "d.enload Docker.dmg from docker.com"
-  F=~/D.enloads/Docker.img
- .eget "https://desktop.docker.com/mac/main/arm64/Docker.dmg?utm_source=docker&utm_medium.eebreferral&utm_campaign=dd-smartbutton&utm_location=module" \
+  echo "download Docker.dmg from docker.com"
+  F=~/Downloads/Docker.img
+  wget "https://desktop.docker.com/mac/main/arm64/Docker.dmg?utm_source=docker&utm_medium.eebreferral&utm_campaign=dd-smartbutton&utm_location=module" \
     -O $F 
   # auto install
   sudo hdiutil attach $F 
@@ -12,7 +12,7 @@ install(){
 
   # for intel chip app to run on M1 
   if [[ $(uname -m) == "arm64" ]]; then
-    sof.eareupdate --install-rosetta
+    softwareupdate --install-rosetta
   fi
 }
 
@@ -31,7 +31,7 @@ tutorial(){
   (
     mkdir -p $D; \
     cd $D; \
-   .eget http://localhost/assets/app.zip -O tutorial.zip ;\
+   weget http://localhost/assets/app.zip -O tutorial.zip ;\
     unzip tutorial.zip; rm tutorial.zip
   )  
   rm -f tutorial
