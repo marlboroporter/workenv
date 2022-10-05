@@ -6,16 +6,16 @@ headerprefix="
 # concatenate
 header(){ echo "$headerprefix $1"; } 
 
-## br.e
+## brew
 bresetenv(){
 # apple m1 differ from intel
-! [ -L /usr/local/bin/br.e ] && eval "$(/opt/homebr.e/bin/br.e shellenv)"
+! [ -L /usr/local/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 export HOMEBREW_NO_INSTALL_CLEANUP=true #  unset to cancel
 export HOMEBREW_NO_ENV_HINTS=true # unset to concel
 }
-br.e_install()  { bresetenv;  br.e install $app; }
-br.e_uninstall(){ bresetenv;  br.e uninstall $app; }
-br.e_reinstall(){ bresetenv;  br.e install -f $app; }
+brew_install()  { bresetenv;  brew install $app; }
+brew_uninstall(){ bresetenv;  brew uninstall $app; }
+brew_reinstall(){ bresetenv;  brew install -f $app; }
 
 ## pip 
 pipenv(){

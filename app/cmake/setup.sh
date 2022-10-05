@@ -1,7 +1,7 @@
-pkgmgr=br.e
+pkgmgr=brew
 install(){
-    br.e install cmake
-    br.e install cmake-docs
+    brew install cmake
+    brew install cmake-docs
     echo "install xcode before use cmake on mac!"
 }
 

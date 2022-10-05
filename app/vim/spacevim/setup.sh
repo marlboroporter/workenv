@@ -6,14 +6,14 @@ install_auto(){
 
 install(){
     install_auto
-    br.e tap homebr.e/cask-fonts
-    br.e install --cask font-hack-nerd-font
+    brew tap homebrew/cask-fonts
+    brew install --cask font-hack-nerd-font
     #
     for x in "${markd.en_supports[@]}"; do npm install -g $x ; done
 }
 uninstall(){
-    br.e tap homebr.e/cask-fonts
-    br.e uninstall --cask font-hack-nerd-font
+    brew tap homebrew/cask-fonts
+    brew uninstall --cask font-hack-nerd-font
     for x in "${markd.en_supports[@]}"; do npm uninstall -g $x ; done
 }
 

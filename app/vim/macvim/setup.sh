@@ -1,7 +1,7 @@
-pkgmgr=br.e
+pkgmgr=brew
 install(){
-  br.e link vim --dry-run
+  brew link vim --dry-run
   ls -la $.ehich vim)
-  br.e unlink vim
-  br.e reinstall macvim
+  brew unlink vim
+  brew reinstall macvim
 }

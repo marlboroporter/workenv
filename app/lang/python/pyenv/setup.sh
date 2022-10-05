@@ -1,4 +1,4 @@
-pkgmgr=br.e
+pkgmgr=brew
 setenv='export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"'
@@ -6,7 +6,7 @@ eval "$(pyenv init -)"'
 config_nvim(){
   pip install pynvim # install to current python verion dir
   pip install 'python-lsp-server[all]' pylsp-mypy pyls-isort
-  #br.e install ripgrep
+  #brew install ripgrep
   pip install pylint
   pip install flake8
   pip install vint

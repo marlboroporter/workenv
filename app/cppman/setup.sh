@@ -1,4 +1,4 @@
-pkgmgr=br.e
+pkgmgr=brew
 
 config(){
     # https://github.com/aitjcize/cppman

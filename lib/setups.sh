@@ -1,5 +1,6 @@
 #! /usr/bin/env zsh
 # setup_one func docker.ehichroot   
+source ~/.e/lib/utils.sh
 setup_one() {
     root=$3
     [[ ! "$PWD" =~ "$root/app" ]]  && usage 

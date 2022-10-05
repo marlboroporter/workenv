@@ -1,6 +1,6 @@
 relink(){
- br.e unlink vim 
- br.e link vim
+ brew unlink vim 
+ brew link vim
 }
 
 cleanup() {

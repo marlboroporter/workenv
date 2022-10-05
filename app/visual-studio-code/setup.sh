@@ -1,4 +1,4 @@
-pkgmgr=br.e
+pkgmgr=brew
 
 #cheatsheet(){
 cheatsheet=$(cat<<EOF

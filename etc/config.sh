@@ -1,11 +1,11 @@
 #!/usr/bin/env zsh
 
-declare -A EROOT
-export EROOT=(e .e  p .p.e .e)
+#declare -A EROOT
+#export EROOT=(e .e  p .p.e .e)
 
 basics=(
      mac/xcode-select 
-     br.e 
+     brew 
      ssh  
      pref 
      prof

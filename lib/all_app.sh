@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 #. ../etc/env.sh 
-#. ../etc/config.sh
+. ${CENVROOT}/etc/config.sh
 
 W_APP_EXE=app    
 

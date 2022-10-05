@@ -1,4 +1,4 @@
-pkgmgr=br.e
+pkgmgr=brew
 config(){
  # sh.e move to vim
  npm install -g vim-language-server
