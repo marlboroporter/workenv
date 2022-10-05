@@ -70,7 +70,6 @@ cheatsheet=""
 setenv(){
   echo "$headerprefix">>$CRC; 
   echo "$setenv">>$CRC; 
-  echo "appended to $CRC: 
-$setenv";  
+  #echo "appended to $CRC:  $setenv";  
   eval "$setenv";  
 }
