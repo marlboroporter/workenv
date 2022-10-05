@@ -3,6 +3,8 @@
 #declare -A EROOT
 #export EROOT=(e .e  p .p.e .e)
 
+#this will be constructed later
+
 basics=(
      mac/xcode-select 
      brew 
@@ -20,7 +22,7 @@ utils=(
 
 lang=(
      sdkman
-     python/pyenv
+     lang/python/pyenv
      node 
      node/npm 
      node/yarn
