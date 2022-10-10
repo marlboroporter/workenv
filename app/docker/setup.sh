@@ -1,5 +1,7 @@
 install(){
 
+  echo "Please download docker desktop and install manually!"
+
 # not working, manually install
 #  echo "download Docker.dmg from docker.com"
 #  F=~/Downloads/Docker.img
@@ -15,6 +17,14 @@ install(){
   # for intel chip app to run on M1 
   if [[ $(uname -m) == "arm64" ]]; then
     softwareupdate --install-rosetta
+  fi
+}
+
+is_installed(){
+  if [[ -l $(which docker) ]] && [[ -f readline $(which docker) ]]; then
+    true
+  else 
+    false
   fi
 }
 

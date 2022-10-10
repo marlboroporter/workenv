@@ -82,7 +82,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-. ~/.e/app/prof/commonrc
+. ~/.x/etc/commonrc
 
 # export MANPATH="/usr/local/man:$MANPATH"
 

@@ -1,1 +1,1 @@
-#export EROOT
+a env_x data dir
