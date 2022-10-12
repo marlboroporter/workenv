@@ -13,6 +13,7 @@ basics=(
      prof
      ohmyzsh
      iterm2    
+     git
 )
 
 utils=(
