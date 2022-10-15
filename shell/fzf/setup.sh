@@ -9,11 +9,10 @@ cat<<EOF
 EOF
 }
 
-
-setenv(){
+setenv=$(
 cat<<EOF
-# cf ~/.fzf.zsh, ~/.fzf.bash
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 EOF
-}
+)
 
 

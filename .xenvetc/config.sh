@@ -6,14 +6,14 @@
 #this will be constructed later
 
 basics=(
-     mac/xcode-select 
+     ohmyzsh
+     profile
+     preference 
+     xcode-select 
      brew 
      ssh  
-     pref 
-     prof
-     ohmyzsh
-     iterm2    
      git
+     iterm2    
 )
 
 utils=(
@@ -23,19 +23,19 @@ utils=(
 
 lang=(
      sdkman
-     lang/python/pyenv
+     pyenv
      node 
-     node/npm 
-     node/yarn
+     npm 
+     yarn
 )
 
 #editor
 ide=(
      intellij-idea-ce
      vim
-     vim/nvim
-     vim/ideavim
-     vim/spacevim
+     nvim
+     ideavim
+     spacevim
      visual-studio-code 
 )
 
