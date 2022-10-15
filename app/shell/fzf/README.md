@@ -6,9 +6,16 @@
 * `Esc` to  abort search in addition to Ctrl-C
 * `tab` to select
 * `return` to terminate
+* `^k/j, up/down` to move up down 
 * `git status |fzf -m | xargs echo`
+* type words to filter not allow non word char such as - in between 
+* `'`prefix word to strict words filter
+* `fzf -m` for multiple selection output
+* `fzf` will search $PWD by default
+* `**` will include all subdir 
+* `|fzf` take from pipe instead of current dir
 
-# Details
+#  Details
   To install useful keybindings and fuzzy completion:
     /opt/homebrew/opt/fzf/install
 
