@@ -45,12 +45,28 @@ cloud=(
   busybox
 )
 
+shell_productivity=(
+  bat
+  exa
+  fd
+  fzf
+  ripgrep 
+  zoxide
+  )
+
+edit=(
+  pandoc
+  )
+
+
 apps=(
   ${basics[@]}
   ${lang[@]}
+  ${shell_productivity[@]}
   ${utils[@]}
   ${ide[@]}
   ${cloud[@]}
+  ${edit[@]}
 )
 
 #echo "${apps[@]}"
