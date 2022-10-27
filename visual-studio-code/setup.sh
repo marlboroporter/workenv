@@ -1,5 +1,20 @@
 pkgmgr=brew
 
+config(){
+
+}
+
+plug(){
+  code --uninstall-extension donjayamanne.python-environment-manager
+  code --install-extension donjayamanne.python-environment-manager
+
+
+
+}
+
+
+
+
 #cheatsheet(){
 cheatsheet=$(cat<<EOF
 * fn + F10:  step over

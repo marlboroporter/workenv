@@ -24,6 +24,7 @@ utils=(
 lang=(
      sdkman
      pyenv
+     python
      node 
      npm 
      yarn
