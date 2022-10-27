@@ -5,3 +5,10 @@ config(){
   ln -sf $D dotpandoc 
 }
 
+setenv="
+source $PWD/bin/pan.sh
+"
+
+
+
+

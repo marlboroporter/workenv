@@ -25,10 +25,10 @@
     [\[OCCUPY.END.DATE\]]{.underline} (the "Lease Term"). At the end of the
     Lease Term, the Tenant: (check one)
 
-    [x] - Can continue to lease the Premises on a month-to-month basis,
+    \[LEASE.TERM.VACATE.NO\] - Can continue to lease the Premises on a month-to-month basis,
     under the same terms as this Agreement.
 
-    [ ] -  Must vacate (leave) the Premises.
+    \[LEASE.TERM.VACATE.YES\] -  Must vacate (leave) the Premises.
 
 4.  **RENT**. The rent to be paid by the Tenant to the Landlord
     throughout the Lease Term is to be made in monthly installments of
@@ -38,27 +38,27 @@
 
 5.  **LATE FEE**. If Rent is not paid by the Due Date: (check one)
 
-    [x] - The Tenant will be charged a fee of \$[\[LATE.FEE.AMOUNT\]]{.underline}. Rent
+    \[LATE.FEE.YES] - The Tenant will be charged a fee of \$[\[LATE.FEE.AMOUNT\]]{.underline}. Rent
     is considered late if it has not been paid within [\[RENT.LATE.DAYS\]]{.underline}
     day(s) after the Due Date.
 
-    [ ] - There shall be NO Late Fee if the Rent is late.
+    \[LATE.FEE.NO\] - There shall be NO Late Fee if the Rent is late.
 
 
 7.  **PRORATION PERIOD**. The Tenant: (check one)
 
-    \[PRORATION.YES.CHECKMARK\] Shall take possession of the Premises before the start of the
+    \[PRORATION.YES\] - Shall take possession of the Premises before the start of the
     Lease Term on [\[PRORATION.START.DATE\]]{.underline} and agrees to pay a total
     of \$[\[PRORATION.START.AMOUNT\]]{.underline} for the proration period (the "Proration
     Rent"). The Proration Rent shall be paid by the Tenant upon the
     execution of this Agreement.
     
-    \[PRORATION.NO.CHECKMARK\] Shall NOT be taking possession of the Premises before the start of
+    \[PRORATION.NO\] - Shall NOT be taking possession of the Premises before the start of
     the Lease Term.
 
 8.  **SECURITY DEPOSIT**. As part of this Agreement: (check one)
 
-    \[SECURITY.DEPOSIT.YES.CHECKMARK\] The Landlord requires a payment of 
+    \[SECURITY.DEPOSIT.YES\] -  The Landlord requires a payment of 
     \$[\[SECURITY.DEPOSIT.AMOUNT\]]{.underline} (the
     "Security Deposit") for the faithful performance of the Tenant under the
     terms and conditions of this Agreement. The Security Deposit is required
@@ -69,41 +69,41 @@
     Deposit shall not be credited towards any Rent unless the Landlord gives
     their written consent.
 
-    \[SECURITY.DEPOSIT.NO.CHECKMARK\] - The Landlord does NOT require the Tenant to pay a Security Deposit
+    \[SECURITY.DEPOSIT.NO\] - The Landlord does NOT require the Tenant to pay a Security Deposit
     as part of this Agreement.
 
 9.  **RETURNED CHECKS (NON-SUFFICIENT FUNDS)**. If the Tenant pays the
     Rent with a check that bounces due to insufficient funds: (check
     one)
 
-    [\[RETURNED.CHECK.FINE.YES.CHECKMARK\] - The Tenant will be required to pay a fee of
+    [\[RETURNED.CHECK.FINE.YES\] - The Tenant will be required to pay a fee of
     \$[\[RETURNED.CHECK.FINE.AMOUNT\]]{.underline} per incident.
 
-    \[RETURNED.CHECK.FINE.NO.CHECKMARK\] - The Tenant will NOT be required to pay a fee.
+    \[RETURNED.CHECK.FINE.NO\] - The Tenant will NOT be required to pay a fee.
 
 10. **OCCUPANTS**. The Premises is to be occupied strictly as a
     residential dwelling with the following individual(s) in addition to
     the Tenant: (check one)
 
-    \[OCCUPANTS.ADDITIONAL.ALLOWED.YES.CHECKMARK\] - [\[OCCUPANT.NAMES\]]{.underline} (the "Occupant(s)").
+    \[OCCUPANTS.ADDITIONAL.ALLOWED.YES\] - [\[OCCUPANT.NAMES\]]{.underline} (the "Occupant(s)").
 
-    \[OCCUPANTS.ADDITIONAL.ALLOWED.NO.CHECKMARK\] - There are NO Occupant(s) in addition to the Tenant.
+    \[OCCUPANTS.ADDITIONAL.ALLOWED.NO\] - There are NO Occupant(s) in addition to the Tenant.
 
 11. **MOVE-IN INSPECTION**. Before, at the time of, or shortly after
     move-in, the Landlord and Tenant: (check one):
 
-    \[MOVEIN.INSPECTION.YES.CHECKMARK\] - Agree to inspect the Premises and write any present damages or
+    \[MOVEIN.INSPECTION.YES\] - Agree to inspect the Premises and write any present damages or
     needed repairs on a move-in checklist.
 
-    \[MOVEIN.INSPECTION.NO.CHECKMARK\] - Shall NOT inspect the Premises or complete a move-in checklist.
+    \[MOVEIN.INSPECTION.NO\] - Shall NOT inspect the Premises or complete a move-in checklist.
 
 13. **FURNISHINGS**. The Premises is: (check one)
 
-    \[FURNISHINGS.YES.CHECKMARK\] - Furnished (or will be furnished) with the following items:
+    \[FURNISHINGS.YES\] - Furnished (or will be furnished) with the following items:
 
     [\[FURNISHINGS.LIST\]]{.underline}.
 
-    \[FURNISHINGS.NO.CHECKMARK\] - NOT furnished.
+    \[FURNISHINGS.NO\] - NOT furnished.
 
 14. **UTILITIES.** 
 
@@ -125,18 +125,18 @@
 
 16. **PETS**. The Tenant is: (check one)
 
-    \[PETS.PERMITTED.YES.CHECKMARK\] - Permitted to 
+    \[PETS.YES\] - Permitted to 
     have [\[PETS.PERMITTED.NUMBER\]]{.underline} pet(s) on the Premises, 
     ONLY consisting of (list pet types): [\[PETS.PERMITTED.TYPES\]]{.underline}.
 
     If permitted, the Landlord shall charge a refundable pet deposit of 
     \$[\[PETS.DEPOSIT\]]{.underline} to cover potential damage to the Premises caused by the Tenant's pet(s).
 
-    \[PETS.PERMITTED.YES.CHECKMARK\] - NOT permitted to have pets of any nature on the Premises.
+    \[PETS.NO\] - NOT permitted to have pets of any nature on the Premises.
 
 17. **SMOKING POLICY**. Smoking on the Premises is: (check one)
 
-    [x] - Prohibited on the Premises and all Common Areas.
+    [SMOKING.POLICY.PROHIBITED.YES] - Prohibited on the Premises and all Common Areas.
 
 18. **SALE OF PROPERTY**. If the Premises is sold during the Lease Term, 
     the Tenant is to be notified of the contact details of the new Owner, 
@@ -144,11 +144,11 @@
     repairs and maintenance shall be forwarded. If the Premises is conveyed to another party, 
     the new owner: (check one)
 
-    \[SALE.OF.PROPERTY.TERMINATION.YES.CHECKMARK\] - Has the right to terminate this 
+    \[SALE.OF.PROPERTY.TERMINATION.YES\] - Has the right to terminate this 
     Agreement by providing [\[SALE.OF.PROPERTY.TERMINATION.DAYS.OF.NOTICE\]]{.underline}
     days' notice to the Tenant.
 
-    \[SALE.OF.PROPERTY.TERMINATION.NO.CHECKMARK\] - Does NOT have the right to terminate this Agreement.
+    \[SALE.OF.PROPERTY.TERMINATION.NO\] - Does NOT have the right to terminate this Agreement.
 
 20. **NOTICES**. Any notice sent by the Landlord or the Tenant to each
     other shall use the following addresses:
@@ -332,12 +332,12 @@
 
 40. **LEAD BASED PAINT**. The Premises (check one):
 
-    [ ] Was built prior to 1978. An attachment titled "Disclosure of
+    \[LEAD.BASED.PAINT.YES\] Was built prior to 1978. An attachment titled "Disclosure of
     Information on Lead-Based Paint and/or Lead-Based Paint Hazards" has
     been affixed to the Agreement and must be initialed and signed by the
     Parties.
 
-    [x] - Was NOT built prior to 1978.
+    \[LEAD.BASED.PAINT\] - Was NOT built prior to 1978.
 
 41. **ADDITIONAL PROVISIONS**.
 
