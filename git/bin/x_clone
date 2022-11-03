@@ -1,14 +1,27 @@
 x_clone_github(){
   repo=$1
-  D=~/dev/$(echo "$repo"\
+  d=$(echo "$repo"\
       | sed -e 's/https:\/\/github.com\///'\
       | sed -e 's/git@github.com://'\
       )
+  D=~/dev/$d
+  b=$(basename $d)
 
-  mkdir -p $D
-  git clone $repo $D
-  ln -s $D .
+  if ! [[ -d $D ]] && [[ -L $b ]]; then
+    rm $b;
+  fi
+
+  if ! [[ -d $D ]] && ! [[ -L $b ]]; then
+    mkdir -p $D
+    git clone $repo $D
+    ln -s $D . 
+  fi
+
+  if [[ -d $D ]]; then
+    rm -f $b;
+    ln -s $D . 
+  fi
+
 }
-
 
 x_clone_github "$@"
