@@ -1,9 +1,9 @@
 # [pandoc ](http://pandoc.org/installing.html)
 
-* [ABC](https://pandoc.org/getting-started.html)
+https://learnbyexample.github.io/customizing-pandoc/* [ABC](https://pandoc.org/getting-started.html)
 	* [ABC](https://pandoc.org/getting-started.html)
 		* [ABC](https://pandoc.org/getting-started.html)
-
+* [by example](https://learnbyexample.github.io/customizing-pandoc/)
 * man pandoc
 
 * converter

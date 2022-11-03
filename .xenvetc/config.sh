@@ -37,7 +37,7 @@ ide=(
      nvim
      ideavim
      spacevim
-     visual-studio-code 
+     vscode 
 )
 
 cloud=(
