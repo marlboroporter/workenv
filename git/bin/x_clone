@@ -1,6 +1,6 @@
 x_clone_github(){
   repo=$1
-  D="~/dev/"$(echo "$repo"\ 
+  D=~/dev/$(echo "$repo"\
       | sed -e 's/https:\/\/github.com\///'\
       | sed -e 's/git@github.com://'\
       )
