@@ -12,7 +12,13 @@ config(){
   - search and enable  \"vimrc\"
   - set vimrc path to ~/.e/vim/vscodevim/vscodevimrc
   - can also access vimrc in the order of : 
+  "
 }
+
+setenv="
+export PATH=$PWD:\$PATH 
+
+"
 
 
 
@@ -24,10 +30,6 @@ uninstall(){
   brew uninstall visual-studio-code  
 }
 
-
-config(){
-
-}
 
 plug(){
   code --uninstall-extension donjayamanne.python-environment-manager
