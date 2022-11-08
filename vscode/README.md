@@ -43,7 +43,10 @@
     $ defaults write com.microsoft.VSCodeExploration ApplePressAndHoldEnabled -bool false   # For VS Codium Exploration users
     $ defaults delete -g ApplePressAndHoldEnabled
 
-
+# Settings
+- Windows %APPDATA%\Code\User\settings.json
+- macOS $HOME/Library/Application\ Support/Code/User/settings.json
+- Linux $HOME/.config/Code/User/settings.json
 
 
 

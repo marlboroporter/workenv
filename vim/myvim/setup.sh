@@ -12,29 +12,29 @@ cleanup() {
     (mkdir -p  ~/.vim  && cd ~/.vim; mkdir -p autoload plugged after/ftplugin doc )
 }
 
-vimrc.eith_coc_metals(){
+vimrc_with_coc_metals(){
     cleanup
-    ln -sf ~/.e/app/vim/vim/rc ~/.vim/rc 
-    ln -sf ~/.e/app/vim/vim/vimrc.eith_coc_metals.vim ~/.vim/vimrc 
+    ln -sf ~/.e/vim/myvim/rc ~/.vim/rc 
+    ln -sf ~/.e/vim/myvim/vimrc.eith_coc_metals.vim ~/.vim/vimrc 
     vim -c " :PlugInstall | :qall! " 
     (cd ~/.vim/plugged/coc.nvim && yarn)
     (cd ~//.vim/plugged/coc-metals && yarn)
 }
 
-vimrc.eith_vimspector(){
+vimrc_with_vimspector(){
     cleanup
-    ln -sf ~/.e/app/vim/vim/rc ~/.vim/rc 
-    ln -sf ~/.e/app/vim/vim/vimrc.eith_vimspector.vim ~/.vim/vimrc 
+    ln -sf ~/.e/vim/myvim/rc ~/.vim/rc 
+    ln -sf ~/.e/vim/myvim/vimrc_with_vimspector.vim ~/.vim/vimrc 
     vim -c " :PlugInstall | :qall! " 
     vim -c " :VimspectorInstall | :qall! " 
 }
 
 cpp(){
     cleanup
-    ln -sf ~/.e/app/vim/vim/rc ~/.vim/rc 
-    ln -sf ~/.e/app/vim/vim/cpp_vimrc.vim  ~/.vim/vimrc 
-    vim -c " :PlugInstall | :qall! " 
-    vim -c " :VimspectorInstall | :qall! " 
+    ln -sf ~/.e/vim/myvim/rc ~/.vim/rc 
+    ln -sf ~/.e/vim/myvim/cpp_vimrc.vim  ~/.vim/vimrc 
+    vim -c ":PlugInstall | :qall! " 
+    #vim -c ":VimspectorInstall | :qall! " 
 }
 
 vimrc_cpp_gist(){
@@ -47,15 +47,15 @@ vimrc_cpp_gist(){
         cp -r OmniCppComplete/autoload/*  ~/.vim/autoload
         cp -r OmniCppComplete/doc/*  ~/.vim/doc
     )
-    ln -sf ~/.e/app/vim/vim/vimrc_cpp_gist.vim  ~/.vim/vimrc 
+    ln -sf ~/.e/vim/myvim/vimrc_cpp_gist.vim  ~/.vim/vimrc 
     #vim -c " :PlugInstall | :qall! " 
 }
 
 
 
 config() {
-   #vimrc.eith_coc_metals 
-   #vimrc.eith_vimspector
+   #vimrc_with_coc_metals 
+   #vimrc_with_vimspector
    cpp
    #vimrc_cpp_gist
 }

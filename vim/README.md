@@ -59,3 +59,6 @@
 
 # SpaceVim
 * `"*y` to copy to system clipboard 
+
+# debut with vim
+* [vimspector: Debugging inside vim | Graphical debugger for vim and neovim](https://www.youtube.com/watch?v=U4KLYhkIgB4)

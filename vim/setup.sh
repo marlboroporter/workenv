@@ -1,9 +1,14 @@
 pkgmgr=brew
+install(){
+    brew remove vim
+    brew cleanup
+    brew install vim
+}
 
 . lib/func.sh
 
 cheatsheet=$(cat<<'EOF'
-* Sh.e vim setting
+* Show vim setting
   - :set all 
   - :map
 * `f`ind/`t`ill char in current line: `fFtT` `;` `c`    

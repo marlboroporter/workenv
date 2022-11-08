@@ -1,7 +1,7 @@
 
 " MAPPINGS && CONFIG --------------------------------------------------------- {{{
 
-let mapleader = ";"
+let mapleader = " "
 
 inoremap jj <Esc>
 inoremap kk <Esc>

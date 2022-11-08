@@ -4,35 +4,20 @@ samples(){
 }
 
 helloworld(){
-N=helloworld
-D=~/dev/samples/cpp/$N
-mkdir -p $D
-(
-cd $D
-tee $N.cpp<<EOF
-#include <iostream>
-#include <vector>
-#include <string>
+N=${1:-helloworld}
+mkdir -p $N
+cp etc/helloworld.cpp $N/$N.cpp
+rm -rf $N/.vscode
+cp -rf ./etc/active_file $N/.vscode 
+cp -f ./etc/gitignore $N/.gitignore
+echo "$N">>$N/.gitignore 
 
-using namespace std;
-
-int main()
-{
-    vector<string> msg {"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"};
-
-    for (const string& word : msg)
-    {
-        cout <<word << " ";
-    }
-    cout << endl;
-}
-EOF
-)
-rm $N
-ln -s $D .  
+#D=~/dev/samples/cpp/$N
+#mkdir -p $D
+#ln -s $D .  
 # config
-rm -rf $D/.vscode
-cp -r ./etc/active_file $D/.vscode 
+#rm -rf $D/.vscode
+#cp -rf ./etc/active_file $D/.vscode 
 }
 
 
