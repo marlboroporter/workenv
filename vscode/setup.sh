@@ -16,7 +16,7 @@ config(){
 }
 
 setenv="
-export PATH=$PWD:\$PATH 
+export PATH=$PWD/bin:\$PATH 
 
 "
 

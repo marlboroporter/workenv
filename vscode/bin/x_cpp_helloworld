@@ -1,18 +1,18 @@
-#!/bin/env zsh
+#! /usr/bin/env zsh
 D=$PWD
 helloworld(){
     e vscode # cd vscode    
-
+    log "$PWD"
     N=${1:-helloworld}
     d=$D/$N
     if ! [[ -d $d ]]; then
         mkdir $d 
         cp etc/cpp/helloworld.cpp $d/$N.cpp
-        cp -r ./etc/active_file $d/.vscode 
-        cp ./etc/gitignore $d/.gitignore
+        cp etc/cpp/gitignore $d/.gitignore
         echo "$N">>$d/.gitignore 
+        cp -r etc/cpp/active_file $d/.vscode 
     fi
     cd $D
 }
 
-
+helloworld "$@"
