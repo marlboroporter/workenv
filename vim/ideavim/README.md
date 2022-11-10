@@ -9,3 +9,5 @@
     - idearefactormode
     - ideajoin mode
     - Using Ctrl+] to escape editing in dialogs
+* Tips
+    - reloadsetting `:source ~/.ideavimrc` 

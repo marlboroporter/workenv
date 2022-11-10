@@ -58,7 +58,7 @@ map <leader>o <Action>(FileStructurePopup)
 
 nmap <leader>n :NERDTreeToggle<CR>
 
-map <leader>m :e ~/.e/vim/ideavim/README.md
+map <leader>hv :split ~/.e/vim/ideavim/README.md
 
 
 
