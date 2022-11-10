@@ -20,6 +20,7 @@ let g:argtextobj_pairs="[:],(:),<:>"
 
 let g:NERDTreeMapActivateNode='l'
 let g:NERDTreeMapJumpParent='h'
+let g:NERDTreeToggle=' n'
 
 
 
@@ -58,7 +59,7 @@ map <leader>o <Action>(FileStructurePopup)
 
 nmap <leader>n :NERDTreeToggle<CR>
 
-map <leader>hv :split ~/.e/vim/ideavim/README.md
+map <leader>hv :vsplit ~/.e/vim/ideavim/README.md
 
 
 
