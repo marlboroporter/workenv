@@ -20,7 +20,9 @@ let g:argtextobj_pairs="[:],(:),<:>"
 
 let g:NERDTreeMapActivateNode='l'
 let g:NERDTreeMapJumpParent='h'
-let g:NERDTreeToggle=' n'
+
+"default setting 
+"let g:NERDTreeQuit='q'
 
 
 
@@ -34,6 +36,7 @@ set noerrorbells
 "
 """ Idea specific settings ------------------
 set ideajoin
+
 set ideastatusicon=gray
 set idearefactormode=keep
 
@@ -49,17 +52,20 @@ map <leader>z <Action>(ToggleDistractionFreeMode)
 map <leader>s <Action>(SelectInProjectView)
 map <leader>a <Action>(Annotate)
 "
-"git history
+"git history 
 map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
+"show ideavim helps 
+map <leader>hv :vsplit ~/.e/vim/ideavim/README.md
+
 
 map <S-Space> <Action>(GotoNextError)
 
 map <leader>b <Action>(ToggleLineBreakpoint)
 map <leader>o <Action>(FileStructurePopup)
 
+"works from editor window only, using q to quit tree map
 nmap <leader>n :NERDTreeToggle<CR>
 
-map <leader>hv :vsplit ~/.e/vim/ideavim/README.md
 
 
 
