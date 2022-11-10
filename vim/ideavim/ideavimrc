@@ -22,6 +22,7 @@ let g:NERDTreeMapActivateNode='l'
 let g:NERDTreeMapJumpParent='h'
 
 
+
 """ Common settings -------------------------
 set showmode
 set so=5
@@ -46,13 +47,16 @@ map <leader>z <Action>(ToggleDistractionFreeMode)
 
 map <leader>s <Action>(SelectInProjectView)
 map <leader>a <Action>(Annotate)
+"
+"git history
 map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
+
 map <S-Space> <Action>(GotoNextError)
 
 map <leader>b <Action>(ToggleLineBreakpoint)
 map <leader>o <Action>(FileStructurePopup)
 
-
+nmap <leader>n :NERDTreeToggle<CR>
 
 map <leader>m :e ~/.e/vim/ideavim/README.md
 
