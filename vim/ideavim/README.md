@@ -1,5 +1,8 @@
 # Reference 
-* [ideavim]( https://github.com/JetBrains/ideavim)
+* [ideavim](https://github.com/JetBrains/ideavim)
+    - [wiki](https://github.com/JetBrains/ideavim/wiki) 
+        -[plugins](https://github.com/JetBrains/ideavim/wiki/Emulated-plugins)
+
 * [video 1](https://www.youtube.com/watch?v=SDiKLLrUZMIk) 
     - Relative line numbering
     - NERDTree support

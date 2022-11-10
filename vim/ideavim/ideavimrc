@@ -13,9 +13,14 @@ set argtextobj
 set easymotion
 set textobj-entire
 set ReplaceWithRegister
-
+set nerdtree
+"
 """ Plugin settings -------------------------
 let g:argtextobj_pairs="[:],(:),<:>"
+
+let g:NERDTreeMapActivateNode='l'
+let g:NERDTreeMapJumpParent='h'
+
 
 """ Common settings -------------------------
 set showmode
@@ -67,12 +72,4 @@ set incsearch
 map Q gq
 "
 "
-""""""""""""""""
-Plug 'tpope/vim-surround'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'tpope/commentary'
-Plug 'vim-scripts/argtextobj.vim'
-Plug 'https://github.com/easymotion/vim-easymotion'
-Plug 'https://github.com/kana/vim-textobj-entire'
-Plug 'https://github.com/vim-scripts/ReplaceWithRegister'
 
