@@ -5,8 +5,9 @@ config(){
   defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false      # For VS Code Insider
   defaults write com.visualstudio.code.oss ApplePressAndHoldEnabled -bool false         # For VS Codium
   defaults write com.microsoft.VSCodeExploration ApplePressAndHoldEnabled -bool false   # For VS Codium Exploration users
-  defaults delete -g ApplePressAndHoldEnabled                                           # If necessary, reset global default
-  # 
+  # the following is set in e/preference
+  # defaults delete -g ApplePressAndHoldEnabled                                           # If necessary, reset global default
+   
   echo "
   - vscode > preferences > settings ;
   - search and enable  \"vimrc\"
