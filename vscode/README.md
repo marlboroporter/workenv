@@ -32,21 +32,11 @@
   * "metals.superMethodLensesEnabled"
   * "Metals: Reveal super method hierachy"   
   * Used with "Metals Quick Pick" extension
-*
 
 # Vscode vim
-  * mac
-
-    $ defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false              # For VS Code
-    $ defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false      # For VS Code Insider
-    $ defaults write com.visualstudio.code.oss ApplePressAndHoldEnabled -bool false         # For VS Codium
-    $ defaults write com.microsoft.VSCodeExploration ApplePressAndHoldEnabled -bool false   # For VS Codium Exploration users
-    $ defaults delete -g ApplePressAndHoldEnabled
-
-# Settings
-- Windows %APPDATA%\Code\User\settings.json
-- macOS $HOME/Library/Application\ Support/Code/User/settings.json
-- Linux $HOME/.config/Code/User/settings.json
+- Settings & shortcuts
+-  macOS: $HOME/Library/Application\ Support/Code/User/settings.json
+-  macOS: $HOME/Library/Application\ Support/Code/User/keybindings.json
 
 
 

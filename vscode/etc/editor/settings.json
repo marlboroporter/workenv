@@ -1,0 +1,30 @@
+{
+    "workbench.colorTheme": "Default Dark+",
+    "explorer.compactFolders": false,
+    "files.watcherExclude": {
+        "**/.bloop": true,
+        "**/.metals": true,
+        "**/.ammonite": true
+    },
+    "window.zoomLevel": 1,
+    "vim.changeWordIncludesWhitespace": true,
+    "vim.useSystemClipboard": true,
+    "vim.leader": " ",
+    "vim.handleKeys": {
+
+        "<C-d>": true,
+        "<C-s>": false,
+        "<C-z>": false,
+        "<C-n>": false
+    },
+    "debug.openExplorerOnEnd": true,
+    "debug.terminal.clearBeforeReusing": true,
+    "debug.toolBarLocation": "docked",
+    "testing.automaticallyOpenPeekViewDuringAutoRun": true,
+    "scm.alwaysShowActions": true,
+    "extensions.closeExtensionDetailsOnViewChange": true,
+    "terminal.integrated.allowMnemonics": true,
+    "vim.vimrc.enable": true,
+    "debug.javascript.autoAttachFilter": "onlyWithFlag",
+    "vim.vimrc.path": "~/.e/vscode/etc/editor/vscodevimrc.vim"
+}
