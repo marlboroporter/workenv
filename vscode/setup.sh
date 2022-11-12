@@ -51,6 +51,9 @@ settings(){
     cp etc/editor/$KBINDING $VSCODE_USER_CFG_DIR
     cp etc/editor/$SETTING $VSCODE_USER_CFG_DIR
     tree -L 1 $VSCODE_USER_CFG_DIR |grep json
+    # additional vim style key mapping
+    #  ./etc/editor/settings.json
+    #  "vim.vimrc.path": "~/.e/vscode/etc/editor/vscodevimrc.vim"
 }
 
 config(){
