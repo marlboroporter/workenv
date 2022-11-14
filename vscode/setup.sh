@@ -48,8 +48,15 @@ settings(){
     VSCODE_USER_CFG_DIR=~"/Library/Application Support/Code/User"
     KBINDING=keybindings.json
     SETTING=settings.json 
-    cp etc/editor/$KBINDING $VSCODE_USER_CFG_DIR
-    cp etc/editor/$SETTING $VSCODE_USER_CFG_DIR
+    
+    rm $VSCODE_USER_CFG_DIR/$KBINDING 
+    ln -s $PWD/etc/editor/$KBINDING  $VSCODE_USER_CFG_DIR/$KBINDING 
+    rm $VSCODE_USER_CFG_DIR/$SETTING 
+    ln -s $PWD/etc/editor/$SETTING  $VSCODE_USER_CFG_DIR/$SETTING 
+
+    #cp etc/editor/$KBINDING $VSCODE_USER_CFG_DIR
+    #cp etc/editor/$SETTING $VSCODE_USER_CFG_DIR
+
     tree -L 1 $VSCODE_USER_CFG_DIR |grep json
     # additional vim style key mapping
     #  ./etc/editor/settings.json

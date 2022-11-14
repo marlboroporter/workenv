@@ -6,3 +6,32 @@
 let mapleader = " "
 inoremap jj <esc>
 inoremap kk <esc>
+
+"
+" read/edit this file
+nmap <leader>cheat :e ~/.e/vscode/etc/editor/vscodevimrc.vim
+
+"" 
+"" cmd + shift + e   ---> switch between editor to explorer 
+"" hjkl ---> move around explorer (NERDTree) 
+""
+
+"" hjkl moving in popup list ( see keymappings.json)
+""
+
+
+""
+"" cmd + shift + p   ---> command pallete 
+""
+
+
+" somehow this still not working
+" https://karlredman.github.io/Articles/dev.to/vscode1999/
+" switch tabs (same as gt & gT)
+nnoremap <C-j> :tabprevious<CR>
+nnoremap <C-k> :tabnext<CR>
+"
+" (bonus) move tabls right or left
+map <C-h> :execute "tabmove" tabpagenr() - 2 <CR>
+map <C-l> :execute "tabmove" tabpagenr() + 1 <CR>
+

@@ -1,4 +1,5 @@
 [
+    //vim movement in various situationx
     {
         "key": "ctrl+h", 
         "command": "workbench.action.focusLeftGroup", 
@@ -64,6 +65,7 @@
         "command": "list.select",
         "when": "listFocus && !inputFocus"
     },
+
     {
         "key": "ctrl+j",
         "command": "selectNextSuggestion",
