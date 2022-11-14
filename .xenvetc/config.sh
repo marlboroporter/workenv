@@ -37,7 +37,6 @@ ide=(
      nvim
      ideavim
      spacevim
-     vscodevim 
      vscode 
 )
 
