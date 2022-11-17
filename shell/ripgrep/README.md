@@ -1,19 +1,25 @@
 # Samples
+* "--multiline-dotall" === "(?s)"
 
 ```bash
-❯ rg  --multiline --multiline-dotall "# Property Tax.*?#"
-house/README.md
-3:## Property Tax Records
-4:
-5:* [1017 Navigon, Durham](https://property.spatialest.com/nc/durham-tax/#/)
-❯ rg  --multiline "(?s)# Property Tax.*?#"
-house/README.md
-3:## Property Tax Records
-4:
-5:* [1017 Navigon, Durham](https://property.spatialest.com/nc/durham-tax/#/)
-
-~/.butler on recycle !15
+❯ rg --pcre2 --multiline --no-line-number --heading "(?s)(?<=^# Syntax\n)(.*?)(?=\n#)" |while read x; do echo $x; done
+pcre/README.md
+* [PCRE](https://www.pcre.org/)
+* [Regular-Expression.info](https://www.regular-expressions.info/)
+❯ rg --pcre2 --multiline  --heading "(?s)(?<=^# Syntax\n)(.*?)(?=\n#)" |while read x; do echo $x; done
 ```
 
-# hi
-test
+
+
+```bash
+rg --pcre2 --multiline --multiline-dotall --no-line-number --heading "(?<=^# Syntax\n)(.*?)(?=\n#)"
+
+```
+
+
+
+
+# Cross References 
+* pcre
+* regex
+
