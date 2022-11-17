@@ -6,7 +6,6 @@
         "**/.metals": true,
         "**/.ammonite": true
     },
-    "window.zoomLevel": 2,
     "vim.changeWordIncludesWhitespace": true,
     "vim.useSystemClipboard": true,
     "vim.leader": " ",
@@ -29,5 +28,6 @@
     "vim.vimrc.path": "~/.e/vscode/etc/editor/vscodevimrc.vim",
     "files.associations": {
         "*.json": "jsonc"
-    }
+    },
+    "window.zoomLevel": 2
 }
