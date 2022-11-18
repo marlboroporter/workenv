@@ -18,8 +18,9 @@
 * VsCode Vim
 * vi
 
-# Vim Tips
-
+# Tips
+x
+x
 ---
 ---
 
@@ -31,7 +32,7 @@
 * [very magic]()
 
 
-# Vim RE
+# RE
 * [regex101](https://regex101.com/r/GyxvOQ/1)
 * [vim by examples](https://learnbyexample.gitbooks.io/vim-reference/content/Regular_Expressions.html)
 * [vim regex - match any number of whitespace at end of line except 2](https://stackoverflow.com/questions/67616933/vim-regex-match-any-number-of-whitespace-at-end-of-line-except-2)  

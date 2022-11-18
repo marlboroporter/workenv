@@ -1,0 +1,39 @@
+#! /usr/bin/env zsh
+# 
+# extract a section of readme.md between firt level of title
+#
+#
+#  - also serve as an multiline and dotall example for lookaround regex
+#    "(?<=^# Tips\n)(.*?)(?=^#|\Z)"
+#    "(?<=^# Tips\n)(.*?)(?=^#|\Z)"
+#      |                  |     | 
+#      |                  |     -> End of string (EOF when read whole file) 
+#      |                  |
+#      |                  ->lookahead
+#      |->lookbehind
+#      
+#  - multiple line treat each line ^ $ as special, i.e. start and end of line
+#  - mutliline-dotall makes "."  matches \n too
+#
+# SUBJECT="^# Tips" 
+# SUBJECT="^# Tips\n" 
+SUBJECT="$1"  
+FILE_EXT="${2:-md}"
+
+REG="(?<=$SUBJECT)(.*?)(?=^#|\Z)"
+
+f1(){
+    rg --pcre2 --multiline --multiline-dotall  --no-line-number --heading $1 
+}
+
+f3(){
+    rg --pcre2 --multiline --multiline-dotall $1 **/*.$FILE_EXT 
+}
+
+f4(){
+    rg --pcre2 --multiline --multiline-dotall $1 
+}
+
+
+f3 $REG
+

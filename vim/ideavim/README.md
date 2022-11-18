@@ -1,4 +1,4 @@
-# Reference 
+# References 
 * [ideavim](https://github.com/JetBrains/ideavim)
     - [wiki](https://github.com/JetBrains/ideavim/wiki) 
         -[plugins](https://github.com/JetBrains/ideavim/wiki/Emulated-plugins)
@@ -9,5 +9,6 @@
     - idearefactormode
     - ideajoin mode
     - Using Ctrl+] to escape editing in dialogs
-* Tips
+
+# Tips
     - reloadsetting `:source ~/.ideavimrc` 
