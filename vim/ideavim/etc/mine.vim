@@ -1,6 +1,6 @@
-
+" https://gist.github.com/zchee/9c78f91cc5ad771c1f5d
 " ===============================================
-# https://github.com/liuchengxu/dotfiles/blob/master/ideavimrc
+" https://github.com/liuchengxu/dotfiles/blob/master/ideavimrc
 let mapleader=' '
 
 set visualbell
@@ -157,9 +157,8 @@ nnoremap <Leader>tl Vy<CR>:action ActivateTerminalToolWindow<CR>
 vnoremap <Leader>tl y<CR>:action ActivateTerminalToolWindow<CR>
 
 " git
-map <leader>a <Action>(Annotate)
-map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
-
+map <leader>aa <Action>(Annotate)
+map <leader>hh <Action>(Vcs.ShowTabbedFileHistory)
 
 " e
 map <leader>er :vsplit ~/.e/vim/ideavim/README.md
