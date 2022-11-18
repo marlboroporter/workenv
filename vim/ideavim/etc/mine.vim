@@ -162,7 +162,8 @@ map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
 
 
 " e
-map <leader>hv :vsplit ~/.e/vim/ideavim/README.md
+map <leader>er :vsplit ~/.e/vim/ideavim/README.md
+map <leader>ec :vsplit ~/.ideavimrc
 
 
 " ============Plugins===================================
@@ -190,7 +191,7 @@ set nerdtree
 let g:argtextobj_pairs="[:],(:),<:>"
 
 "Inside NerdTree window
-"   expand below or go editor if leaf node ( enter on leaf node also go editor)
+"   expand below or go editor if leaf node ( enter on leaf node also go editor), also toggle exapnd/shrink 
 let g:NERDTreeMapActivateNode='l'
 "   go up tree node
 let g:NERDTreeMapJumpParent='h'
