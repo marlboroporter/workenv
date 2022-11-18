@@ -1,7 +1,7 @@
 
 " ===============================================
 # https://github.com/liuchengxu/dotfiles/blob/master/ideavimrc
-"let mapleader=' '
+let mapleader=' '
 
 set visualbell
 set hlsearch
@@ -189,16 +189,22 @@ set nerdtree
 
 let g:argtextobj_pairs="[:],(:),<:>"
 
-" In NerdTree window
+"Inside NerdTree window
+"   expand below or go editor if leaf node ( enter on leaf node also go editor)
 let g:NERDTreeMapActivateNode='l'
+"   go up tree node
 let g:NERDTreeMapJumpParent='h'
-"default setting 
-let g:NERDTreeQuit='q'
-" Open tree from editor
+"   quit tree when in tree; default setting of Nerdtree
+"let g:NERDTreeQuit='q'
+"   change focus to tree from editor
 nmap <leader>n :NERDTreeFocus<CR>
-" Quit tree : 'q'
+"   go editor from tree to editor in any node; l and enter also work for leaf
+"    ESC or mapped CAP LOCK key
+" Quit tree : 'q' ; then focus not useful
+" Open tree in case quited before"
+nmap <leader>no :NERDTree<CR>
 
-" easymotion 
+" easymotion
 "map <leader>f <Plug>(easymotion-s)
 "map <leader>e <Plug>(easymotion-f)
 
