@@ -19,7 +19,7 @@
  :%s/\v(\s)@<!\s(\s{2,})?$//g
 ```
 * [Regex to match spaces that are NOT at the beginning of a line?](https://vi.stackexchange.com/questions/7914/regex-to-match-spaces-that-are-not-at-the-beginning-of-a-line) 
-```vim regex 
+```vim regex  
   ┌──────────────── 1.     \v - Using "very magic",
   │              ┌─ 2.  s{2,} - Match two or more spaces,
  ┌┤         ┌────┤
@@ -31,9 +31,9 @@
         └────────── 4. (^\s*) - The start of the line followed by
                                 any number of spaces.
 ```
-*  to copy to system clipboard 
+* To copy to system clipboard 
 ```vim keymapping 
- "*y 
+    "*y 
 ```
 # Debug 
 * [vimspector: Debugging inside vim | Graphical debugger for vim and neovim](https://www.youtube.com/watch?v=U4KLYhkIgB4)
