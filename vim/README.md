@@ -1,3 +1,11 @@
+# Tasks
+|Task|Due|Status|
+|---|---|---|
+|Sync ideavim vscodevim vim keymappings|2022-12-31|pending|
+|Vim inspector for c++|2022-12-31|pending|
+
+
+
 # Vim distributions
 
 * Vim 8
@@ -37,3 +45,4 @@
 ```
 # Debug 
 * [vimspector: Debugging inside vim | Graphical debugger for vim and neovim](https://www.youtube.com/watch?v=U4KLYhkIgB4)
+
