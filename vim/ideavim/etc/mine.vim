@@ -197,12 +197,12 @@ let g:NERDTreeMapJumpParent='h'
 "   quit tree when in tree; default setting of Nerdtree
 "let g:NERDTreeQuit='q'
 "   change focus to tree from editor
-nmap <leader>n :NERDTreeFocus<CR>
+"nmap <leader>nn :NERDTreeFocus<CR>
 "   go editor from tree to editor in any node; l and enter also work for leaf
 "    ESC or mapped CAP LOCK key
 " Quit tree : 'q' ; then focus not useful
 " Open tree in case quited before"
-nmap <leader>no :NERDTree<CR>
+nmap <leader>nn :NERDTree<CR>
 
 " easymotion
 "map <leader>f <Plug>(easymotion-s)
