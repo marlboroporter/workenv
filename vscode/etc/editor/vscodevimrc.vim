@@ -9,7 +9,10 @@ inoremap kk <esc>
 
 "
 " read/edit this file
-nmap <leader>cheat :e ~/.e/vscode/etc/editor/vscodevimrc.vim
+nmap <leader>ec :e ~/.e/vscode/etc/editor/vscodevimrc.vim
+nmap <leader>ek :e ~/.e/vscode/etc/editor/keybindings.json
+nmap <leader>es :e ~/.e/vscode/etc/editor/settings.json
+nmap <leader>er :e ~/.e/vscode/README.md
 
 "" 
 "" cmd + shift + e   ---> switch between editor to explorer 

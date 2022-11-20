@@ -86,5 +86,9 @@
         "key": "ctrl+k",
         "command": "workbench.action.quickOpenSelectPrevious",
         "when": "inQuickOpen"
+    },
+    {
+        "key": "cmd+s",
+        "command": "editor.action.insertSnippet"
     }
 ]

@@ -1,4 +1,25 @@
-# [Using Clang in Visual Studio Code](https://code.visualstudio.com/docs/cpp/config-clang-mac)
+# References
+
+
+# Keybindings 
+* Default
+  - [Cmd+K+R](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
+  - [Saved](etc/editor/keyboard-shortcuts-macos.pdf)
+* Current
+  - *Cmd+K+S*    
+
+* Memo 
+
+Keys              | Function            
+------------------|---------------------------
+Cmd+B             | Toggle Explorer 
+Cmd+B             | Bold in Markdown Snippet view
+Sft+Cmd+          | Switch focus between explorer and editor 
+
+
+
+
+# [Using Clang in Visual Studio Code](https://code.visualstudio.com/docslcpp/config-clang-mac)
   - See setup.sh#samples()
   - .vscode
     - task.json -- build file
@@ -37,6 +58,15 @@
 - Settings & shortcuts
 -  macOS: $HOME/Library/Application\ Support/Code/User/settings.json
 -  macOS: $HOME/Library/Application\ Support/Code/User/keybindings.json
+
+
+# Tasks
+Task | Repeat | Date Init | Date Due | Status | Notes
+---|---|---|---|---|---
+dothis | m | 20221120 |  | o |
+|||||
+
+
 
 
 

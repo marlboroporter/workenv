@@ -53,6 +53,9 @@ settings(){
     ln -s $PWD/etc/editor/$KBINDING  $VSCODE_USER_CFG_DIR/$KBINDING 
     rm $VSCODE_USER_CFG_DIR/$SETTING 
     ln -s $PWD/etc/editor/$SETTING  $VSCODE_USER_CFG_DIR/$SETTING 
+    rm -rf $VSCODE_USER_CFG_DIR/snippets 
+    ln -s $PWD/etc/editor/snippets  $VSCODE_USER_CFG_DIR/snippets
+
 
     #cp etc/editor/$KBINDING $VSCODE_USER_CFG_DIR
     #cp etc/editor/$SETTING $VSCODE_USER_CFG_DIR
@@ -72,5 +75,3 @@ cheatsheet=$(cat<<EOF
 * fn + F10:  step over
 EOF
 )
-
-
