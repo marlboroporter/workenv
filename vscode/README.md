@@ -60,13 +60,11 @@ Sft+Cmd+          | Switch focus between explorer and editor
 -  macOS: $HOME/Library/Application\ Support/Code/User/keybindings.json
 
 
-# Tasks
-Task | Repeat | Date Init | Date Due | Status | Notes
----|---|---|---|---|---
-dothis | m | 20221120 |  | o |
-|||||
-
-
-
-
-
+# Snippets
+```markdown
+  # Tasks
+  Task | Repeat | Date Init | Date Due | Status | Notes
+  ---|---|---|---|---|---
+  dothis | m | 20221120 |  | o |
+  |||||
+```

@@ -1,10 +1,8 @@
 # Tasks
-|Task|Due|Status|
-|---|---|---|
-|Sync ideavim vscodevim vim keymappings|2022-12-31|pending|
-|Vim inspector for c++|2022-12-31|pending|
-
-
+Task | Repeat | Date Init | Date Due | Status | Notes
+---|---|---|---|---|---
+Common Keybindings vscode, intellij, vim | m | 20221120 |  | o |
+|||||
 
 # Vim distributions
 
