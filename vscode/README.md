@@ -68,3 +68,16 @@ Sft+Cmd+          | Switch focus between explorer and editor
   dothis | m | 20221120 |  | o |
   |||||
 ```
+# Extension
+* [Create extension pack](https://code.visualstudio.com/api/get-started/your-first-extension)
+    * install
+        - npm install -g yo generator-code 
+        - npm install -g vsce 
+    * create extension zip 
+        - yo code
+        - cd extensionDirCreated;  vsce 
+        - jiecodeenv-0.0.1.vsix
+    * install extension
+        - from ui -> extension -> ... -> install from VSIX -> pick jiecodeenv-0.0.1.vsix
+        
+

@@ -23,10 +23,16 @@ export PATH=$PWD/bin:\$PATH
 
 install(){
   brew reinstall visual-studio-code  
+  # [extension generator](https://code.visualstudio.com/api/get-started/your-first-extension)
+  npm install -g yo generator-code
+  npm i -g vsce
 }
 uninstall(){
   brew uninstall visual-studio-code  
 }
+
+
+
 
 
 extensions(){

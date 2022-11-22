@@ -31,6 +31,6 @@
     },
 
     "vim.easymotion": true,
-    "window.zoomLevel": 1,
-    "editor.tabCompletion": "on"
+    "editor.tabCompletion": "on",
+    "git.autofetch": true
 }

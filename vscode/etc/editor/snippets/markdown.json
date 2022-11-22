@@ -39,8 +39,42 @@
 			"dothis | m | ${CURRENT_YEAR}${CURRENT_MONTH}${CURRENT_DATE} |  | o |", 
 			"|||||"
 		],
-		"description": "tasks in readme.md, repeat: d, w, m, y; status: o, c, p(detail in notes)" 	
+		"description": "repeat(n, d, w, m, y);status(o, c, p)(detail in notes)" 	
 	},		
 
+	"Insurance":{
+		"scope": "markdown",
+		"prefix": "insurance",
+		"body": [
+			"# Insurances",
+			"* address",
+			"* agent",
+			"* policy",
+			"",
+			"Year | Policy | Premium | Agent | Start | End",
+			"---|---|---|---|---|---",
+			"|||||"
+		],
+		"description": "Insurance yearly" 	
+	},		
+
+	//"``` ",
+	//"`category: m-edical, b-usiness, s-ocial, f-amily",
+	//"`attendee: use name or email or mobile",
+	//"`location: like doctor's address  ",
+	//"`details: full details ",
+	//"```",
+	"Appointments":{
+		"scope": "markdownk",
+		"prefix": "appointments",
+		"body": [
+			"# Appointments",
+			"Category | Title | Time | Location | Attendees | Details ",
+			"---|---|---|---|---|---",
+			"M | Vision annual check | 2022-12-17 12:15:00 | 357 Route 9, Manalapan;| Yanping Xing; Jie Li |732-972-2221 ",
+
+		]	
+
+	}, 
 
 }
