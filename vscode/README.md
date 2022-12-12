@@ -14,6 +14,7 @@ Keys              | Function
 ------------------|---------------------------
 Cmd+B             | Toggle Explorer 
 Cmd+B             | Bold in Markdown Snippet view
+Sht+Cmd+B         | build from command line (c++ etc)
 Sft+Cmd+          | Switch focus between explorer and editor 
 
 
