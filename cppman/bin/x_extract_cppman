@@ -28,8 +28,10 @@ END="^\S+"
 cppman $1 | rg --pcre2 --multiline --multiline-dotall  "(?<=$START)(.*?)(?=$END)" \
     | grep -v $START \
     | rg --pcre2 --multiline --multiline-dotall  --passthru -r '$1/* $0 $1*/'  "(^\s+)(Output)(.*?)(?=^\S+|\Z)" \
-    | rg  --passthru -r "'"  '’' \
-> $1.cpp    
+    | rg --passthru -r "'"  '’' \
+    | rg --passthru -r "-" "‐"   \
+    > $1.cpp    
+    
 # echo will trun  '\n' into actually new line in shell, but redirect to file will not 
 # ' in unicode is different ans sometimes need to replace with ascii  
 # control encoding is another way to handle it
