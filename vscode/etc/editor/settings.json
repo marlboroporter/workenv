@@ -10,7 +10,6 @@
     "vim.useSystemClipboard": true,
     "vim.leader": " ",
     "vim.handleKeys": {
-
         "<C-d>": true,
         "<C-s>": false,
         "<C-z>": false,
@@ -29,8 +28,14 @@
     "files.associations": {
         "*.json": "jsonc"
     },
-
     "vim.easymotion": true,
     "editor.tabCompletion": "on",
-    "git.autofetch": true
+    "git.autofetch": true,
+    "extensions.experimental.affinity": {
+        "ms-toolsai.jupyter": 1,
+        "ms-toolsai.jupyter-renderers": 1,
+        "ms-python.python": 1,
+        "ms-python.vscode-pylance": 1
+    },
+    "window.zoomLevel": 1
 }

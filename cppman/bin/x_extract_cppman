@@ -14,32 +14,16 @@
 #      
 #  - multiple line treat each line ^ $ as special, i.e. start and end of line
 #  - mutliline-dotall makes "."  matches \n too
-#
-# START="^# Tips" 
-# START="^# Tips\n" 
-# 
-START="$1"  
-END=${2:-^#}
-FILE_EXT="${3:-md}"
-REG="(?<=$START)(.*?)(?=$END|\Z)"
-
-f1(){
-    rg --pcre2 --multiline --multiline-dotall  --no-line-number --heading $1 
-}
-
-f2(){
-    rg --pcre2 --multiline --multiline-dotall --with-filename $1 **/*.$FILE_EXT 
-}
+ 
+START="^EXAMPLE"  
+END="^\S+"
+example=$(cppman $1 | rg --pcre2 --multiline --multiline-dotall  "(?<=$START)(.*?)(?=$END)" \
+    | grep -v $START \
+    | rg --pcre2 --multiline --multiline-dotall  --passthru -r '$1/* $0 $1*/'  "(^\s+)(Output)(.*?)(?=^\S+|\Z)" \
+    | rg  --passthru -r "'"  '’' 
+    )
+x_cpp_helloworld $1
 
 
-f3(){
-    rg --pcre2 --multiline --multiline-dotall $1 **/*.$FILE_EXT 
-}
 
-f4(){
-    rg --pcre2 --multiline --multiline-dotall $1 
-}
-
-
-f2 $REG |while read x; do echo $x; done 
-
+echo $example > $1/$1.cpp

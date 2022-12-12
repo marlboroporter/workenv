@@ -1,0 +1,48 @@
+
+var ftGUID_4572845="5443944AD4FD9A";
+var ftConfID_4572845="0";
+var ftParams_4572845="ftOBA=1&ft_domain=www.bigocheatsheet.com&ft_ifb=1&ft_agentEnv=0&ft_referrer=https%3A%2F%2Fwww.bigocheatsheet.com%2F&us_privacy=${US_PRIVACY}&cachebuster=789332.6679809196&ft_dv=%5B%25ft_dv%25%5D";
+var ftKeyword_4572845="";
+var ftCustom_4572845="";
+var ftSection_4572845="";
+var ftSegment_4572845="";
+var ftSegmentList_4572845=[];
+var ftRuleMatch_4572845="0";
+var ftTimestamp_4572845="1669439586";
+var ftGeoC2_4572845="it";
+var ftGeoState_4572845="rm";
+var ftGeoCity_4572845="rome";
+var ftISP_4572845="telecom italia s.p.a.";
+var ftSpeed_4572845="xdsl";
+var ftDMA_4572845="-1";
+var ftLong_4572845="12.5";
+var ftLat_4572845="41.92";
+var ftPostal_4572845="00198";
+var ftTimeZone_4572845="100";
+var ftMobileCarrier_4572845="";
+var ftImp4572845 = {};
+ftImp4572845.privacy = "t";
+ftImp4572845.guidAge = "132";
+ftImp4572845.impID = "9A2E75A5-699A-D99D-8F86-E35FED15B18A";
+ftImp4572845.duid = "FT:5443944AD4FD9A";
+
+ftImp4572845.ft_tpplid = "";
+ftImp4572845.ft_c = {};
+ftImp4572845.gdpr = "";
+ftImp4572845.gdpr_consent = "";
+ftImp4572845.gdpr_pd = "";
+ftImp4572845.oob_consent = "";
+ftImp4572845.gdprStoredConsent = "";
+ftImp4572845.us_privacy = "!!US_PRIVACY!";
+
+ftImp4572845.jsAppend = "1";
+(function(){
+    var tag = document.getElementById('ft_servedby_4572845') || (function(s){
+    	return s[s.length-1];
+    }(document.getElementsByTagName('script'))),
+           js = document.createElement('script');
+    js.src =
+"https://cdn.flashtalking.com/xre/457/4572845/4069496/js/j-4572845-4069496.js";
+    js.id = "ftscript_m4572845";
+    tag.parentNode.insertBefore(js, tag);
+}());
