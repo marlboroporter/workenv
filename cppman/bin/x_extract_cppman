@@ -1,4 +1,12 @@
 #! /usr/bin/env zsh
+#
+#------ extract example code from cppman page --------
+# the extracted code is equipted with a .xcode config
+# and become a vscode project 
+
+# sample usage 
+#
+# x_extract_cppman std::map 
 # 
 # extract a section of readme.md between firt level of title
 #
