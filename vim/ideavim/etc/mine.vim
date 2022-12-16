@@ -52,6 +52,8 @@ nnoremap <Leader>d  <C-d>  " half page down
 nnoremap <Leader>u  <C-u>
 
 
+" ------ navigation  ------  
+"
 " ------  Window operation ------  
 " <C-W>
 nnoremap <Leader>ww <C-W>w
@@ -71,13 +73,12 @@ nnoremap <Leader>w\| <C-W>v
 nnoremap <Leader>tl Vy<CR>:action ActivateTerminalToolWindow<CR>
 vnoremap <Leader>tl y<CR>:action ActivateTerminalToolWindow<CR>
 
-" ------ navigation  ------  
-
-"" Tab operation
+" ------ tab  ------  
 "nnoremap tn gt
 "nnoremap tp gT
 
 
+" ------ Symbol navigation ------  
 nnoremap ga :action GotoAction<CR>
 nnoremap gc :action GotoClass<CR>
 nnoremap gd :action GotoDeclaration<CR>
