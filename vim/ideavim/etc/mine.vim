@@ -71,14 +71,12 @@ nnoremap <Leader>w\| <C-W>v
 nnoremap <Leader>tl Vy<CR>:action ActivateTerminalToolWindow<CR>
 vnoremap <Leader>tl y<CR>:action ActivateTerminalToolWindow<CR>
 
-" ------   ------  
+" ------ navigation  ------  
 
 "" Tab operation
 "nnoremap tn gt
 "nnoremap tp gT
 
-nnoremap <Leader>bb :action ToggleLineBreakpoint<CR>
-nnoremap <Leader>br :action ViewBreakpoints<CR>
 
 nnoremap ga :action GotoAction<CR>
 nnoremap gc :action GotoClass<CR>
@@ -86,6 +84,9 @@ nnoremap gd :action GotoDeclaration<CR>
 nnoremap gf :action GotoFile<CR>
 nnoremap gi :action GotoImplementation<CR>
 nnoremap gs :action GotoSymbol<CR>
+" Go back (forth)  
+" Alt+Cmd+(<- ->) or Cmd+[/]         
+" Ctrl+O is different
 
 " ------ Refactor ------
 "
@@ -94,9 +95,10 @@ nnoremap <Leader>rf :action RenameFile<CR>
 "
 " ------ Debug
 "
+nnoremap <Leader>bb :action ToggleLineBreakpoint<CR>
+nnoremap <Leader>br :action ViewBreakpoints<CR>
 nnoremap <Leader>ic :action InspectCode<CR>
 nnoremap <Leader>si :action StepInto<CR>
-nnoremap <Leader>bb :action ToggleLineBreakpoint<CR>
 " error 
 nnoremap <Leader>ne :action GotoNextError<CR>
 
