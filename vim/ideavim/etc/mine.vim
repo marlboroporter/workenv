@@ -1,84 +1,59 @@
 " https://gist.github.com/zchee/9c78f91cc5ad771c1f5d
 " ===============================================
 " https://github.com/liuchengxu/dotfiles/blob/master/ideavimrc
+
+ 
+" ------ Leader ------ "
+
 let mapleader=' '
+ 
+" ------ Esc ------ "
 
-set visualbell
-set hlsearch
-set incsearch
-set ignorecase
-set smartcase
-set showmode
-
-set number
-" set relativenumber
-
-set scrolloff=3
-" scrolloff?
-set so=5
-
-set history=100000
-set clipboard=unnamed
-
-" clear the highlighted search result
-nnoremap <Leader>sc :nohlsearch<CR>
-
-nnoremap <Leader>fs :w<CR>
-
-nnoremap <C-C> <Esc>
-
-nnoremap <Leader>? :action GotoAction<CR>
-nnoremap gd :action GotoDeclaration<CR>
-nnoremap gi :action GotoImplementation<CR>
-
-" project search
-nnoremap <Leader>ps :action SearchEverywhere<CR>
-nnoremap <Leader>pf :action GotoFile<CR>
-
-nnoremap fu :action FindUsages<CR>
-nnoremap <Leade>fu :action FindUsages<CR>
-
-" Quit normal mode
-nnoremap <Leader>q  :q<CR>
-nnoremap <Leader>Q  :qa!<CR>
-
-" Move half page faster
-nnoremap <Leader>d  <C-d>
-nnoremap <Leader>u  <C-u>
-
-" Insert mode shortcut
-inoremap <C-h> <Left>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-l> <Right>
-inoremap <C-a> <Home>
-inoremap <C-e> <End>
-inoremap <C-d> <Delete>
-
-" Quit insert mode
 inoremap jj <Esc>
 inoremap jk <Esc>
 inoremap kk <Esc>
 
-" Quit visual mode
-vnoremap v <Esc>
+" ------ intellij actions ------
+" :actionlist to show actions
 
-" Move to the start of line
-nnoremap H ^
 
-" Move to the end of line
-nnoremap L $
+" ------ search ------ "
 
-" Redo
-nnoremap U <C-r>
+" built in search looks better
+nnoremap / :action Find<CR>
+" * while cusor on phrase to save typing
 
-" Yank to the end of line
-nnoremap Y y$
+set hlsearch
+" clear the highlighted search result
+nnoremap <Leader>sc :nohlsearch<CR>
+nnoremap <Leader>se :action SearchEverywhere<CR>
+nnoremap <Leader>fu :action FindUsages<CR>
 
-" quit ==> close current window
-nnoremap <Leader>q <C-W>w
+set incsearch
 
-" Window operation
+" ------ other set ------ "
+
+set ignorecase
+set smartcase
+set showmode
+set visualbell
+set number
+" set relativenumber
+set scrolloff=3
+" scrolloff?
+set so=5
+set history=100000
+" 
+set clipboard=unnamed
+
+" ------ cursor movement ------ 
+
+nnoremap <Leader>d  <C-d>  " half page down 
+nnoremap <Leader>u  <C-u>
+
+
+" ------  Window operation ------  
+" <C-W>
 nnoremap <Leader>ww <C-W>w
 nnoremap <Leader>wd <C-W>c
 nnoremap <Leader>wj <C-W>j
@@ -90,27 +65,20 @@ nnoremap <Leader>w- <C-W>s
 nnoremap <Leader>wv <C-W>v
 nnoremap <Leader>w\| <C-W>v
 
-" Tab operation
-nnoremap tn gt
-nnoremap tp gT
+" see NerdTree for more
+"
+" ------ terminal ------
+nnoremap <Leader>tl Vy<CR>:action ActivateTerminalToolWindow<CR>
+vnoremap <Leader>tl y<CR>:action ActivateTerminalToolWindow<CR>
 
-" ==================================================
-" Show all the provided actions via `:actionlist`
-" ==================================================
+" ------   ------  
 
-" built in search looks better
-nnoremap / :action Find<CR>
-" but preserve ideavim search
-nnoremap <Leader>/ /
-
-nnoremap <Leader>;; :action CommentByLineComment<CR>
+"" Tab operation
+"nnoremap tn gt
+"nnoremap tp gT
 
 nnoremap <Leader>bb :action ToggleLineBreakpoint<CR>
 nnoremap <Leader>br :action ViewBreakpoints<CR>
-
-nnoremap <Leader>cv :action ChangeView<CR>
-
-nnoremap <Leader>cd :action ChooseDebugConfiguration<CR>
 
 nnoremap ga :action GotoAction<CR>
 nnoremap gc :action GotoClass<CR>
@@ -119,51 +87,26 @@ nnoremap gf :action GotoFile<CR>
 nnoremap gi :action GotoImplementation<CR>
 nnoremap gs :action GotoSymbol<CR>
 
-nnoremap <Leader>ga :action GotoAction<CR>
-nnoremap <Leader>gc :action GotoClass<CR>
-nnoremap <Leader>gd :action GotoDeclaration<CR>
-nnoremap <Leader>gf :action GotoFile<CR>
-nnoremap <Leader>gi :action GotoImplementation<CR>
-nnoremap <Leader>gs :action GotoSymbol<CR>
-nnoremap <Leader>gt :action GotoTest<CR>
-
-nnoremap <Leader>fp :action ShowFilePath<CR>
-
-nnoremap <Leader>ic :action InspectCode<CR>
-
-nnoremap <Leader>mv :action ActivateMavenProjectsToolWindow<CR>
-
-nnoremap <Leader>oi :action OptimizeImports<CR>
-
-nnoremap <Leader>pm :action ShowPopupMenu<CR>
-
-nnoremap <Leader>rc :action RunToCursor<CR>
-nnoremap <Leader>rC :action ChooseRunConfiguration<CR>
-nnoremap <Leader>re :action RenameElement<CR>
-nnoremap <Leader>rf :action RenameFile<CR>
-
-nnoremap <Leader>rr :action Rerun<CR>
-
-nnoremap <Leader>se :action SearchEverywhere<CR>
-nnoremap <Leader>su :action ShowUsages<CR>
-nnoremap <Leader>tc :action CloseActiveTab<CR>
-nnoremap <Leader>si :action StepInto<CR>
-
-nnoremap <Leader>tb :action ToggleLineBreakpoint<CR>
+" ------ Refactor ------
 "
+noremap <Leader>re :action RenameElement<CR>
+nnoremap <Leader>rf :action RenameFile<CR>
+"
+" ------ Debug
+"
+nnoremap <Leader>ic :action InspectCode<CR>
+nnoremap <Leader>si :action StepInto<CR>
+nnoremap <Leader>bb :action ToggleLineBreakpoint<CR>
+" error 
 nnoremap <Leader>ne :action GotoNextError<CR>
 
-nnoremap <Leader>tl Vy<CR>:action ActivateTerminalToolWindow<CR>
-vnoremap <Leader>tl y<CR>:action ActivateTerminalToolWindow<CR>
-
-" git
+"------ git
 map <leader>aa <Action>(Annotate)
 map <leader>hh <Action>(Vcs.ShowTabbedFileHistory)
 
-" e
+" ------ edit config
 map <leader>er :vsplit ~/.e/vim/ideavim/README.md
 map <leader>ec :vsplit ~/.ideavimrc
-
 
 " ============Plugins===================================
 " based on recommendation of 
@@ -187,11 +130,18 @@ set nerdtree
 
 " Pluting setting   
 
+" ------ argtextobj ------
+"
 let g:argtextobj_pairs="[:],(:),<:>"
 
+"
+" ------ NertTree ------
+"
 "Inside NerdTree window
+" lower 
 "   expand below or go editor if leaf node ( enter on leaf node also go editor), also toggle exapnd/shrink 
 let g:NERDTreeMapActivateNode='l'
+" higher
 "   go up tree node
 let g:NERDTreeMapJumpParent='h'
 "   quit tree when in tree; default setting of Nerdtree
