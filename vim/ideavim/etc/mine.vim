@@ -5,11 +5,11 @@
  
 " ------ Leader ------ "
 
-let mapleader=' '
+let mapleader=' '   " *****
  
 " ------ Esc ------ "
 
-inoremap jj <Esc>
+inoremap jj <Esc>        " *****
 inoremap jk <Esc>
 inoremap kk <Esc>
 
@@ -25,9 +25,9 @@ nnoremap / :action Find<CR>
 
 set hlsearch
 " clear the highlighted search result
-nnoremap <Leader>sc :nohlsearch<CR>
-nnoremap <Leader>se :action SearchEverywhere<CR>
-nnoremap <Leader>fu :action FindUsages<CR>
+nnoremap <Leader>nohl :nohlsearch<CR>
+nnoremap <Leader>s :action SearchEverywhere<CR>
+nnoremap <Leader>f :action FindUsages<CR>
 
 set incsearch
 
@@ -55,19 +55,19 @@ nnoremap <Leader>u  <C-u>
 " ------ navigation  ------  
 "
 " ------  Window operation ------  
-" <C-W>
-nnoremap <Leader>ww <C-W>w
-nnoremap <Leader>wd <C-W>c
+" <C-W> j k h l  c s v
+nnoremap <Leader>ww <C-W>w   " ****
+nnoremap <Leader>wc <C-W>c
 nnoremap <Leader>wj <C-W>j
 nnoremap <Leader>wk <C-W>k
 nnoremap <Leader>wh <C-W>h
 nnoremap <Leader>wl <C-W>l
 nnoremap <Leader>ws <C-W>s
-nnoremap <Leader>w- <C-W>s
 nnoremap <Leader>wv <C-W>v
+nnoremap <Leader>w- <C-W>s
 nnoremap <Leader>w\| <C-W>v
-
-" see NerdTree for more
+"
+"" see NerdTree for more
 "
 " ------ terminal ------
 nnoremap <Leader>tl Vy<CR>:action ActivateTerminalToolWindow<CR>
@@ -81,35 +81,37 @@ vnoremap <Leader>tl y<CR>:action ActivateTerminalToolWindow<CR>
 " ------ Symbol navigation ------  
 nnoremap ga :action GotoAction<CR>
 nnoremap gc :action GotoClass<CR>
-nnoremap gd :action GotoDeclaration<CR>
+nnoremap gd :action GotoDeclaration<CR>   "*****
 nnoremap gf :action GotoFile<CR>
 nnoremap gi :action GotoImplementation<CR>
 nnoremap gs :action GotoSymbol<CR>
 " Go back (forth)  
-" Alt+Cmd+(<- ->) or Cmd+[/]         
+" Alt+Cmd+(<- ->) or Cmd+[/]        " ***** 
 " Ctrl+O is different
 
 " ------ Refactor ------
 "
-noremap <Leader>re :action RenameElement<CR>
-nnoremap <Leader>rf :action RenameFile<CR>
+noremap <Leader>re :action RenameElement<CR>  " *****
+nnoremap <Leader>rf :action RenameFile<CR> " *****
 "
 " ------ Debug
 "
-nnoremap <Leader>bb :action ToggleLineBreakpoint<CR>
-nnoremap <Leader>br :action ViewBreakpoints<CR>
-nnoremap <Leader>ic :action InspectCode<CR>
+nnoremap <Leader>bb :action ToggleLineBreakpoint<CR>  " *****
+nnoremap <Leader>bv :action ViewBreakpoints<CR>  
 nnoremap <Leader>si :action StepInto<CR>
+
+" ------ Inspect code
+nnoremap <Leader>ic :action InspectCode<CR>   " ****
 " error 
-nnoremap <Leader>ne :action GotoNextError<CR>
+nnoremap <Leader>ne :action GotoNextError<CR> 
 
 "------ git
-map <leader>aa <Action>(Annotate)
-map <leader>hh <Action>(Vcs.ShowTabbedFileHistory)
+map <leader>aa <Action>(Annotate)   " *****  
+map <leader>hh <Action>(Vcs.ShowTabbedFileHistory) " *****
 
 " ------ edit config
 map <leader>er :vsplit ~/.e/vim/ideavim/README.md
-map <leader>ec :vsplit ~/.ideavimrc
+map <leader>ec :vsplit ~/.ideavimrc  " *****
 
 " ============Plugins===================================
 " based on recommendation of 
@@ -155,7 +157,7 @@ let g:NERDTreeMapJumpParent='h'
 "    ESC or mapped CAP LOCK key
 " Quit tree : 'q' ; then focus not useful
 " Open tree in case quited before"
-nmap <leader>nn :NERDTree<CR>
+nmap <leader>nn :NERDTree<CR>  " *****
 
 " easymotion
 "map <leader>f <Plug>(easymotion-s)
