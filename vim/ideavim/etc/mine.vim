@@ -70,8 +70,8 @@ nnoremap <Leader>w\| <C-W>v
 "" see NerdTree for more
 "
 " ------ terminal ------
-nnoremap <Leader>tl Vy<CR>:action ActivateTerminalToolWindow<CR>
-vnoremap <Leader>tl y<CR>:action ActivateTerminalToolWindow<CR>
+nnoremap <Leader>tt Vy<CR>:action ActivateTerminalToolWindow<CR>
+vnoremap <Leader>tt y<CR>:action ActivateTerminalToolWindow<CR>
 
 " ------ tab  ------  
 "nnoremap tn gt
