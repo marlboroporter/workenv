@@ -18,7 +18,9 @@ basics=(
 
 utils=(
      yq 
+     yaml
      tree
+
 ) 
 
 lang=(
@@ -59,7 +61,6 @@ edit=(
   pandoc
   )
 
-
 apps=(
   ${basics[@]}
   ${lang[@]}
@@ -69,5 +70,9 @@ apps=(
   ${cloud[@]}
   ${edit[@]}
 )
+
+
+
+
 
 #echo "${apps[@]}"
