@@ -7,6 +7,8 @@ x_clone_github(){
   D=~/dev/$d
   b=$(basename $d)
 
+  # clean up first     
+
   if ! [[ -d $D ]] && [[ -L $b ]]; then
     rm $b;
   fi

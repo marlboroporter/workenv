@@ -1,7 +1,14 @@
 pkgmgr=brew
+install(){
+    brew reinstall pyenv 
+    brew reinstall  pyenv-virtualenv
+}
+
 setenv='export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"'
+eval "$(pyenv init -)"
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+'
 
 config_nvim(){
   pip install pynvim # install to current python verion dir
@@ -26,3 +33,12 @@ config(){
 info(){
     echo "# pyenv global 3.10.6"
 }
+
+cling_env(){
+    pyenv activate 3.10.6/envs/cling
+    #pip install xeus-cling -c conda-forge
+    conda install xeus-cling -c conda-forge
+}
+
+
+

@@ -1,0 +1,12 @@
+x_jupyter_book(){
+    D=$1
+    d=~/dev/$D
+    if [ -d $d ]; then 
+        echo "$d exist"
+    else
+        jupyter-book create $d
+        ln -s $d $D 
+    fi
+}
+
+x_jupyter_book "$@"

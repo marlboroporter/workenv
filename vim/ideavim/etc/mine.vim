@@ -32,6 +32,9 @@ nnoremap <Leader>nohl :nohlsearch<CR>
 nnoremap <Leader>s :action SearchEverywhere<CR>
 nnoremap <Leader>f :action FindUsages<CR>
 
+" bookmaorks 
+" Cmd+2 or F3   to toggle bookmarks windows       
+
 set incsearch
 
 " ------ other set ------ "

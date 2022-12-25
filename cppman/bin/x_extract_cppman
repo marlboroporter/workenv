@@ -1,5 +1,6 @@
 #! /usr/bin/env zsh
-#
+
+
 #------ extract example code from cppman page --------
 # the extracted code is equipted with a .xcode config
 # and become a vscode project 
@@ -22,23 +23,58 @@
 #      
 #  - multiple line treat each line ^ $ as special, i.e. start and end of line
 #  - mutliline-dotall makes "."  matches \n too
- 
-START="^EXAMPLE"  
-END="^\S+"
-cppman $1 | rg --pcre2 --multiline --multiline-dotall  "(?<=$START)(.*?)(?=$END)" \
-    | grep -v $START \
-    | rg --pcre2 --multiline --multiline-dotall  --passthru -r '$1/* $0 $1*/'  "(^\s+)(Output)(.*?)(?=^\S+|\Z)" \
-    | rg --passthru -r "'"  '’' \
-    | rg --passthru -r "-" "‐"   \
-    > $1.cpp    
-    
-# echo will trun  '\n' into actually new line in shell, but redirect to file will not 
-# ' in unicode is different ans sometimes need to replace with ascii  
-# control encoding is another way to handle it
 
-rm -rf $1
-x_cpp_helloworld $1
-mv $1.cpp $1
+# usage
+# extract_a_project_from_cppman_page "operator overloading"
+extract_a_project_from_cppman_page(){
 
+    START="^EXAMPLE"  
+    END="^\S+"
+    NAME=$(toname $1)
+    cppman $1 | rg --pcre2 --multiline --multiline-dotall  "(?<=$START)(.*?)(?=$END)" \
+        | grep -v $START \
+        | rg --pcre2 --multiline --multiline-dotall  --passthru -r '$1/* $0 $1*/'  "(^\s+)(Output)(.*?)(?=^\S+|\Z)" \
+        | rg --passthru -r "'"  '’' \
+        | rg --passthru -r "-" "‐"   \
+        > $NAME.cpp    
+        
+    # echo will trun  '\n' into actually new line in shell, but redirect to file will not 
+    # ' in unicode is different ans sometimes need to replace with ascii  
+    # control encoding is another way to handle it
+
+    rm -rf $NAME
+    x_cpp_helloworld $NAME
+    mv $NAME.cpp $NAME
+    (cd $NAME; gen_build $NAME.cpp $NAME) 
+
+    # move to ~/dev/
+    mkdir -p  ~/dev/e/cppman
+    rm -rf ~/dev/e/cppman/$NAME
+    mv $NAME ~/dev/e/cppman
+    ln -sf ~/dev/e/cppman/$NAME $NAME
+}
+
+toname(){
+    echo "$1" | rg --passthru -r "_" " "    
+}
+
+# gen_build xx.cpp xx
+gen_build(){
+echo "
+    /usr/bin/clang++ \
+        -fcolor-diagnostics \
+        -fansi-escape-codes \
+        -g \
+        $1 \
+        -o $2 \
+        --std=c++17
+    " > build.sh
+    chmod u+x build.sh
+}
+
+
+
+
+extract_a_project_from_cppman_page "$1"
 
     

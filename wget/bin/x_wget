@@ -1,0 +1,7 @@
+URL=$1
+D=$2
+d=~/dev/$D
+mkdir -p $d
+(cd $d; wget $URL)
+ln -s $d $D  
+

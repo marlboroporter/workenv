@@ -20,8 +20,12 @@ utils=(
      yq 
      yaml
      tree
-
 ) 
+
+publish=(
+    jupyter-book
+)
+
 
 lang=(
      sdkman
@@ -69,6 +73,7 @@ apps=(
   ${ide[@]}
   ${cloud[@]}
   ${edit[@]}
+  ${publish[@]}
 )
 
 

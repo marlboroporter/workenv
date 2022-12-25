@@ -1,5 +1,5 @@
-D=$1
-URL=$2
+URL=$1
+D=$2
 d=~/dev/$D
 #url=https://cmake.org/cmake/help/latest/guide/tutorial/index.html#introduction:~:text=are%20available%20in-,this%20archive,-.%20Each%20step%20has
 mkdir -p $d
