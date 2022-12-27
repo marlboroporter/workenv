@@ -44,6 +44,8 @@
     * Group project
     * Student personal repos
     * Effective and practical
+* Benchmark
+    * algo
 
 ## Notebook via mybinder.org
 * [my xues-cling fork, docker hosted on mybinder.org](https://mybinder.org/v2/gh/jli8000/xeus-cling.git/HEAD?labpath=notebooks%2Fxcpp.ipynb)
