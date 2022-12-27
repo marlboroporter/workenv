@@ -1,8 +1,23 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" "File/Dir Navigation 
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
 " https://gist.github.com/zchee/9c78f91cc5ad771c1f5d
 " ===============================================
 " https://github.com/liuchengxu/dotfiles/blob/master/ideavimrc
-
- 
 " ------ Leader ------ "
 
 " --> 
@@ -161,10 +176,13 @@ let g:argtextobj_pairs="[:],(:),<:>"
 
 "
 " ------ NertTree ------
-"
-"Inside NerdTree window
-" lower 
-"   expand below or go editor if leaf node ( enter on leaf node also go editor), also toggle exapnd/shrink 
+" Usage:
+" <leader>n 
+" *   j k   --> up down a line without expand  
+" * h       --> up a level without expand 
+" *       l --> toggle expand/callapse current level 
+" * CR --> toggle dir but jump to editor for file 
+" -    ( enter on leaf node also go editor), also toggle exapnd/shrink 
 let g:NERDTreeMapActivateNode='l'
 " higher
 "   go up tree node
@@ -179,7 +197,7 @@ let g:NERDTreeMapJumpParent='h'
 " Open tree in case quited before"
 "
 " -->
-nmap <leader>nn :NERDTree<CR>
+nmap <leader>n :NERDTree<CR>
 
 " easymotion
 "map <leader>f <Plug>(easymotion-s)
