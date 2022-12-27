@@ -38,7 +38,12 @@
     * Cpp manuals
     * leekcode and hackrank
 
-
+* Teaching
+    * Questionaire for purpose of taking
+    * Test to check current understanding for algo and c++
+    * Group project
+    * Student personal repos
+    * Effective and practical
 
 ## Notebook via mybinder.org
 * [my xues-cling fork, docker hosted on mybinder.org](https://mybinder.org/v2/gh/jli8000/xeus-cling.git/HEAD?labpath=notebooks%2Fxcpp.ipynb)
