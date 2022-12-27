@@ -1,12 +1,18 @@
 pkgmgr=brew
-
+# https://github.com/aitjcize/cppman
+appdef="C++ manual/source from cplusplus.com and cppreference.com"
 config(){
-    # https://github.com/aitjcize/cppman
     # to acess cppman with man when cached
     cppman -m true
+    # cache 
+    # build_man_cache
+}
+
+build_man_cache(){
     # to download all available man 
     cppman -c
 }
+
 setenv="
 # to make bash completion.eork for ::
 export COMP_WORDBREAKS=\" /\\\"\\'><;|&(\"
