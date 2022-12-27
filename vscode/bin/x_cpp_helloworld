@@ -1,18 +1,35 @@
 #! /usr/bin/env zsh
-D=$PWD
-helloworld(){
-    e vscode # cd vscode    
-    log "$PWD"
-    N=${1:-helloworld}
-    d=$D/$N
-    if ! [[ -d $d ]]; then
-        mkdir $d 
-        cp etc/cpp/helloworld.cpp $d/$N.cpp
-        cp etc/cpp/gitignore $d/.gitignore
-        echo "$N">>$d/.gitignore 
-        cp -r etc/cpp/active_file $d/.vscode 
-    fi
-    cd $D
+C=$0
+usage(){
+echo "
+$(basename $C): 
+- Purpose: create a cpp proj with vscode support and simple makefile. 
+- Usage:
+    - make run
+    - cd $D; code .; click cpp file; add break points; run debug 
+"
 }
 
-helloworld "$@"
+
+create_simple_cpp_vscode_helloworld_proj(){
+    e vscode # cd vscode    
+    D=$1
+    D=${D:-helloworld}
+    d=~/dev/vscode/$D
+    rm -rf $d
+    rm  -f $D
+    mkdir -p $d 
+    cp etc/cppsample/makefile $d  
+    cp etc/cppsample/helloworld.cpp $d
+    cp etc/cppsample/gitignore $d/.gitignore
+    echo "$N">>$d/.gitignore 
+    cp -r etc/cppsample/active_file $d/.vscode 
+    ln -sf $d $D 
+}
+
+if [[ "$1" == "--help" ]]; then
+    usage
+else
+    create_simple_cpp_vscode_helloworld_proj "$@"
+fi
+

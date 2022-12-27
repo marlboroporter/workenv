@@ -1,7 +1,7 @@
-# References
-
-
-# Keybindings 
+## References
+## 
+ 
+## Keybindings 
 * Default
   - [Cmd+K+R](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
   - [Saved](etc/editor/keyboard-shortcuts-macos.pdf)
