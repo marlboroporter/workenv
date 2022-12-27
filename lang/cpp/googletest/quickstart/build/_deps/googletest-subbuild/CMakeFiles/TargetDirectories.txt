@@ -1,3 +1,0 @@
-/Users/jieli/.e/lang/cpp/googletest/gt/build/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir
-/Users/jieli/.e/lang/cpp/googletest/gt/build/_deps/googletest-subbuild/CMakeFiles/edit_cache.dir
-/Users/jieli/.e/lang/cpp/googletest/gt/build/_deps/googletest-subbuild/CMakeFiles/rebuild_cache.dir

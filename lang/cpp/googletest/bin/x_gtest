@@ -1,0 +1,12 @@
+#!/usr/bin/env zsh
+source ~/.zshenv
+sample_gtest_cmake_proj(){
+    D=$1
+    d=~/dev/googletest/$D
+    mkdir -p ~/dev/googletest
+    rm -rf $d
+    rm $D
+    cp -r $EROOT[e]/lang/cpp/googletest/etc/samplegtest $d  
+    ln -sf $d .
+}
+sample_gtest_cmake_proj "$1"

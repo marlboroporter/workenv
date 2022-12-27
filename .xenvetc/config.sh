@@ -64,6 +64,13 @@ shell_productivity=(
 edit=(
   pandoc
   )
+cpp=(
+  cppman  
+  conan  
+  googletest  
+)
+
+
 
 apps=(
   ${basics[@]}
@@ -74,6 +81,7 @@ apps=(
   ${cloud[@]}
   ${edit[@]}
   ${publish[@]}
+  ${cpp[@]}
 )
 
 
