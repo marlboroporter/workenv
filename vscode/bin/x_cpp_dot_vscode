@@ -1,0 +1,22 @@
+#! /usr/bin/env zsh
+C=$0
+usage(){
+echo "
+$(basename $C): 
+add .vscode dir with cpp setting
+"
+}
+
+
+add_dot_vscode_cpp(){
+    DIR_OLD=$PWD
+    e vscode # cd vscode    
+    cp -r etc/cppsample/vscode_settings $DIR_OLD/.vscode 
+}
+
+if [[ "$1" == "--help" ]]; then
+    usage
+else
+    add_dot_vscode_cpp
+fi
+

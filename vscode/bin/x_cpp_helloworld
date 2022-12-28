@@ -24,7 +24,7 @@ create_simple_cpp_vscode_helloworld_proj(){
     cp etc/cppsample/helloworld.cpp $d
     cp etc/cppsample/gitignore $d/.gitignore
     echo "$N">>$d/.gitignore 
-    cp -r etc/cppsample/active_file $d/.vscode 
+    cp -r etc/cppsample/vscode_settings $d/.vscode 
     cd $DIR_OLD
     ln -sf $d $D 
 }

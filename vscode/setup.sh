@@ -32,7 +32,21 @@ uninstall(){
 }
 
 
+add(){
+    code --force --install-extension $1 
+}
 
+ext(){
+    add alefragnani.project-manager # each switch between projects with save or git 
+    add johnpapa.vscode-peacock  # assign different color scheme to projects
+    add Llam4u.nerdtree
+    add donjayamanne.python-environment-manager
+    add vscodevim.vim
+    add scalameta.metals
+    add ms-vscode.cpptools
+    add eamodio.gitlens 
+        
+}
 
 
 extensions(){
@@ -42,7 +56,9 @@ extensions(){
       vscodevim.vim \
       scalameta.metals \
       ms-vscode.cpptools \
-      eamodio.gitlens
+      eamodio.gitlens \
+      alefragnani.project-manager \
+        
   do
     code --uninstall-extension $x
     code --force --install-extension  $x
