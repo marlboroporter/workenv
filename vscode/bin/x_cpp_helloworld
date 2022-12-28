@@ -12,6 +12,7 @@ $(basename $C):
 
 
 create_simple_cpp_vscode_helloworld_proj(){
+    DIR_OLD=$PWD
     e vscode # cd vscode    
     D=$1
     D=${D:-helloworld}
@@ -24,6 +25,7 @@ create_simple_cpp_vscode_helloworld_proj(){
     cp etc/cppsample/gitignore $d/.gitignore
     echo "$N">>$d/.gitignore 
     cp -r etc/cppsample/active_file $d/.vscode 
+    cd $DIR_OLD
     ln -sf $d $D 
 }
 
