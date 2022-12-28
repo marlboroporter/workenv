@@ -37,8 +37,10 @@ add(){
 }
 
 ext(){
+    #https://www.youtube.com/watch?v=MUlisk6Om20
     add alefragnani.project-manager # each switch between projects with save or git 
     add johnpapa.vscode-peacock  # assign different color scheme to projects
+
     add Llam4u.nerdtree
     add donjayamanne.python-environment-manager
     add vscodevim.vim
