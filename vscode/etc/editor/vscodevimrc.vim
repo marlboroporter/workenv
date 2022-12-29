@@ -38,3 +38,7 @@ nnoremap <C-k> :tabnext<CR>
 map <C-h> :execute "tabmove" tabpagenr() - 2 <CR>
 map <C-l> :execute "tabmove" tabpagenr() + 1 <CR>
 
+
+" --> Markdown
+" Shft+Cmd+V to preview, Shift+Cmd+P also can pick open preview, but different
+

@@ -36,7 +36,7 @@ add(){
     code --force --install-extension $1 
 }
 
-ext(){
+extensions(){
     #https://www.youtube.com/watch?v=MUlisk6Om20
     add alefragnani.project-manager # each switch between projects with save or git 
     add johnpapa.vscode-peacock  # assign different color scheme to projects
@@ -49,24 +49,6 @@ ext(){
     add eamodio.gitlens 
         
 }
-
-
-extensions(){
-  for x in \
-      Llam4u.nerdtree \
-      donjayamanne.python-environment-manager \
-      vscodevim.vim \
-      scalameta.metals \
-      ms-vscode.cpptools \
-      eamodio.gitlens \
-      alefragnani.project-manager \
-        
-  do
-    code --uninstall-extension $x
-    code --force --install-extension  $x
-  done
-}
-
 
 settings(){
     VSCODE_USER_CFG_DIR=~"/Library/Application Support/Code/User"

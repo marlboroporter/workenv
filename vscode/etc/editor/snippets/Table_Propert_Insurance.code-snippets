@@ -1,0 +1,13 @@
+{
+	 "Table Propert Insurance": {
+	 	"scope": "markdown",
+	 	"prefix": "table_property_insurance",
+	 	"body": [
+"Property | Year | Policy | Premium | Provider | Start | End | Agent",
+"---|---|---|---|---|---|---|---",
+"Southern Point | 2021 | NCA144349 | \$456 | American Strategic Insurance Corp | 2021-11-20 | 2022-01-26",
+"Southern Point,Hadley At Arrowood Station,Marlboro Summit | 2022 | 1001365068 | \$404.58 | Milbank Insurance Company | 2021-01-27 | 2022-01/27 | Stateauto.com (866) 364-7489"
+	 	],
+	 	"description": "Insurance Records"
+	 }
+}
