@@ -1,5 +1,7 @@
 ## Data Structure and Algorithms in C++
 * C++ project generator 
+    * x_cpp_dot_cpp
+        * add .vscode with cpp setting to enable cpp debug
     * x_cpp_helloworld 
         * create a cpp project on the fly
         * each file is a program
