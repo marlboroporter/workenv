@@ -13,8 +13,7 @@
                 "${fileDirname}/${fileBasenameNoExtension}",
                 //"${fileDirname}/a.out",
                 // This need to be changed when needed
-                "-std=c++17",
-                "-std=c17"
+                "-std=c++17"
 
             ],
             "options": {
