@@ -37,6 +37,6 @@
         "ms-python.python": 1,
         "ms-python.vscode-pylance": 1
     },
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 3,
     "editor.wordWrap": "on"
 }

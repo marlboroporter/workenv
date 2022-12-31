@@ -1,15 +1,23 @@
 # simple makefile 
 
-all: helloworld
+all: helloworld helloc
 CC = clang++ 
-CFLAGS = --std=c++17 -fcolor-diagnostics -fansi-escape-codes -g 
+C=clang
+CCFLAGS = --std=c++17 -fcolor-diagnostics -fansi-escape-codes -g 
+CFLAGS = --std=c17 -fcolor-diagnostics -fansi-escape-codes -g 
 
 helloworld: helloworld.cpp 
-	$(CC) $(CFLAGS) $? $(LDFLAGS) -o $@
+	$(CC) $(CCFLAGS) $? $(LDFLAGS) -o $@
+helloc: helloc.c
+	$(C) $(CFLAGS) $? $(LDFLAGS) -o $@
+
 
 clean:
-	rm  -rf *.o helloworld rm helloworld.dSYM
+	rm  -rf *.o helloworld helloc 
+	rm -rf helloworld.dSYM helloc.dSYM
 
 run: all
-	echo "run ..."
+	echo "run c++"
 	helloworld
+	echo "run C"
+	helloc

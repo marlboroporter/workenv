@@ -20,11 +20,9 @@ create_simple_cpp_vscode_helloworld_proj(){
     rm -rf $d
     rm  -f $D
     mkdir -p $d 
-    cp etc/cppsample/makefile $d  
-    cp etc/cppsample/helloworld.cpp $d
-    cp etc/cppsample/gitignore $d/.gitignore
+    cp etc/cppsample/* $d  
     echo "$N">>$d/.gitignore 
-    cp -r etc/cppsample/vscode_settings $d/.vscode 
+    cp -r etc/vscode_profiles/cpp1 $d/.vscode 
     cd $DIR_OLD
     ln -sf $d $D 
 }

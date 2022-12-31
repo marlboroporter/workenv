@@ -9,14 +9,15 @@ add .vscode dir with cpp setting
 
 
 add_dot_vscode_cpp(){
+    prof=${1:-cpp1}
     DIR_OLD=$PWD
     e vscode # cd vscode    
-    cp -r etc/cppsample/vscode_settings $DIR_OLD/.vscode 
+    cp -r etc/vscode_profiles/$prof $DIR_OLD/.vscode  # cpp0 is auto added + std setting
 }
 
 if [[ "$1" == "--help" ]]; then
     usage
 else
-    add_dot_vscode_cpp
+    add_dot_vscode_cpp $1
 fi
 

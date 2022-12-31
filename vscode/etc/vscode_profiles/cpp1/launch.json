@@ -1,0 +1,37 @@
+{
+    // This file is created:
+    // when launch.json is open or created 
+    // then select "c++ add debug configuration" 
+
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(lldb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            //"program": "${workspaceFolder}/a.out",
+            "program":"${fileDirname}/${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            //"externalConsole": true,
+            "externalConsole": false,
+            "MIMode": "lldb"
+            //add additional attribute here from  https://code.visualstudio.com/docs/cpp/launch-json-reference
+        },
+        {
+            "name": "(lldb) Attach",
+            "type": "cppdbg",
+            "request": "attach",
+            //"program": "${workspaceFolder}/a.out",
+            "program":"${fileDirname}/${fileBasenameNoExtension}",
+            "MIMode": "lldb"
+            //add additional attribute here from  https://code.visualstudio.com/docs/cpp/launch-json-reference
+        }
+
+    ]
+}
