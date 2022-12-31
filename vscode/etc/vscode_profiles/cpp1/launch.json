@@ -20,7 +20,8 @@
             "environment": [],
             //"externalConsole": true,
             "externalConsole": false,
-            "MIMode": "lldb"
+            "MIMode": "lldb",
+            "preLaunchTask": "C/C++: clang++ build active file"
             //add additional attribute here from  https://code.visualstudio.com/docs/cpp/launch-json-reference
         },
         {
