@@ -51,3 +51,8 @@
 
 ## Notebook via mybinder.org
 * [my xues-cling fork, docker hosted on mybinder.org](https://mybinder.org/v2/gh/jli8000/xeus-cling.git/HEAD?labpath=notebooks%2Fxcpp.ipynb)
+    * only works here in existing clone. otherwise not kernel avaialbe
+
+
+
+
