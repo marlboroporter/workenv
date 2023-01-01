@@ -3,13 +3,16 @@ install(){
     brew reinstall pyenv 
     brew reinstall  pyenv-virtualenv
 }
+xappdef="pyeny & conda"
 
-setenv='export PYENV_ROOT="$HOME/.pyenv"
+
+setenv='
+export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 '
-
 config_nvim(){
   pip install pynvim # install to current python verion dir
   pip install 'python-lsp-server[all]' pylsp-mypy pyls-isort
@@ -34,11 +37,4 @@ info(){
     echo "# pyenv global 3.10.6"
 }
 
-cling_env(){
-    pyenv activate 3.10.6/envs/cling
-    #pip install xeus-cling -c conda-forge
-    conda install xeus-cling -c conda-forge
-}
-
-
-
+# pyenv pypi does not support M1 chip, use conda

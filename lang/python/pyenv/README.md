@@ -1,3 +1,8 @@
+## Intro
+* [Use conda+pyenv to manage python](https://gist.github.com/pocin/c3e58af3b1f23ed62143b01f5c3f8904)
+*
+
+
 ## Tutorial
 * To list envs:
     ```bash
