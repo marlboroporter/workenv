@@ -22,7 +22,6 @@
         * run c++/c code attached to reference/manual  page
     * jupyter notebook from mybinder.org  
         * run my owner algo repo from mybinder.org 
-        * [link to binder](https://mybinder.org/v2/gh/jli8000/xeus-cling/79d2bb803bade714ad70e905b71cb913d86f5b24?urlpath=lab%2Ftree%2Fnotebooks%2Fxcpp.ipynb)
         * [link to binder](https://mybinder.org/v2/gh/marlboroporter/algos.git/main?labpath=notebooks%2Fxcpp.ipynb)
         * build tips
             * github nees to use main branch for used default to Master
