@@ -1,31 +1,31 @@
 pkgmgr=brew
+
 install(){
     brew install miniforge 
-    brew install micromamba
-    # us mamba
-    conda install mamba -n base -c conda-forge
 
 }
 
-setenv='
-# >>> mamba initialize >>>
-# !! Contents within this block are managed by mamba init !!
-export MAMBA_EXE="/opt/homebrew/bin/micromamba";
-export MAMBA_ROOT_PREFIX="/Users/jieli/micromamba";
-__mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__mamba_setup"
+
+setenv=$(cat <<EOF
+# conda init zsh
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="\$('/opt/homebrew/Caskroom/miniforge/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ \$? -eq 0 ]; then
+    eval "\$__conda_setup"
 else
-    if [ -f "/Users/jieli/micromamba/etc/profile.d/micromamba.sh" ]; then
-        . "/Users/jieli/micromamba/etc/profile.d/micromamba.sh"
+    if [ -f "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh" ]; then
+        . "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh"
     else
-        export  PATH="/Users/jieli/micromamba/bin:$PATH"  # extra space after export prevents interference from conda init
+        export PATH="/opt/homebrew/Caskroom/miniforge/base/bin:\$PATH"
     fi
 fi
-unset __mamba_setup
-# <<< mamba initialize <<<
-'
+unset __conda_setup
+# <<< conda initialize <<<
+EOF
+)
 
-tmpenv(){
-/opt/homebrew/bin/micromamba shell init -s zsh -p ~/micromamba
+config(){
+    conda create --name cling python=3.10.6
 }
+
