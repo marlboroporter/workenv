@@ -12,11 +12,10 @@ resources(){
     # my dev
     x_git_clone https://bitbucket.org/jli8000/cppalgo.git 
 
-    # x_git_clone git@github.com:jli8000/xeus-cling.git
+    x_git_clone git@github.com:marlboroporter/algos.git
+    x_git_clone git@github.com:marlboroporter/xeus-cling.git
     
 }
-
-
 
 
 
