@@ -1,6 +1,5 @@
 ##    
-* [Docker vs DockerDesktop](https://forums.docker.com/t/difference-between-docker-desktop-and-docker-engine/124612)
-
+* [Dockerize Cpp Dev env](https://ddanilov.me/dockerized-cpp-build
 
 ## History
 * When "docker desktop" installed properly, docker daemon works file, docker build works
