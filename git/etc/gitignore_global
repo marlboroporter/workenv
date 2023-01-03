@@ -116,3 +116,7 @@ out/
 *.exe
 *.out
 
+# Jebrain
+jiedata/
+application-local-jie.properties 
+SpringRunner.scala
