@@ -6,17 +6,25 @@
   - [Cmd+K+R](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
   - [Saved](etc/editor/keyboard-shortcuts-macos.pdf)
 * Current
-  - *Cmd+K+S*    
+  - *Cmd+K+S*
 
 * Memo 
 
-Keys              | Function            
-------------------|---------------------------
-Cmd+B             | Toggle Explorer 
-Cmd+B             | Bold in Markdown Snippet view
-^N                | toggle focus on explorer, w/ NerdTree, by "vim.handleKeys": {"<C-n>": false }
-Sht+Cmd+B         | build from command line (c++ etc)
-Sft+Cmd+          | Switch focus between explorer and editor 
+|Domain     | extension      |  Keys/menu        | Function 
+|-----------|----------------|-------------------|---------------------------
+|Explorer   |                |Cmd+B              | Toggle Explorer 
+|           |                |Cmd+B              | Bold in Markdown Snippet view
+|Explorer   | Nerdtree       |^N                 | To goggle tree panel 
+|           |                |Sht+Cmd+B          | build from command line (c++ etc)
+|           |                |Sft+Cmd+           | Switch focus between explorer and editor 
+|           |                |Cmd+B              | Toggle Explorer 
+|           |                |Sft+Cmd+           | Switch focus between explorer and editor 
+
+|Domain     | extension      |  Keys/menu        | Function 
+|-----------|----------------|-------------------|---------------------------
+|Json       |mohsen1.prettify-json| menu         | tree view
+
+
 
 
 

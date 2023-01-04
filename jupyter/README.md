@@ -15,5 +15,5 @@
     * [xwidgets: the C++ back-end for Jupyter interactive widgets](https://mybinder.org/v2/gh/QuantStack/xwidgets/0.11.1?filepath=notebooks/xwidgets.ipynb),
     * [xplot: the C++ back-end to the bqplot 2-D plotting library for Jupyter](https://mybinder.org/v2/gh/QuantStack/xplot/0.5.0?filepath=notebooks).
 
-
+## [cling docker](https://hub.docker.com/r/sehrig/cling)
 

@@ -71,3 +71,20 @@ cheatsheet=$(cat<<'EOF'
 EOF
 )
 
+cling(){
+    # cling (interactive c++)
+    docker run -it sehrig/cling cling
+}
+
+cpp_notebook(){
+    # notebook
+    docker run -it -p 8888:8888 sehrig/cling jupyter-notebook
+    #        To access the notebook, open this file in a browser:
+    #        file:///root/.local/share/jupyter/runtime/nbserver-9-open.html
+    #    Or copy and paste one of these URLs:
+    #        http://3725734d71ac:8888/?token=bbe0d8905a4c69accd9cf66be4e826aac6386c3b92d399eb
+    #     or http://127.0.0.1:8888/?token=bbe0d8905a4c69accd9cf66be4e826aac6386c3b92d399eb
+    # 
+}
+   
+
