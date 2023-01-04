@@ -22,7 +22,8 @@ create_simple_cpp_vscode_helloworld_proj(){
     mkdir -p $d 
     cp etc/cppsample/* $d  
     echo "$N">>$d/.gitignore 
-    cp -r etc/vscode_profiles/cpp1 $d/.vscode 
+    #cp -r etc/vscode_profiles/cpp1 $d/.vscode # can hang on local when debug
+    cp -r etc/vscode_profiles/cpp2 $d/.vscode 
     cd $DIR_OLD
     ln -sf $d $D 
 }

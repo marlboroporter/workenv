@@ -18,8 +18,8 @@
             "stopAtEntry": true,
             "cwd": "${fileDirname}",
             "environment": [],
-            //"externalConsole": true,
-            "externalConsole": false,
+            "externalConsole": true,
+            //"externalConsole": false, //can cause hang on debut g
             "MIMode": "lldb",
             "preLaunchTask": "C/C++: clang++ build active file"
             //add additional attribute here from  https://code.visualstudio.com/docs/cpp/launch-json-reference
