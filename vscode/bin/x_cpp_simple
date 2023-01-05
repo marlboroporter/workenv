@@ -14,13 +14,20 @@ create_proj_at_call_site(){
     CALL_DIR=$PWD
     D=${1:-helloworld}
     d1=$CALL_DIR/$D
-    rm  -rf $d1
+
+    # avoid rm current existing
+    if [ -d $d1 ]; then 
+        echo "$d1 exists"  
+        exit 1
+    fi
+    #rm  -rf $d1
     mkdir -p $d1
 
     e vscode # cd vscode    
     cp etc/cpp_ex_2/* $d1
     mv  $d1/gitignore $d1/.gitignore
     echo "$D" >> $d1/.gitignore 
+    echo "# $D" > $d1/README.md
     cp -r etc/vscode_profiles/cpp2 $d1/.vscode 
     cd $CALL_DIR
 }
