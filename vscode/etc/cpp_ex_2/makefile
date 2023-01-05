@@ -1,23 +1,27 @@
 # simple makefile 
 
-all: c c++ 
+all: prep c c++ 
 CC = clang++ 
 C=clang
 CCFLAGS = --std=c++17 -fcolor-diagnostics -fansi-escape-codes -g 
 CFLAGS = --std=c17 -fcolor-diagnostics -fansi-escape-codes -g 
 
 c++: c++.cpp 
-	$(CC) $(CCFLAGS) $? $(LDFLAGS) -o $@
-c: c.c
-	$(C) $(CFLAGS) $? $(LDFLAGS) -o $@
+	(cd build; $(CC) $(CCFLAGS) ../$? $(LDFLAGS) -o $@)
 
+c: c.c
+	(cd build; $(C) $(CFLAGS) ../$? $(LDFLAGS) -o $@ )
+
+prep:
+	mkdir -p build
 
 clean:
-	rm  -rf *.o c c++ 
-	rm -rf c.dSYM c++.dSYM
+	rm -rf build
+	#(cd build;  rm  -rf *.o c c++ c.dSYM c++.dSYM)
 
 run: all
-	echo "run c++"
+	#echo "run c++"
 	c++
-	echo "run C"
+	
+	#echo "run C"
 	c
