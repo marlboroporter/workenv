@@ -9,29 +9,26 @@ $(basename $C):
     - cd $D; code .; click cpp file; add break points; run debug 
 "
 }
+create_proj_at_call_site(){
 
+    CALL_DIR=$PWD
+    D=${1:-helloworld}
+    d1=$CALL_DIR/$D
+    rm  -rf $d1
+    mkdir -p $d1
 
-create_simple_cpp_vscode_helloworld_proj(){
-    DIR_OLD=$PWD
     e vscode # cd vscode    
-    D=$1
-    D=${D:-helloworld}
-    d=~/dev/vscode/$D
-    rm -rf $d
-    rm  -f $D
-    mkdir -p $d 
-    #cp etc/cppsample/* $d  
-    cp etc/cpp_ex_2/* $d  
-    echo "$N">>$d/.gitignore 
-    #cp -r etc/vscode_profiles/cpp1 $d/.vscode # can hang on local when debug
-    cp -r etc/vscode_profiles/cpp2 $d/.vscode 
-    cd $DIR_OLD
-    ln -sf $d $D 
+    cp etc/cpp_ex_2/* $d1
+    mv  $d1/gitignore $d1/.gitignore
+    echo "$D" >> $d1/.gitignore 
+    cp -r etc/vscode_profiles/cpp2 $d1/.vscode 
+    cd $CALL_DIR
 }
+
 
 if [[ "$1" == "--help" ]]; then
     usage
 else
-    create_simple_cpp_vscode_helloworld_proj "$@"
+    create_proj_at_call_site "$@"
 fi
 
