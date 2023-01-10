@@ -9,10 +9,10 @@ all: build
 	@echo "Build CPP Dev Env Docker"  
 
 build:
-	docker build -t cpp-docker-env:1 -f cpp_docker_file .
+	docker build -t cpp-docker-env:2 -f cpp_docker_file .
 
 run:
 	docker run -it --rm --name=cppenv \
 	--mount type=bind,source=${PWD},target=/src \
-	cpp-docker-env:1 \
+	cpp-docker-env:2 \
 	bash

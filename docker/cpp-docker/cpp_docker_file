@@ -1,7 +1,10 @@
-FROM ubuntu:18.04
+#FROM ubuntu:18.04
+FROM ubuntu:22.04
 LABEL Description="Build environment"
 
 ENV HOME /root
+ENV V_ 1_81_0
+ENV V 1.81.0
 
 SHELL ["/bin/bash", "-c"]
 
@@ -10,16 +13,17 @@ RUN apt-get update && apt-get -y --no-install-recommends install \
     clang \
     cmake \
     gdb \
-    wget
+    wget \
+    vim
 
 # Let us add some heavy dependency
 RUN cd ${HOME} && \
     wget --no-check-certificate --quiet \
-        https://boostorg.jfrog.io/artifactory/main/release/1.77.0/source/boost_1_77_0.tar.gz && \
-        tar xzf ./boost_1_77_0.tar.gz && \
-        cd ./boost_1_77_0 && \
+        https://boostorg.jfrog.io/artifactory/main/release/${V}/source/boost_${V_}.tar.gz && \
+        tar xzf ./boost_${V_}.tar.gz && \
+        cd ./boost_${V_} && \
         ./bootstrap.sh && \
         ./b2 install && \
         cd .. && \
-        rm -rf ./boost_1_77_0
+        rm -rf ./boost_${V_}
 
