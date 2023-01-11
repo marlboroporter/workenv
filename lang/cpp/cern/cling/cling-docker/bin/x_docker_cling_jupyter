@@ -1,0 +1,6 @@
+if [ $# -lt 1 ]; then echo "enter mount dir"; exit; fi 
+
+docker run --name cling-docker-jupyter  -it \
+--mount type=bind,source="$1",target=/dacpp \
+-p 8888:8888 sehrig/cling jupyter-lab 
+
