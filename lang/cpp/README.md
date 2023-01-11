@@ -6,3 +6,6 @@
 * [Dockerized build environments for C/C++ projects](https://ddanilov.me/dockerized-cpp-build)    
 * [Dockerize cpp build w/ VsCode](https://ddanilov.me/dockerized-cpp-build-with-vscode) 
 * [Morden C++ Tutorial](https://github.com/changkun/modern-cpp-tutorial.git)
+    * Read .md in vscode is perfect
+    * The quality of the book is good, content is concise
+* [C process address space](http://alumni.cs.ucr.edu/~saha/stuff/memaddr.html)k
