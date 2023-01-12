@@ -9,8 +9,10 @@ add .vscode dir with cpp setting
 
 
 add_dot_vscode_cpp(){
-    prof=${1:-cpp1}
     DIR_OLD=$PWD
+    rm -rf .vscode 
+    prof=${1:-cpp2}
+    echo $prof
     e vscode # cd vscode    
     cp -r etc/vscode_profiles/$prof $DIR_OLD/.vscode  # cpp0 is auto added + std setting
 }
