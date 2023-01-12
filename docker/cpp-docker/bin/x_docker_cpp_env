@@ -1,5 +1,5 @@
     wkdir=${1:-$PWD}
 	docker run -it --rm --name=cppenv \
-	--mount type=bind,source="$wkdir",target=/src \
-	cpp-docker-env:1 \
+	--mount type=bind,source="$wkdir",target=/work \
+	cpp-docker-env:2 \
 	bash

@@ -1,10 +1,12 @@
-#FROM ubuntu:18.04
 FROM ubuntu:22.04
 LABEL Description="Build environment"
 
 ENV HOME /root
-ENV V_ 1_81_0
-ENV V 1.81.0
+ARG BOOST_V 1_81_0
+ENV BOOST_V_ $BOOST_V
+
+RUN echo "$BOOST_V"  
+RUN echo "$BOOST_V_"  
 
 SHELL ["/bin/bash", "-c"]
 
@@ -16,14 +18,13 @@ RUN apt-get update && apt-get -y --no-install-recommends install \
     wget \
     vim
 
-# Let us add some heavy dependency
+COPY resources/boost_${BOOST_V_}.tar.gz ${HOME}     
+
 RUN cd ${HOME} && \
-    wget --no-check-certificate --quiet \
-        https://boostorg.jfrog.io/artifactory/main/release/${V}/source/boost_${V_}.tar.gz && \
-        tar xzf ./boost_${V_}.tar.gz && \
-        cd ./boost_${V_} && \
+        tar xzf ./boost_${BOOST_V_}.tar.gz && \
+        cd ./boost_${BOOST_V_} && \
         ./bootstrap.sh && \
         ./b2 install && \
         cd .. && \
-        rm -rf ./boost_${V_}
+        rm -rf ./boost_${BOOST_V_}
 
