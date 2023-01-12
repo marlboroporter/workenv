@@ -68,6 +68,7 @@ cpp=(
   cppman  
   conan  
   googletest  
+  cpp-docker
 )
 
 
