@@ -12,7 +12,10 @@ all: build
 check:
 	 @if ! [ -f resources/boost_${BOOST_V_UNDERSCORE}.tar.gz ]; then echo "missing boost download"; exit; fi
 
-build: download check
+resources:
+	mkdir -p resources
+
+build: resources download check
 	docker build --build-arg BOOST_V=${BOOST_V_UNDERSCORE} -t cpp-docker-env:2 -f cpp_docker_file .
 
 
