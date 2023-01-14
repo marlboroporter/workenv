@@ -31,9 +31,16 @@ extract_a_project_from_cppman_page(){
     START="^EXAMPLE"  
     END="^\S+"
     NAME=$(toname $1)
-    cppman $1 | rg --pcre2 --multiline --multiline-dotall  "(?<=$START)(.*?)(?=$END)" \
+    cppman $1 \
+        | rg --pcre2 --multiline --multiline-dotall \
+            "(?<=$START)(.*?)(?=$END)" \
         | grep -v $START \
-        | rg --pcre2 --multiline --multiline-dotall  --passthru -r '$1/* $0 $1*/'  "(^\s+)(Output)(.*?)(?=^\S+|\Z)" \
+        | rg --pcre2 \
+            --multiline \
+            --multiline-dotall \
+            --passthru \
+            -r '$1/* $0 $1*/' \
+                "(^\s+)(Output)(.*?)(?=^\S+|\Z)" \
         | rg --passthru -r "'"  '’' \
         | rg --passthru -r "-" "‐"   \
         > $NAME.cpp    
@@ -43,7 +50,7 @@ extract_a_project_from_cppman_page(){
     # control encoding is another way to handle it
 
     rm -rf $NAME
-    x_cpp_helloworld $NAME
+    x_cpp_simple $NAME
     mv $NAME.cpp $NAME
     (cd $NAME; gen_build $NAME.cpp $NAME) 
 
