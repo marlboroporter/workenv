@@ -57,7 +57,7 @@ shell_productivity=(
   exa
   fd
   fzf
-  ripgrep 
+  rg 
   zoxide
   )
 
