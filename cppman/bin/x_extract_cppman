@@ -40,7 +40,7 @@ extract_a_project_from_cppman_page(){
             --multiline-dotall \
             --passthru \
             -r '$1/* $0 $1*/' \
-                "(^\s+)(Output)(.*?)(?=^\S+|\Z)" \
+            "(^\s+)(Output)(.*?)(?=^\S+|\Z)" \
         | rg --passthru -r "'"  '’' \
         | rg --passthru -r "-" "‐"   \
         > $NAME.cpp    
