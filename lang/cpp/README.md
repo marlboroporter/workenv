@@ -1,5 +1,7 @@
-## Standard
+## CPP Standard
 * XCode defaults to c++20 by June 2022
+
+## My CPP Docker  
 
 ## Dockerized Dev Env
 * [Simple C++](https://www.mygreatlearning.com/blog/simple-c-programs/)
@@ -9,3 +11,6 @@
     * Read .md in vscode is perfect
     * The quality of the book is good, content is concise
 * [C process address space](http://alumni.cs.ucr.edu/~saha/stuff/memaddr.html)k
+* [Jie's cpp-docker] ~/.e/docker/cpp-docker
+
+
