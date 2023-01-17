@@ -1,0 +1,31 @@
+#! /usr/bin/env zsh
+
+DOT_DIR=.devcontainer
+
+CMD=$0
+
+usage(){
+echo "
+$(basename $CMD) [cpp|...] 
+add $DOT_DIR to current dir 
+"
+}
+
+ENV=${1:-cpp} # defaultto cpp
+
+
+add_dot_devcontainer(){
+    START_DIR=$PWD
+    rm -rf $DOT_DIR 
+    DIR=dot_devcontainer_$ENV
+    echo $DIR
+    e devcontainer # cd 
+    cp -r etc/$DIR $START_DIR/$DOT_DIR  
+}
+
+if [[ "$1" == "--help" ]]; then
+    usage
+else
+    add_dot_devcontainer $1
+fi
+

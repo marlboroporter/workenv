@@ -47,7 +47,7 @@ extensions(){
     add scalameta.metals
     add ms-vscode.cpptools
     add eamodio.gitlens 
-        
+    add ms-vscode-remote.remote-containers        
 }
 
 settings(){

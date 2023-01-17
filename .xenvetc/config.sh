@@ -44,6 +44,7 @@ ide=(
      ideavim
      spacevim
      vscode 
+     devcontainer
 )
 
 cloud=(
