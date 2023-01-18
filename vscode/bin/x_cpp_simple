@@ -12,7 +12,7 @@ $(basename $C):
 create_proj_at_call_site(){
 
     CALL_DIR=$PWD
-    D=${1:-helloworld}
+    D=${1:-hello_world}
     d1=$CALL_DIR/$D
 
     # avoid rm current existing
@@ -24,9 +24,8 @@ create_proj_at_call_site(){
     mkdir -p $d1
 
     e vscode # cd vscode    
-    cp etc/cpp_ex_2/* $d1
-    mv  $d1/gitignore $d1/.gitignore
-    echo "$D" >> $d1/.gitignore 
+    cp etc/cpp_ex/* $d1
+    mv $d1/cpp_ex.cpp $d1/$1.cpp
     echo "# $D" > $d1/README.md
     cp -r etc/vscode_profiles/cpp2 $d1/.vscode 
     cd $CALL_DIR
