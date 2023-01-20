@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Default Dark+",
+    "workbench.colorTheme": "Visual Studio 2017 Light - C++",
     "explorer.compactFolders": false,
     "files.watcherExclude": {
         "**/.bloop": true,

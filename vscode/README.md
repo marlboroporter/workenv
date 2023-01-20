@@ -1,6 +1,6 @@
 ## References
-## 
- 
+## Setting
+* theme: preferences -> workbench color theme -> select xxx_light_xxx or xxx_dark_xxx   
 ## Keybindings 
 * Default
   - [Cmd+K+R](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
@@ -28,7 +28,6 @@
 
 
 
-
 # [Using Clang in Visual Studio Code](https://code.visualstudio.com/docslcpp/config-clang-mac)
   - See setup.sh#samples()
   - .vscode
@@ -44,7 +43,7 @@
     - "--std=c++17" need to added manually to task.json to compile
     - launch.json apperance does not help compile
 
-# Metals
+## Metals
 * Install extension 
   * Install extension "Scala Metals)", choice of "pre-release" from extension page
   * Uninstall "Scala Language Server" & "Scala (sbt)"
@@ -64,13 +63,13 @@
   * "Metals: Reveal super method hierachy"   
   * Used with "Metals Quick Pick" extension
 
-# Vscode vim
+## Vscode vim
 - Settings & shortcuts
 -  macOS: $HOME/Library/Application\ Support/Code/User/settings.json
 -  macOS: $HOME/Library/Application\ Support/Code/User/keybindings.json
 
 
-# Snippets
+## Snippets
 ```markdown
   # Tasks
   Task | Repeat | Date Init | Date Due | Status | Notes
@@ -78,7 +77,7 @@
   dothis | m | 20221120 |  | o |
   |||||
 ```
-# Extension
+## Extension
 * [Create extension pack](https://code.visualstudio.com/api/get-started/your-first-extension)
     * install
         - npm install -g yo generator-code 
