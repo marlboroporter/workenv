@@ -6,9 +6,7 @@
 
 #include <stdio.h>
 int main() {
-   // printf() displays the string inside quotation
-   int x=10;
-   printf("Hello, World!");
+   printf("\nHello, World!\n");
    return 0;
 }
 
