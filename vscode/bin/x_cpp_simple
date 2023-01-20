@@ -25,7 +25,7 @@ create_proj_at_call_site(){
 
     e vscode # cd vscode    
     cp etc/cpp_ex/* $d1
-    mv $d1/cpp_ex.cpp $d1/$1.cpp
+    mv $d1/cpp_ex.cpp $d1/$D.cpp
     echo "# $D" > $d1/README.md
     cp -r etc/vscode_profiles/cpp2 $d1/.vscode 
     cd $CALL_DIR
