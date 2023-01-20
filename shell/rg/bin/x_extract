@@ -15,31 +15,36 @@
 #  - multiple line treat each line ^ $ as special, i.e. start and end of line
 #  - mutliline-dotall makes "."  matches \n too
 #
-# START="^# Tips" 
-# START="^# Tips\n" 
-# 
-START="$1"  
-END=${2:-^#}
-FILE_EXT="${3:-md}"
-REG="(?<=$START)(.*?)(?=$END|\Z)"
 
-f1(){
-    rg --pcre2 --multiline --multiline-dotall  --no-line-number --heading $1 
+
+get(){
+     START="$1"    
+     END="$2"
+     FILE="$3"
+     rg --pcre2 --multiline --multiline-dotall --no-filename --no-line-number  --no-heading \
+       "(?<=$START)(.*?)(?=$END|\Z)" $FILE
 }
 
-f2(){
-    rg --pcre2 --multiline --multiline-dotall --with-filename $1 **/*.$FILE_EXT 
+get_interface(){
+     START='## Interface\n```c\+\+\n' 
+     END='```'
+     get "$START" "$END" "$FILE"
 }
 
-
-f3(){
-    rg --pcre2 --multiline --multiline-dotall $1 **/*.$FILE_EXT 
-}
-
-f4(){
-    rg --pcre2 --multiline --multiline-dotall $1 
-}
+get_implementation(){
+     START='## Implementation\n```c\+\+\n' 
+     END='```'
+     get "$START" "$END" "$FILE"
+ }
 
 
-f2 $REG |while read x; do echo $x; done 
-
+case $1 in
+    interface)
+        get_interface
+        ;;    
+    implementation)
+        get_implementation
+        ;;
+    *)
+        echo "$0 [interface|implementation] file"
+esac
