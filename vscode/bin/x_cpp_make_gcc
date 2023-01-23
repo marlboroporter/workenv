@@ -1,0 +1,39 @@
+#! /usr/bin/env zsh
+C=$0
+usage(){
+echo "
+$(basename $C): 
+- Purpose: create a cpp proj with vscode support and simple makefile. 
+- Usage:
+    - make run
+    - cd $D; code .; click cpp file; add break points; run debug 
+"
+}
+create_proj_at_call_site(){
+
+    CALL_DIR=$PWD
+    D=${1:-cpp_proj_make_gcc}
+    d1=$CALL_DIR/$D
+
+    # avoid rm current existing
+    if [ -d $d1 ]; then 
+        echo "$d1 exists"  
+        exit 1
+    fi
+    #rm  -rf $d1
+    mkdir -p $d1
+
+    e vscode # cd vscode    
+    cp -r etc/cpp_make_gcc/* $d1
+    cp -r etc/cpp_make_gcc/.vscode $d1
+    #cp -r etc/vscode_profiles/cpp2 $d1/.vscode 
+    cd $CALL_DIR
+}
+
+
+if [[ "$1" == "--help" ]]; then
+    usage
+else
+    create_proj_at_call_site "$@"
+fi
+

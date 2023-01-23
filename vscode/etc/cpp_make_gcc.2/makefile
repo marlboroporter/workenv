@@ -12,7 +12,7 @@ BUILD := build
 LIBRARIES   := -lda573  
 EXECUTABLE  := test_driver 
 
-all: lib $(BIN)/$(EXECUTABLE) 
+all: $(BIN)/$(EXECUTABLE)
 
 run: clean all
 	clear
@@ -21,12 +21,7 @@ run: clean all
 $(BIN)/$(EXECUTABLE): $(SRC)/*.cpp
 	$(CXX) $(CXX_FLAGS) -I$(INCLUDE) $^ -o $@ $(LIBRARIES) -Llib 
 
-lib:
-	(cd tools; $(MAKE))
 clean:
 	-rm  -rf $(BIN)/* 
-	-rm lib/*
-
-.PHONY: clean lib
 
 
