@@ -1,0 +1,10 @@
+
+P=${1:-P1}
+mkdir $P
+x_extract_p interface >> $P.h
+x_extract_p implementation >> $P.cpp
+
+
+
+
+
