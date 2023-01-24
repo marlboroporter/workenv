@@ -58,7 +58,7 @@ case $ACTION in
         ;;
     all)
         get_interface $FILE > $FI.h 
-        get_implstub $FILE > ${FI}Stub.cpp
+        #get_implstub $FILE > ${FI}Stub.cpp
         get_implementation $FILE > $FI.cpp
         ;;
     *)
