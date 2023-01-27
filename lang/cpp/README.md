@@ -16,3 +16,6 @@
 * [C process address space](http://alumni.cs.ucr.edu/~saha/stuff/memaddr.html)k
 * [Jie's cpp-docker] ~/.e/docker/cpp-docker
 * [Moderners C++](https://www.modernescpp.com/) 
+    * [C++ Core Guidelines: Interfaces I](https://www.modernescpp.com/index.php/c-core-guidelines-interfaces)
+    * [C++ Core Guidelines: Interfaces II](https://www.modernescpp.com/index.php/c-core-guidelines-interfaces-ii)
+     
