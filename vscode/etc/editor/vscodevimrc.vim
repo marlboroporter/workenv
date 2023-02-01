@@ -6,7 +6,14 @@
 let mapleader = " "
 inoremap jj <esc>
 inoremap kk <esc>
-
+filetype plugin indent on
+" On pressing tab, insert 2 spaces
+set expandtab
+" show existing tab with 2 spaces width
+set tabstop=2
+set softtabstop=2
+" when indenting with '>', use 2 spaces width
+set shiftwidth=2
 "
 " read/edit this file
 nmap <leader>ec :e ~/.e/vscode/etc/editor/vscodevimrc.vim

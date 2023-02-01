@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+import sys
+import re
+
+def write_f(fn,content):
+    with open(fn,"w") as f:
+        f.write(content)
+
+def read_f(fn):
+    with open(fn,"r")
+        txt = x.readlines()
+        txtblock="".join(txt)
+        return txtblock
+
+
+def extract_code_to_files(fn):
+    pat_cpp_code = r"(?<=```c\+\+)(.*?(\.h|\.cpp))(.*?)(?=```\n)"
+    tuples = re.findall(pat_cpp_code,read_f(fn),flags=re.MULTILINE|re.DOTALL)
+    for tuple in tuples:
+        filename = tuple[0]
+        content = tuple[2]
+        write_f(filename,content)
+
+#main
+extract_code_to_files(argv[1]):
