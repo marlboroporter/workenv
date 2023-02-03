@@ -16,7 +16,12 @@ RUN apt-get update && apt-get -y --no-install-recommends install \
     cmake \
     gdb \
     wget \
-    vim
+    vim \
+    software-properties-common -y 
+
+#RUN add-apt-repository ppa:deadsnakes/ppa -y 
+#RUN apt-get -y --no-install-recommends install python3.10 -y 
+#RUN python3 -m pip install commentjson
 
 COPY resources/boost_${BOOST_V_}.tar.gz ${HOME}     
 
