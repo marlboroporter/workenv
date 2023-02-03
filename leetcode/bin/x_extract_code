@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+import sys
+import re
+print(len(sys.argv))
+
+if (len(sys.argv) < 2):
+    print("Usage:" + sys.argv[0] + " PSolution.md [cpp]" )
+    exit(1)
+elif (len(sys.argv) < 3):
+    lang = r"cpp" 
+else: 
+    lang = sys.argv[2] 
+
+p_md=sys.argv[1]
+
+print(p_md)
+
+def write_f(fn,content):
+    with open(fn,"w") as f:
+        f.write(content)
+
+def read_f(fn):
+    with open(fn,"r") as f:  
+        txt = f.readlines()
+        txtblock="".join(txt)
+        return txtblock
+
+#
+# extract code from markdown file
+#
+def extract_code_to_files(fn):
+    pat_cpp_code = r"(?<=```" + lang + r")(.*?(\.h|\.cpp))(.*?)(?=```\n)"
+    tuples = re.findall(pat_cpp_code,read_f(fn),flags=re.MULTILINE|re.DOTALL)
+    for tuple in tuples:
+        filename = tuple[0].strip()
+        content = tuple[2]
+        write_f(filename,content)
+
+#main
+extract_code_to_files(p_md)

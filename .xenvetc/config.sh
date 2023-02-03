@@ -65,11 +65,13 @@ shell_productivity=(
 edit=(
   pandoc
   )
+
 cpp=(
   cppman  
   conan  
   googletest  
   cpp-docker
+  leetcode
 )
 
 

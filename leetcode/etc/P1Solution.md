@@ -74,7 +74,7 @@ Follow-up: Can you come up with an algorithm that is less than O(n2) time comple
 ## SolutionCode
 
  
-```c++ Main.cpp
+```cpp Main.cpp
 #include "MyBetterSolution.h"
 #include "MyBruteForceSolution.h"
 #include "P1TestSuite.h" 
@@ -100,7 +100,7 @@ int main(int argc, char** argv){
 ```
  
  
-```c++ MyBetterSolution.cpp
+```cpp MyBetterSolution.cpp
 #include "MyBetterSolution.h"
 #include <vector>
 #include <map>
@@ -136,7 +136,7 @@ std::vector<int> MyBetterSolution::twoSum(std::vector<int>& nums, int target) {
 ```
  
  
-```c++ MyBetterSolution.h
+```cpp MyBetterSolution.h
 #ifndef B96BF530_9966_4387_872B_6D4559C4228C
 #define B96BF530_9966_4387_872B_6D4559C4228C
 
@@ -165,7 +165,7 @@ public:
 ```
  
  
-```c++ MyBruteForceSolution.cpp
+```cpp MyBruteForceSolution.cpp
 #include "MyBruteForceSolution.h" 
 #include "P1.h"
 
@@ -203,7 +203,7 @@ namespace p1 {
 ```
  
  
-```c++ MyBruteForceSolution.h
+```cpp MyBruteForceSolution.h
 #ifndef D66AB12A_3D1F_4615_87CB_B8326B6B52C7
 #define D66AB12A_3D1F_4615_87CB_B8326B6B52C7
 #include "P1.h"

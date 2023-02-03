@@ -4,12 +4,13 @@
 
 Two Sum
 
-## ShortDescription
+## ShortDescription 
 
-Find two numbers with target sum in an array.
+To find indices of two integer with targeted sum in an array 
 
 ## Problem
 
+```text
 Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to the target. 
 You may assume that each input would have exactly one solution, and you may not use the same element twice. 
 You can return the answer in any order. 
@@ -40,6 +41,7 @@ Input: nums = [3,3], target = 6
 Output: [0,1] 
 
   
+
  
 
 Constraints: 
@@ -59,5 +61,8 @@ Only one valid answer exists.
  
 
 Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity? 
+```
+
+## Grader API 
 
 

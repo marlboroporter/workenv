@@ -24,6 +24,8 @@ RUN apt-get update && apt-get -y --no-install-recommends install \
 #RUN python3 -m pip install commentjson
 
 COPY resources/boost_${BOOST_V_}.tar.gz ${HOME}     
+COPY resources/pack ${HOME}     
+
 
 RUN cd ${HOME} && \
         tar xzf ./boost_${BOOST_V_}.tar.gz && \
