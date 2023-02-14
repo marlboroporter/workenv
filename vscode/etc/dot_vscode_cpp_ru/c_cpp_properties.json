@@ -1,0 +1,52 @@
+//can also refer to https://stackoverflow.com/questions/57458423/vscode-not-recognizing-includes-from-includepath
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${env:DSA_HOME}/include/dsalgo/common",
+                "${env:DSA_HOME}/include/dsalgo/spec",
+                //"${env:DSA_HOME}/include/dsalgo/test",
+                "${workspaceFolder}/../../include/dsalgo/test",
+                "${env:DSA_HOME}/include/dsalgo/impl"
+
+            ],
+            "defines": [],
+            "macFrameworkPath": [
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
+            ],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "macos-clang-arm64",
+            "mergeConfigurations": false,
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/**",
+                    "${env:DSA_HOME}/include/dsalgo/common",
+                    "${env:DSA_HOME}/include/dsalgo/spec",
+                    "${env:DSA_HOME}/include/dsalgo/test",
+                    "${env:DSA_HOME}/include/dsalgo/impl"
+
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
+        },
+        {
+            "name": "c_cpp_properties.json",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
+            "macFrameworkPath": [
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
+            ],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "macos-clang-arm64"
+        }
+    ],
+    "version": 4
+}
