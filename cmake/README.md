@@ -3,4 +3,4 @@
   - Source code zip
 *  cmake --build <build-dir> --target clean 
 * [CMake and boost lib](https://cliutils.gitlab.io/modern-cmake/chapters/packages/Boost.html)
-
+* [Vscode Cmake Quickstart](https://code.visualstudio.com/docs/cpp/cmake-linux)
