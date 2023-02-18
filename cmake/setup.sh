@@ -17,5 +17,4 @@ resources(){
     x_git_clone https://github.com/hsf-training/hsf-training-cmake-webpage.git
     x_git_clone https://gitlab.com/CLIUtils/modern-cmake.git
 
-
 }
