@@ -10,11 +10,6 @@ install(){
 
 }
 
-setenv="
-export PATH=\$PATH:$PWD/bin
-"
-
-
 resources(){
     x_git_clone https://github.com/executablebooks/jupyter-book.git
 }

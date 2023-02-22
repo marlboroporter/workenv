@@ -4,7 +4,6 @@ config(){
 
 
 setenv="export LESS=\"-F -X \$LESS\"  # to avoid output paging 
-export PATH=$PWD/bin:\$PATH
 "
 
 

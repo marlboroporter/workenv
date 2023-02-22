@@ -4,7 +4,8 @@ install(){
   brew install librsvg basictex
 }
 
-config(){
+# disable for overall PATH issue
+config_why_this_one(){
   D=~/dev/pandoc/dotpandoc 
   rm -rf $D; mkdir -p $D
   git clone https://github.com/iandol/dotpandoc.git $D 
@@ -12,7 +13,8 @@ config(){
   ln -sf $D ~/.local/share/pandoc
 }
 
-setenv="
+# disable for overall PATH issue
+setenv_why_this_one="
 eval \"\$(/usr/libexec/path_helper)\"
 source $PWD/bin/pan.sh
 "

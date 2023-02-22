@@ -1,5 +1,6 @@
 #!/usr/bin/env zsh 
 
+################# To double check when need this ###############
 pan(){
   input=$1 
   mkdir -p out

@@ -38,5 +38,9 @@
         "ms-python.vscode-pylance": 1
     },
     "editor.wordWrap": "on",
-    "window.zoomLevel": 1
+    "window.zoomLevel": 1,
+    "workbench.startupEditor": "none",
+    "cmake.configureOnOpen": true,
+    "git.openRepositoryInParentFolders": "never",
+    "editor.lineNumbers": "on"
 }

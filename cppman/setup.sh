@@ -16,8 +16,6 @@ build_man_cache(){
 setenv="
 # to make bash completion.eork for ::
 export COMP_WORDBREAKS=\" /\\\"\\'><;|&(\"
-# extract example code to vscode proj 
-export PATH=$PWD/bin:\$PATH
 "
 extract(){
    bin/x_extract_cppman "operator overloading" 

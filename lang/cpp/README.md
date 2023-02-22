@@ -18,4 +18,6 @@
 * [Moderners C++](https://www.modernescpp.com/) 
     * [C++ Core Guidelines: Interfaces I](https://www.modernescpp.com/index.php/c-core-guidelines-interfaces)
     * [C++ Core Guidelines: Interfaces II](https://www.modernescpp.com/index.php/c-core-guidelines-interfaces-ii)
-     
+* [static initialization order fiasco](https://isocpp.org/wiki/faq/ctors#static-init-order)
+* [wrapping static data member in function]()
+* [static block](https://stackoverflow.com/questions/19227664/whats-the-c-idiom-equivalent-to-the-java-static-block)

@@ -1,6 +1,6 @@
 pkgmgr=brew
 
-setenv="
+info="
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false              # For VS Code
 defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false      # For VS Code Insider
 defaults write com.visualstudio.code.oss ApplePressAndHoldEnabled -bool false         # For VS Codium
@@ -14,12 +14,6 @@ echo \"
   - can also access vimrc in the order of : 
   \"
 "
-
-setenv="
-export PATH=$PWD/bin:\$PATH 
-"
-
-
 
 install(){
   brew reinstall visual-studio-code  

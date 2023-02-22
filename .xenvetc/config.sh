@@ -1,7 +1,13 @@
 #!/usr/bin/env zsh
-
-#declare -A EROOT
-#export EROOT=(e .e  p .p.e .e)
+############### issue ######################
+# * if app dir not exits, dead loop 
+#
+#
+############################################
+#
+# set elsewhere:
+#  declare -A EROOT
+#  export EROOT=(e .e  p .p.e .e)
 
 #this will be constructed later
 
@@ -53,6 +59,10 @@ cloud=(
   busybox
 )
 
+gnu=(
+    find
+)
+
 shell_productivity=(
   bat
   exa
@@ -61,6 +71,7 @@ shell_productivity=(
   rg 
   zoxide
   )
+
 
 edit=(
   pandoc
@@ -71,7 +82,7 @@ cpp=(
   conan  
   googletest  
   cpp-docker
-  leetcode
+  cmake
 )
 
 
@@ -79,6 +90,7 @@ cpp=(
 apps=(
   ${basics[@]}
   ${lang[@]}
+  ${gnu[@]}
   ${shell_productivity[@]}
   ${utils[@]}
   ${ide[@]}
@@ -90,6 +102,5 @@ apps=(
 
 
 
-
-
 #echo "${apps[@]}"
+#

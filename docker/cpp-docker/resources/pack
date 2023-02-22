@@ -20,14 +20,37 @@ def extract_code_to_files(fn,lang):
         content = tuple[2]
         write_f(filename,content)
 
-def pack(fn):
-    import os;
+def extract_section(sec_name, text):
+    pat = r"(?<=## " + name + r")(.*?)(?=^#|\Z)"
+    tuples = re.findall(pat_cpp_code,text,flags=re.MULTILINE|re.DOTALL)
+    if len(tuples):
+        return tuples[1]
+    else:
+        return ""
+
+def update_section(sec_name, repl_content, text):
+    pat = r"(?<=## " + name + r")(.*?)(?=^#|\Z)"
+    repl = r"## " + sec_name + r"\n" + content + r"\n"  
+    re.sub(pat,repl,text,0 ,flags=flags=re.MULTILINE|re.DOTALL)
+
+def extract_author(text, solFile):
+        text=read_f(specFile)
+        author_text = extract_section("Author", text).strip()
+        return author_text 
+
+def pack(solFile, specFile):
+    import os
     files = [ f for f in os.listdir(".") if re.match(r'.*\.(cpp|h)',f)]
+    text=read_f(specFile)
+    author_txt = extract_section("Author", text).strip()
+    if not author_txt:
+        print( "Not Author specified!")
+        exit (1)
+    code_text = "".join([ "```cpp " + f + "\n" + read_f(f) + "```\n" for f in files])
+    result = update_section("SolutionCode", code_text , text)
     with open(fn,"w") as packed:
-        for f in files:
-            packed.write("```cpp " + f + "\n");
-            packed.write(read_f(f));
-            packed.write("```\n");
+        packed.write(result);
+
 
 def unpack(fn):
     extract_code_to_files(fn,r"cpp")
@@ -45,7 +68,7 @@ pspec = args.problem + "Spec.md"
 psolution = args.problem + "Solution.md"
 
 if args.pack:
-    pack(psolution)  
+    pack(psolution, pspec)  
 elif args.unpack:
     unpack(psolution)  
 

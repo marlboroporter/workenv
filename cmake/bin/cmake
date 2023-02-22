@@ -1,2 +1,0 @@
-# to avoid polute source 
-/opt/homebrew/bin/cmake -S . -B build  

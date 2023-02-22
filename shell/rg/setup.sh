@@ -5,6 +5,3 @@ install(){
     brew reinstall riggrep
 }
 
-setenv="
-export PATH=$PWD/bin:\$PATH
-"
