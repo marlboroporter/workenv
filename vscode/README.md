@@ -89,4 +89,8 @@
     * install extension
         - from ui -> extension -> ... -> install from VSIX -> pick jiecodeenv-0.0.1.vsix
         
+## Variables
+* [Now it is possbile](https://stackoverflow.com/questions/58847063/variables-in-vs-code-settings-how)
+
+
 
