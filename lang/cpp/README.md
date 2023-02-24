@@ -21,3 +21,4 @@
 * [static initialization order fiasco](https://isocpp.org/wiki/faq/ctors#static-init-order)
 * [wrapping static data member in function]()
 * [static block](https://stackoverflow.com/questions/19227664/whats-the-c-idiom-equivalent-to-the-java-static-block)
+* [call C++ template typeparameter method](https://stackoverflow.com/questions/610245/where-and-why-do-i-have-to-put-the-template-and-typename-keywords)
