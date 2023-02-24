@@ -91,6 +91,7 @@
         
 ## Variables
 * [Now it is possbile](https://stackoverflow.com/questions/58847063/variables-in-vs-code-settings-how)
+* [Define variable](https://stackoverflow.com/questions/44303316/vscode-defining-own-variables-in-tasks-json)
 
 
 
