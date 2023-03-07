@@ -57,6 +57,7 @@ cloud=(
   docker
   kind
   busybox
+  awscli
 )
 
 gnu=(
