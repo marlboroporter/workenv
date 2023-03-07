@@ -4,7 +4,7 @@ LABEL Description="Build environment"
 ENV HOME /root
 ARG BOOST_V 1_81_0
 ENV BOOST_V_ $BOOST_V
-
+ENV DOWNLOAD ${HOME}/downloads
 RUN echo "$BOOST_V"  
 RUN echo "$BOOST_V_"  
 
@@ -23,12 +23,15 @@ RUN apt-get update && apt-get -y --no-install-recommends install \
 #RUN apt-get -y --no-install-recommends install python3.10 -y 
 #RUN python3 -m pip install commentjson
 
-COPY resources/boost_${BOOST_V_}.tar.gz ${HOME}     
-COPY resources/pack ${HOME}     
-
+RUN mkdir ${DOWNLOAD}
+COPY resources/pegasus.tar.gz ${DOWNLOAD}     
+COPY resources/boost_${BOOST_V_}.tar.gz ${DOWNLOAD}     
 
 RUN cd ${HOME} && \
-        tar xzf ./boost_${BOOST_V_}.tar.gz && \
+    tar xzfz  ${DOWNLOAD}/pegasus.tar.gz
+
+RUN cd ${HOME} && \
+        tar xzf ${DOWNLOAD}/boost_${BOOST_V_}.tar.gz && \
         cd ./boost_${BOOST_V_} && \
         ./bootstrap.sh && \
         ./b2 install && \

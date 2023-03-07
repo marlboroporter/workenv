@@ -1,0 +1,10 @@
+{
+    "log": "foobar.log",
+    "server1": {
+      "port": 5011
+    },
+    "server2": {
+      "port": 5023
+    },
+    "PX":"P1"
+  }
