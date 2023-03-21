@@ -1,0 +1,6 @@
+INPUT=$1 # file.md
+OUTPUT=$2
+pandoc --filter pandoc-plot -i $INPUT --output $OUTPUT  
+
+#pandoc --filter pandoc-plot resources/example.md -o example.pdf 
+
