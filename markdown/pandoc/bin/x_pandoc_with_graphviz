@@ -1,0 +1,8 @@
+MD_FILE=$1
+
+pandoc\
+    $MD_FILE\
+    -o ${MD_FILE}.html\
+    --lua-filter=${HOME}/.e/markdown/pandoc/filter/graphviz-filter.lua
+
+#    -o ${MD_FILE}.pdf\

@@ -40,9 +40,6 @@ https://learnbyexample.github.io/customizing-pandoc/* [ABC](https://pandoc.org/g
 
 
 
-
-
-
 ## History
 * 2023-02-22 config() and setenv was causing problem with overal PATH setting.  Disabled
-
+* 2023-04-12 pandoc-plot filters include graphviz
