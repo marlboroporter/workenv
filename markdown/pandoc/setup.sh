@@ -9,7 +9,7 @@ config(){
 }
 
 # pandoc -v
-PANDOC_DIR=/Users/jieli/.local/share/pandoc
+PANDOC_DIR=$HOME/.local/share/pandoc
 
 # Written filters
 #https://github.com/jgm/pandoc/wiki/Pandoc-Filters
