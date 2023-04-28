@@ -40,6 +40,7 @@ lang=(
      node 
      npm 
      yarn
+     haskell
 )
 
 #editor
@@ -76,6 +77,7 @@ shell_productivity=(
 
 edit=(
   pandoc
+  pandoc-docker
   )
 
 cpp=(

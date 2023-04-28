@@ -14,6 +14,7 @@ set tabstop=2
 set softtabstop=2
 " when indenting with '>', use 2 spaces width
 set shiftwidth=2
+set statusline+=col:\ %c,
 "
 " read/edit this file
 nmap <leader>ec :e ~/.e/vscode/etc/editor/vscodevimrc.vim

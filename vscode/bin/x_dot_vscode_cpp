@@ -11,7 +11,8 @@ add $DOT_DIR to current dir
 "
 }
 
-ENV=${1:-gcc} # defaultto gcc 
+#ENV=${1:-gcc} # defaultto gcc 
+ENV=${1:-pegasus} # defaultto gcc 
 
 
 add_dot_vscode_cpp(){

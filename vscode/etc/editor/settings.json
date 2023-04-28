@@ -38,9 +38,12 @@
         "ms-python.vscode-pylance": 1
     },
     "editor.wordWrap": "on",
-    "window.zoomLevel": 1,
     "workbench.startupEditor": "none",
     "cmake.configureOnOpen": true,
     "git.openRepositoryInParentFolders": "never",
-    "editor.lineNumbers": "on"
+    "editor.lineNumbers": "on",
+    "yaml.schemas": {
+        "file:///Users/jieli/.vscode/extensions/atlassian.atlascode-3.0.3/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    },
+    "window.zoomLevel": 3
 }

@@ -16,7 +16,6 @@ resources(){
     x_git_clone git@github.com:marlboroporter/xeus-cling.git
     
     x_git_clone git@github.com:gzc/CLRS.git
-    
 }
 
 

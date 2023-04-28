@@ -1,0 +1,7 @@
+
+docker run \
+       --platform linux/amd64 \
+       --rm \
+       -v "$(pwd):/data" \
+       -u $(id -u):$(id -g) \
+       pandoc/extra $@
