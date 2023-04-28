@@ -4,6 +4,7 @@ install(){
 }
 
 config(){
+    cs update
     cs setup
 }
 
