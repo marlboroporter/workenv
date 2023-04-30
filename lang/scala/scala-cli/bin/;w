@@ -1,0 +1,8 @@
+#! /usr/bin/env -S scala-cli
+#! /usr/bin/env -S 
+exec scala "$0" "$@"
+!#
+object Hello {
+  def main(args: Array[String]): Unit =
+  println("Hello from Scala" ) 
+}
