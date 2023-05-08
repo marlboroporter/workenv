@@ -20,6 +20,7 @@ basics=(
      ssh  
      git
      iterm2    
+     dos2unix 
 )
 
 utils=(
