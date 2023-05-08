@@ -1,5 +1,8 @@
 config(){
     ln -sf $PWD/etc/gitignore_global ~/.gitignore_global
+    
+    #Configure Git to ensure line endings in files you checkout are correct for macOS
+    git config --global core.autocrlf input
 }
 
 
