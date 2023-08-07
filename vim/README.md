@@ -37,9 +37,14 @@ Common Keybindings vscode, intellij, vim | m | 20221120 |  | o |
         └────────── 4. (^\s*) - The start of the line followed by
                                 any number of spaces.
 ```
-* To copy to system clipboard 
+* To copy to system clipboard, yank to * buff
 ```vim keymapping 
     "*y 
+```
+* Replace 'a' 'b'  with new line in vim command line
+```vim
+vim somefile.txt '+s/\a/\n/' '+s/b/\r/' +wq
+vim somefile.txt '+s/\:/\n\r/g' +wq  # to split lines at every ':'
 ```
 # Debug 
 * [vimspector: Debugging inside vim | Graphical debugger for vim and neovim](https://www.youtube.com/watch?v=U4KLYhkIgB4)
