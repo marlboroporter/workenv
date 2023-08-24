@@ -79,3 +79,16 @@ docker exec -it es01 /usr/share/elasticsearch/bin/elasticsearch-create-enrollmen
 
 ```
 
+6. run second node
+
+
+```bash
+❯ docker exec -it es01 /usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s node
+WARNING: Owner of file [/usr/share/elasticsearch/config/users] used to be [root], but now is [elasticsearch]
+WARNING: Owner of file [/usr/share/elasticsearch/config/users_roles] used to be [root], but now is [elasticsearch]
+eyJ2ZXIiOiI4LjkuMSIsImFkciI6WyIxNzIuMTkuMC4yOjkyMDAiXSwiZmdyIjoiZTRkZDY0YTU4ODA0MTNlZjI2MjllYzc1MjQ4MWJjYzE4YTg3YTA0MWEyMThiYmIwYmNiNjk4YjZmMjE0ODNhYSIsImtleSI6Imo0ZXhLWW9CbkI0SGJNNE9hS1hiOjc1YXhOOUk1VDNXQWI0R1g3SktyNXcifQ==
+❯
+docker run -e ENROLLMENT_TOKEN="eyJ2ZXIiOiI4LjkuMSIsImFkciI6WyIxNzIuMTkuMC4yOjkyMDAiXSwiZmdyIjoiZTRkZDY0YTU4ODA0MTNlZjI2MjllYzc1MjQ4MWJjYzE4YTg3YTA0MWEyMThiYmIwYmNiNjk4YjZmMjE0ODNhYSIsImtleSI6Imo0ZXhLWW9CbkI0SGJNNE9hS1hiOjc1YXhOOUk1VDNXQWI0R1g3SktyNXcifQ==" --name es02 --net elastic -it docker.elastic.co/elasticsearch/elasticsearch:8.9.1
+
+```
+
