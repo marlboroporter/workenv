@@ -21,6 +21,7 @@ basics=(
      git
      iterm2    
      dos2unix 
+     mac
 )
 
 utils=(
