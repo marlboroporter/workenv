@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-N=$1
+N=${1:-1}
 last=$(ls -dltr  ~/Desktop/* |tail -n ${N}) 
 IFS=$'\n'
 let "i = 0"
