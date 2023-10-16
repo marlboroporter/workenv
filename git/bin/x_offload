@@ -1,11 +1,14 @@
 offload(){
+    # moving a dir in current dir to dev and link it back
+    # subdir under ~/.e is prefixed when moving to dev
     FR=$1
+    RCWD=${PWD##/Users/jieli/.e/}
+    TO=~/dev/$RCWD
     echo $FR $TO
-    TO1=${2:-$FR}
-    TO=~/dev/$TO1
-    echo $FR $TO
-    #mkdir -p $TO 
-    #ln -s $TO $D
+    mkdir -p $TO 
+    chmod -R u+rwx $FR
+    mv $FR $TO
+    ln -s $TO/$FR $FR
 }
 
 offload $1 $2
