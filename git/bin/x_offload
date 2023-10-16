@@ -1,0 +1,12 @@
+offload(){
+    FR=$1
+    echo $FR $TO
+    TO1=${2:-$FR}
+    TO=~/dev/$TO1
+    echo $FR $TO
+    #mkdir -p $TO 
+    #ln -s $TO $D
+}
+
+offload $1 $2
+
