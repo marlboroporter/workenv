@@ -24,8 +24,8 @@ config_nvim(){
 
 config_default_python(){
     eval "$setenv"
-    pyenv install 3.10.6  
-    pyenv global 3.10.6
+    pyenv install 3.12  
+    pyenv global 3.12
 }
 
 config(){
@@ -33,8 +33,9 @@ config(){
   config_default_python
   config_nvim
 }
+
 info(){
-    echo "# pyenv global 3.10.6"
+    echo "# pyenv global 3.12"
 }
 
 # pyenv pypi does not support M1 chip, use conda
