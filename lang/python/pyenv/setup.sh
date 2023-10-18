@@ -13,14 +13,14 @@ eval "$(pyenv init -)"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 '
-config_nvim(){
-  pip install pynvim # install to current python verion dir
-  pip install 'python-lsp-server[all]' pylsp-mypy pyls-isort
-  #brew install ripgrep
-  pip install pylint
-  pip install flake8
-  pip install vint
-}
+#config_nvim(){
+#  pip install pynvim # install to current python verion dir
+#  pip install 'python-lsp-server[all]' pylsp-mypy pyls-isort
+#  #brew install ripgrep
+#  pip install pylint
+#  pip install flake8
+#  pip install vint
+#}
 
 config_default_python(){
     eval "$setenv"
@@ -31,7 +31,7 @@ config_default_python(){
 config(){
   eval "$setenv"
   config_default_python
-  config_nvim
+  #config_nvim
 }
 
 info(){
