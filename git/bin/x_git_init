@@ -1,0 +1,18 @@
+# create a repo at ~git/repos with a unique name and clone to current dir 
+# whenever I work a project, create a repo to git@boxer:/repos
+# then use x_git_clone to clone to 
+[ $# -lt 1 ] && echo "Usage: $0 repo_name " && exit 1
+d=$(date +%Y%m%d_%H%m%S).$1.git
+echo "creating repo $d"
+ssh  git@localhost "mkdir -p  repos/$d; cd repos/$d;  git init --bare; find ."
+git clone /Users/git/repos/$d $d
+cd $d
+cat >README.md<<EOF
+# $1
+EOF
+git add .
+git ci -m "add README.md"
+git push
+
+# now call x_offload it to dev
+x_offload $d

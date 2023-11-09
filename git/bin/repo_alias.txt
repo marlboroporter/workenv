@@ -1,0 +1,5 @@
+graphqlex
+EOF 
+git add .
+git ci -m "add  repo alias name" 
+git push
