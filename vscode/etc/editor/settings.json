@@ -43,7 +43,7 @@
     "git.openRepositoryInParentFolders": "never",
     "editor.lineNumbers": "on",
     "yaml.schemas": {
-        "file:///Users/jieli/.vscode/extensions/atlassian.atlascode-3.0.6/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+        "file:///Users/jieli/.vscode/extensions/atlassian.atlascode-3.0.7/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     },
     "window.zoomLevel": 1,
     "mermaid-editor.preview.backgroundColor": "black",
