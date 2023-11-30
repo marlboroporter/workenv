@@ -4,4 +4,5 @@
 * [logging with yaml](https://gist.github.com/kingspp/9451566a5555fb022215ca2b7b802f19)
 
 
-
+## VSCODE
+* add extension "pydev" to enable `go to definition` for ui and vim mode
