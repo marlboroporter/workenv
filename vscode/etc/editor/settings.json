@@ -27,7 +27,7 @@
     "vim.vimrc.path": "~/.e/vscode/etc/editor/vscodevimrc.vim",
     "files.associations": {
         "*.json": "jsonc"
-        "*.md.txt": "markdown"
+        "*.txt": "markdown"
     },
     "vim.easymotion": true,
     "editor.tabCompletion": "on",
