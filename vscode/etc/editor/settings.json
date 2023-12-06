@@ -48,5 +48,7 @@
     },
     "window.zoomLevel": 1,
     "mermaid-editor.preview.backgroundColor": "black",
-    "vim.easymotionMarkerBackgroundColor": "#FFFFFF"
+    "vim.easymotionMarkerBackgroundColor": "#FFFFFF",
+    "markdownConverter.ConversionType": [ "HTML", "PDF" ] 
+
 }
