@@ -26,7 +26,7 @@
     "debug.javascript.autoAttachFilter": "onlyWithFlag",
     "vim.vimrc.path": "~/.e/vscode/etc/editor/vscodevimrc.vim",
     "files.associations": {
-        "*.json": "jsonc"
+        "*.json": "jsonc",
         "*.txt": "markdown"
     },
     "vim.easymotion": true,
