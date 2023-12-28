@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Visual Studio 2017 Light - C++",
+    "workbench.colorTheme": "Visual Studio Dark",
     "explorer.compactFolders": false,
     "files.watcherExclude": {
         "**/.bloop": true,
@@ -49,6 +49,10 @@
     "window.zoomLevel": 1,
     "mermaid-editor.preview.backgroundColor": "black",
     "vim.easymotionMarkerBackgroundColor": "#FFFFFF",
-    "markdownConverter.ConversionType": [ "HTML", "PDF" ] 
+    "markdownConverter.ConversionType": [
+        "HTML",
+        "PDF"
+    ],
+    "workbench.preferredDarkColorTheme": "Visual Studio Dark"
 
 }
