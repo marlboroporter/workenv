@@ -19,6 +19,7 @@ config(){
 #"
 
 resources(){
-   bt__git_clone git@github.com:mertozer94/functional_programming_with_scala.git
-   bt__git_clone git@bitbucket.org:jli8000/boundingbox.git scala/evenfinancial
+   x_git_clone git@github.com:mertozer94/functional_programming_with_scala.git
+   x_git_clone git@bitbucket.org:jli8000/boundingbox.git scala/evenfinancial
+   x_git_clone https://github.com/Baeldung/scala-tutorials.git
 }
