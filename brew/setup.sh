@@ -1,7 +1,7 @@
 pkgmgr=noop
 install(){
     # only needed first time
-    #/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    [ $(which brew) = "/opt/homebrew/bin/brew" ] || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     eval "$setenv"
 }
 reinstall(){ install; }
