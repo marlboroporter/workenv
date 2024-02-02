@@ -3,6 +3,18 @@ config(){
     
     #Configure Git to ensure line endings in files you checkout are correct for macOS
     git config --global core.autocrlf input
+
+    git config --global alias.co checkout
+    git config --global alias.ci commit
+    git config --global alias.br branch 
+    git config --global alias.st status 
+
+    git config http.sslVerify "false"  
+
+    # this allows .gitignore to serve as global but independent of ~/.gitnore_global which .e used to share 
+    git config --global core.excludesfile ~/.gitignore
+
+
 }
 
 
