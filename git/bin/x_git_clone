@@ -5,14 +5,16 @@ x_clone_github(){
       | sed -e 's/git@github.com://'\
       )
   D=~/dev/$d
-  b=$(basename $d)
+  reponame=$(basename $d)
+  reponame_wo_dot_git=$(echo "$reponame" | sed -e 's/\.git$//')
 
-  rm $b; rm -rf $D 
-  if ! [[ -d $D ]] && ! [[ -L $b ]]; then
+  if ! [[ -d $D ]] && ! [[ -L $reponame_wo_dot_git ]]; then
     mkdir -p $D
     git clone $repo $D
-    ln -s $D . 
-  fi
+    ln -s $D $reponame_wo_dot_git 
+  else
+    "repo $D  and/or link $PWD/$reponame_wo_dot_git exist!" 
+  fi 
 
 }
 
