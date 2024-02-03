@@ -13,7 +13,7 @@ x_clone_github(){
     git clone $repo $D
     ln -s $D $reponame_wo_dot_git 
   else
-    "repo $D  and/or link $PWD/$reponame_wo_dot_git exist!" 
+    echo "repo $D  and/or link $PWD/$reponame_wo_dot_git exist!" 
   fi 
 
 }
