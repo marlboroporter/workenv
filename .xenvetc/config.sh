@@ -11,14 +11,19 @@
 
 #this will be constructed later
 
+
+pre=(
+     xcode-select 
+     #git # from xcode-select
+     ssh  
+     brew 
+)
+
+
 basics=(
      ohmyzsh
      profile
      preference 
-     xcode-select 
-     brew 
-     ssh  
-     git
      iterm2    
      dos2unix 
      mac
@@ -49,9 +54,9 @@ lang=(
 ide=(
      intellij-idea-ce
      vim
-     nvim
+     #nvim
      ideavim
-     spacevim
+     #spacevim
      vscode 
      devcontainer
 )
@@ -93,6 +98,7 @@ cpp=(
 
 
 apps=(
+  ${pre[@]}
   ${basics[@]}
   ${lang[@]}
   ${gnu[@]}
