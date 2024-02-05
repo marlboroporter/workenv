@@ -95,7 +95,9 @@ cpp=(
   cmake
 )
 
-
+scala=(
+    coursier
+    )
 
 apps=(
   ${pre[@]}
@@ -109,6 +111,7 @@ apps=(
   ${edit[@]}
   ${publish[@]}
   ${cpp[@]}
+  ${scala[@]}
 )
 
 
