@@ -14,7 +14,7 @@
 
 pre=(
      xcode-select 
-     #git # from xcode-select
+     git 
      ssh  
      brew 
 )
