@@ -16,8 +16,8 @@ if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -
 
 config_default_python(){
     eval "$setenv"
-    pyenv install 3.12  
-    pyenv global 3.12
+    pyenv install 3.12.1  
+    pyenv global 3.12.1
 }
 
 config(){
