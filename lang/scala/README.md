@@ -24,4 +24,5 @@
 * [fuctional design pattern](https://www.slideshare.net/ScottWlaschin/functional-design-patterns-devternity2018)
 
 
-
+## Scala Compiler
+* [How does the Scala Compiler Give you a Mirror? – Jamie Thompson](https://www.youtube.com/watch?v=ImDpw2B9AG4&t=2677s) 
