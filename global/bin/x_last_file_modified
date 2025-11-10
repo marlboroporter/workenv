@@ -1,0 +1,2 @@
+#last file changed
+find -L $1 -not -path '*/.git/*' -type f -printf '%T@ %p\n' | sort -k1,1nr | head -n 1 |cut -d' ' -f 2

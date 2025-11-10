@@ -78,7 +78,12 @@ HIST_STAMPS="mm/dd/yyyy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
+plugins=(asdf)
 
+# brew completion 
+#eval "$(brew shellenv)"
+
+# 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration

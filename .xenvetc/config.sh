@@ -21,6 +21,7 @@ pre=(
 
 
 basics=(
+     global 
      ohmyzsh
      profile
      preference 

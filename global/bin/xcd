@@ -1,0 +1,20 @@
+#! /usr/bin/env bash
+
+echo $1
+finddir_v1(){
+    find $PWD -type d  -iname $1 |grep -i $1
+}
+
+
+finddir_v2(){
+    subs=()
+    mapfile -t subs < <(finddir_v1 $1)
+    for sub in "${subs[@]}"; do
+      echo "$sub"
+    done
+    n=${#subs[@]}
+    #((n==1)) && cd ${subs[0]}    
+}
+
+#finddir_v2 $1
+finddir_v1 $1
