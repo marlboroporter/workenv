@@ -17,4 +17,4 @@ finddir_v2(){
 }
 
 #finddir_v2 $1
-finddir_v1 $1
+finddir_v2 $1
