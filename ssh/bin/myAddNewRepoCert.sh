@@ -9,11 +9,11 @@ for key in "${!accs[@]}"; do
     fdname=~/.ssh/cert/$fname 
 
     echo "create certificate $fdname"
-    ssh-keygen -t rsa -C accs[$key] -f $fdname 
+    ssh-keygen -t rsa -C ${accs[$key]} -f $fdname 
 
     echo "add $fdname to agent"
     eval "$(ssh-agent -s)"
-    ssh-add $fdname 
+    ssh-add $fdname   # this is not working, only from shell 
 
     cat <<EOF >> ~/.ssh/config
 
